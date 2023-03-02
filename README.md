@@ -27,6 +27,38 @@ Is to provide a user with basic information about the certain hiking trails/area
 - As a site owner I want to be able to create,read,update and delete bookings
 ## Database
 ## Design
-###Color
-###Fonts
-###Wireframes
+### Color
+### Fonts
+### Wireframes
+<details><summary>Home page</summary>
+<img src="readme_img/home page.png">
+</details>
+
+<details><summary>Post page</summary>
+<img src="readme_img/post_page.png">
+</details>
+
+<details><summary>Posts page</summary>
+<img src="readme_img/login_post.png">
+</details>
+
+<details><summary>Contact & Edit profile page</summary>
+<img src="readme_img/contact_edit_profile.png">
+</details>
+
+<details><summary>Signup page</summary>
+<img src="readme_img/sign_up_page.png">
+</details>
+
+<details><summary>Mobile Home & Post page</summary>
+<img src="readme_img/mobile_home_posts.png">
+</details>
+
+<details><summary>Mobile Contact & Edit profile page</summary>
+<img src="readme_img/mobile_contact_edit_profile.png">
+</details>
+
+<details><summary>Mobile Posts page and Navigation menu</summary>
+<img src="readme_img/mobile_posts_navbar.png">
+</details>
+
