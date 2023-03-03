@@ -23,11 +23,24 @@
     color: white;
     --bs-nav--link-color:white;
 }
+.hero {
+    display: flex;
+}
 /* hero image */
 .hero-img{
+ 
     background-image: url('../images/hero_img.jpg');
     background-position: center center;
     background-size: cover;
     height: 90vh;
     width: 100%;
+}
+/* hero text */
+.hero-text {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
