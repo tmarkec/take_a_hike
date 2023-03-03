@@ -1,3 +1,33 @@
-body {
-    background-color: yellow;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+.contain { 
+    margin: auto;
+    font-family: 'Dosis', sans-serif;
+    max-width: 1200px;  
+}
+/* navigation menu */
+.nav-link {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.navbar-expand-lg .navbar-collapse {
+    margin-left: 20rem;
+}
+.navbar {
+    background-color: black;
+}
+.navbar-brand {
+    color: white;
+}
+.navbar-nav {
+    color: white;
+    --bs-nav--link-color:white;
+}
+/* hero image */
+.hero-img{
+    background-image: url('../images/hero_img.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
 }
