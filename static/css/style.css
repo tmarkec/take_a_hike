@@ -32,7 +32,7 @@ ul {
 /* hero image */
 .hero-img{
  
-    background-image: url('../images/hero_img.jpg');
+    background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1678099583/static/images/hero_img.b47bd4022d36.jpg');
     background-position: center center;
     background-size: cover;
     height: 90vh;
