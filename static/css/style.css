@@ -5,7 +5,10 @@
     font-family: 'Dosis', sans-serif;
     max-width: 1200px;  
 }
-/* navigation menu */
+ul {
+    list-style: none;
+}
+/* -----navigation menu ------*/
 .nav-link {
     font-size: 1.4rem;
     font-weight: bold;
@@ -43,4 +46,31 @@
     align-items: center;
     justify-content: center;
     color: white;
+}
+/* ---------- footer---------------- */
+.footer {
+    background-color: rgb(129, 126, 122);
+    padding: 0.2rem 1rem;
+}
+
+/* ------------------ index------------------- */
+
+.lead-text {
+    margin: 1rem 2rem;
+    font-weight: 800;
+    font-size: 3.4rem;
+}
+.icon {
+    font-size: 3rem;
+}
+.li-txt {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.li-nmb {
+    font-weight: 900;
+}
+.me {
+    margin-top: 4rem;
+    padding: 1rem 3rem;
 }
