@@ -31,10 +31,19 @@
                     <a class="nav-link" href="{% url 'post' %}">Posts</a>
                   </li>
                 </ul>
-                <form class="d-flex justify-content-end" role="search">
-                  <button class="btn btn-outline-success " type="submit">Login</button>
-                  <button class="btn btn-outline-success ms-3" type="submit">Sign up</button>
-                </form>
+                <ul class="d-flex justify-content-end" role="search">
+                  {% if user.is_authenticated %}
+                  <li class="btn btn-outline-success">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+                  {% else %}
+                  <li class="btn btn-outline-success ">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                  </li>
+                  <li class="btn btn-outline-success ms-3">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a></li>
+                  </li>
+                  {% endif %}
+                </ul>
               </div>
             </div>
           </nav>
