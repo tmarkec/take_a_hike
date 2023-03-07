@@ -5,8 +5,8 @@
   <div class="row">
 
       <!-- Blog Entries Column -->
-      <div class="col-12 mt-3 left">
-        <div class="row">
+      <div class="col-12 mt-3 left contain">
+        <div class="row height">
             {% for post in post_list %}
             <div class="col-md-4">
                 <div class="card mb-4">
@@ -16,13 +16,13 @@
                             <img class="card-img-top"
                                 src="../static/images/kerry.jpg">
                             {% else %}
-                            <img class="card-img-top" src="../static/images/kerry.jpg">
+                            <img class="card-img-top" src="{{ post.featured_image.url }}">
                             {% endif %}
                             <div class="image-flash">
                                 <p class="author">Author: {{ post.author }}</p>
                             </div>
                         </div>
-                        <a href="#" class="post-link">
+                        <a href="{% url 'single_post' post.slug %}" class="post-link">
                             <h2 class="card-title">{{ post.title }}</h2>
                             <p class="card-text">{{ post.excerpt }}</p>
                         </a>
