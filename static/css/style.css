@@ -75,3 +75,21 @@ ul {
     padding: 1rem 3rem;
 }
 /* ---------------posts page--------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------Login, logout, signup page--- */
+.form-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.form-view {
+    height: 86vh;
+}
