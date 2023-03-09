@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="contain form-view">
+  <div class="row  m-5">
+    <div class="col-md-8 offset-md-3 mt5">
+
+      <form class="signup" id="signup_form" method="POST" action="{% url 'account_register' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <!-- <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> -->
+        <br>
+        <button type="submit" class="btn btn-outline-info">Sign up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
