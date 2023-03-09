@@ -16,7 +16,7 @@
 </head>
 <body>
     <header class="contain sticky-top">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75">
             <div class="container-fluid">
               <a class="navbar-brand ms-5" href="#">Navbar</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
               </button>
               <div class="collapse navbar-collapse center" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <li class="nav-item ms-5">
                     <a class="nav-link " aria-current="page" href="{% url 'index' %}">Home</a>
                   </li>
                   <li class="nav-item ms-5">
@@ -55,16 +55,16 @@
     <footer class="footer contain ">
       <div class="row">
         <div class="col">
-          <a class="navbar-brand ms-5" href="#">Navbar</a>
+          <a class=" navbar-brand " href="#">Navbar</a>
         </div>
         <div class="col text-center">
-          <p class="m-0 text-center text-black">Follow us: </p>
-            <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+          <p class="m-0 text-center text-white fs-4 pb-2 fw-bold">Follow us: </p>
+            <i class="fab fa-facebook-square ms-1 text-white fs-3"></i>
+            <i class="fab fa-twitter-square ms-1 text-white fs-3"></i>
+            <i class="fab fa-instagram-square ms-1 text-white fs-3"></i>
+            <i class="fab fa-youtube-square ms-1 text-white fs-3"></i>
         </div>
-        <div class="col">
+        <div class="col text-end ">
           <button class="btn btn-outline-success " type="submit">Login</button>
         </div>
       </div>

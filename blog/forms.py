@@ -13,6 +13,7 @@ class CommentForm(forms.ModelForm):
 class FormUser(UserCreationForm):
     first_name = forms.CharField()
     last_name = forms.CharField()
+    email = forms.EmailField()
 
     class Meta:
         model = User
@@ -20,5 +21,5 @@ class FormUser(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super(FormUser, self).__init__(*args, **kwargs)
-        for field in ['username', 'email','password1', 'password2']:
+        for field in ['username', 'email', 'password1', 'password2']:
             self.fields[field].help_text = None
