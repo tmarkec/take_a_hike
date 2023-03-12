@@ -33,6 +33,9 @@
                 </ul>
                 <ul class="d-flex justify-content-end" role="search">
                      {% if user.is_authenticated %}
+                     <li class="nav-item ms-5">
+                      <a class="nav-link" href="{% url 'profile' user_id=user.id %}">Profile</a>
+                    </li>
                   <li class="btn btn-outline-success">
                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
                   {% else %}

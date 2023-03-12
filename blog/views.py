@@ -2,7 +2,13 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Post
 from .forms import CommentForm, FormUser
-
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from .forms import ProfileForm
+from django.contrib import messages
+from django.contrib.auth import logout
+from django.urls import reverse
 
 # Create your views here.
 # def index(request):
@@ -84,3 +90,46 @@ def register(request):
         form = FormUser()
 
     return render(request, 'account/signup-copy.html', {'form': form})
+
+
+# def profile(request, user_id):
+#     user = request.user
+#     context = {'user': user}
+#     return render(request, 'profile.html', context)
+
+# def profile(request):
+#     user = get_object_or_404(User, id=user_id)
+#     if request.method == 'POST':
+#         form = UserChangeForm(request.POST, instance=user)
+#         if form.is_valid():
+#             form.save()
+#     else:
+#         form = UserChangeForm(instance=user)
+#     context = {'form': form}
+#     return render(request, 'profile.html', context)
+
+
+@login_required
+def profile(request, user_id):
+    user = request.user
+    if request.method == 'POST':
+        # If the user clicked on the "Update" button
+        if 'update' in request.POST:
+            form = ProfileForm(request.POST, instance=user)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Profile updated successfully.')
+                return redirect('profile', user_id=user_id)
+        # If the user clicked on the "Delete" button
+        elif 'delete' in request.POST:
+            user.delete()
+            logout(request)
+            messages.success(request, 'Account deleted successfully.')
+            return redirect('index')
+    else:
+        form = ProfileForm(instance=user)
+    return render(request, 'profile.html', {'form': form})
+
+
+def logout_view(request):
+    logout(request)

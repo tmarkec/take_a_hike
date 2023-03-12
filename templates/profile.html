@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="contain">
+  <h1>Register</h1>
+  <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+<p>Email: {{ user.email }}</p>
+<p>Username: {{ user.username }}</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" name="update">Update</button>
+    <button type="submit" name="delete">Delete Account</button>
+  </form>
+</div>
+{% endblock %}

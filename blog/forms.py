@@ -1,7 +1,7 @@
 from .models import Comment
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class CommentForm(forms.ModelForm):
@@ -23,3 +23,9 @@ class FormUser(UserCreationForm):
         super(FormUser, self).__init__(*args, **kwargs)
         for field in ['username', 'email', 'password1', 'password2']:
             self.fields[field].help_text = None
+
+
+class ProfileForm(UserChangeForm):
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email']
