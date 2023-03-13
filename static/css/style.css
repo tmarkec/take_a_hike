@@ -108,8 +108,11 @@ a {
     color: rgb(15, 111, 190);
 }
 
-
-
+.paragraph-text {
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif; 
+    line-height: normal;
+}
 
 
 

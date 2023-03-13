@@ -10,7 +10,7 @@
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                 <br>
-                <P> {{ post.content2 | safe }}</P>
+                <P class="paragraph-text"> {{ post.content2 | safe }}</P>
             </div>
             <div class="d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
