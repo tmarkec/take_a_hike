@@ -29,3 +29,8 @@ class ProfileForm(UserChangeForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
+
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        for field in ['username', 'email',]:
+            self.fields[field].help_text = None

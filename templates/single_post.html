@@ -2,12 +2,15 @@
 
 {% block content %}
 {% load crispy_forms_tags %}
+<div class="contain mx-5 my-4">
 <div class="masthead contain">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <br>
+                <P> {{ post.content2 | safe }}</P>
             </div>
             <div class="d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
@@ -53,19 +56,21 @@
             <div class="card-body"></div> 
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
+                    <p><strong>
+                        {{ comment.name }},
+                    </strong>
                         <span class=" text-muted font-weight-normal">  
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
+                    <hr>
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-3 card mb-4  mt-3 ">
             <div class="card-body">
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
@@ -74,17 +79,20 @@
                 {% else %}
                 {% if user.is_authenticated %}
                 <h3>Leave comment:</h3>
-                <p>Posting as : {{ user.username }}</p>
+                <p><strong>Posting as:</strong> {{ user.username }}</p>
                 <form method="post">
                     {{ comment_form|crispy }}
                     {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <div class="d-grid gap-2 col-6 mx-auto">  
+                <button type="submit" class="btn btn-primary btn-lg my-3 mx-1">Submit</button>
+                    </div>
                 </form>
                 {% endif %}
                 {% endif %}
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock content %}

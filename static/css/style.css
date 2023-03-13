@@ -1,43 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
-.contain { 
+.contain {
     margin: auto;
     font-family: 'Dosis', sans-serif;
-    max-width: 1200px;  
+    max-width: 1200px;
 }
+
 ul {
     list-style: none;
 }
+
 /* -----navigation menu ------*/
 .nav-link {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .navbar-expand-lg .navbar-collapse {
     margin-left: 20rem;
 }
+
 .navbar {
     background-color: black;
 }
+
 .navbar-brand {
     color: white;
 }
+
 .navbar-nav {
     color: white;
-    --bs-nav--link-color:white;
+    --bs-nav--link-color: white;
 }
+
 .hero {
     display: flex;
 }
+
 /* hero image */
-.hero-img{
- 
+.hero-img {
+
     background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1678099583/static/images/hero_img.b47bd4022d36.jpg');
     background-position: center center;
     background-size: cover;
     height: 90vh;
     width: 100%;
 }
+
 /* hero text */
 .hero-text {
     margin-top: 20%;
@@ -47,6 +56,7 @@ ul {
     justify-content: center;
     color: white;
 }
+
 /* ---------- footer---------------- */
 .footer {
     background-color: rgb(236, 72, 7);
@@ -62,25 +72,41 @@ ul {
     font-weight: 800;
     font-size: 3.4rem;
 }
+
 .icon {
     font-size: 3rem;
 }
+
 .li-txt {
     font-size: 2rem;
     font-weight: 600;
 }
+
 .li-nmb {
     font-weight: 900;
 }
+
 .me {
     margin-top: 4rem;
     padding: 1rem 3rem;
 }
+
 /* ---------------posts page--------------- */
 
+.card {
+    background-color: rgb(231, 236, 238);
+}
 
-
-
+a {
+    text-decoration: none;
+    color: black;
+}
+.post-link{
+    transition: all .2s ease-in-out;
+}
+.post-link:hover {
+    color: rgb(15, 111, 190);
+}
 
 
 
@@ -92,20 +118,26 @@ ul {
     font-size: 2rem;
     font-weight: 700;
 }
+
 .form-view {
     height: 86vh;
 }
 
+#div_id_password {
+    display: none;
+}
 
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {
     .navbar-expand-lg .navbar-collapse {
         margin-left: 0rem;
     }
+
     .justify-content-end {
-        justify-content: flex-start!important;
+        justify-content: flex-start !important;
     }
 }
+
 @media screen and (max-width:500px) {
     .footer {
         padding: 0.5rem 1rem;
