@@ -6,11 +6,11 @@
 
       <!-- Blog Entries Column -->
       <div class="col-12 mt-3 left contain">
-        <h1 class="my-5"><strong>My hikes</strong></h1>
+        <h1 class="lead-text my-5">My hikes</h1>
         <div class="row height">
             {% for post in post_list %}
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card mb-4 shadow lg p-3 mb-5 bg-dark-subtle rounded">
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in post.featured_image.url %}
