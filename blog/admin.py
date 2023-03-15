@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Subscription
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -22,4 +22,8 @@ class CommentAdmin(admin.ModelAdmin):
 
     def comments(self, request, queryset):
         queryset.update(approved=True)
-        
+
+
+@admin.register(Subscription)
+class SubscribedUserAdmin(admin.ModelAdmin):
+    list_display = ('email', 'created_on')

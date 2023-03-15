@@ -5,10 +5,13 @@ from .forms import CommentForm, FormUser
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import ProfileForm
+from .forms import ProfileForm, SubcribersForm
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.urls import reverse
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
+from .models import Subscription
 
 # Create your views here.
 # def index(request):
@@ -116,3 +119,30 @@ def profile(request, user_id):
 
 def logout_view(request):
     logout(request)
+
+
+def subscribe(request):
+    if request.method == 'POST':
+        form = SubcribersForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = SubcribersForm()
+
+    context = {'form': form}
+    return render(request, 'base.html', context)
+    # if request.method == 'POST':
+    #     email = request.POST.get('email', None)
+    #     if not email:
+    #         messages.error(request, 'You must type legit email address to subscribe')
+    #     try:
+    #         validate_email(email)
+    #     except ValidationError as e:
+    #         messages.error(request, e.messages[0])
+    #         return redirect("/")
+    #     subscribe_model_instance = Subscription()
+    #     subscribe_model_instance.save()
+    #     # messages.success(request, f'{email} email was successfully subscribed to our newsletter!')
+    #     return redirect(request.META.get("HTTP_REFERER", "/"))
+    

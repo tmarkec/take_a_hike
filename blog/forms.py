@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Subscription
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
@@ -34,3 +34,9 @@ class ProfileForm(UserChangeForm):
         super(ProfileForm, self).__init__(*args, **kwargs)
         for field in ['username', 'email',]:
             self.fields[field].help_text = None
+
+
+class SubcribersForm(forms.ModelForm):
+    class Meta:
+        model = Subscription
+        fields = ['email',]
