@@ -7,8 +7,7 @@ class TypeWriter {
       this.wait = parseInt(wait, 10);
       this.type();
       this.isDeleting = false;
-    }
-  
+    } 
     type() {
       // Current index of word
       const current = this.wordIndex % this.words.length;
@@ -62,5 +61,13 @@ class TypeWriter {
     const wait = txtElement.getAttribute('data-wait');
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
-  }
+  };
   
+
+  // dismiss messages accross the website
+  setTimeout(function(){
+    let messages = document.getElementById("msg")
+    let alert = new bootstrap.Aleret(messages)
+    alert.close();
+
+  }, 2000);

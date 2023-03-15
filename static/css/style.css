@@ -15,10 +15,12 @@ ul {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .logo-header {
     width: 50px;
     height: 50px;
 }
+
 .navbar-expand-lg .navbar-collapse {
     margin-left: 20rem;
 }
@@ -67,9 +69,15 @@ ul {
     border: 0.5px solid black;
     border-radius: 4px;
 }
+
 .logo-footer {
     max-height: 90px;
     max-width: 90px;
+}
+
+.form-control {
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* ------------------ index------------------- */
@@ -79,10 +87,12 @@ ul {
     font-weight: 800;
     font-size: 3.4rem;
 }
+
 .high {
     max-height: 25rem;
     object-fit: cover;
 }
+
 .icon {
     font-size: 3rem;
 }
@@ -111,16 +121,18 @@ a {
     text-decoration: none;
     color: black;
 }
-.post-link{
+
+.post-link {
     transition: all .2s ease-in-out;
 }
+
 .post-link:hover {
     color: rgb(15, 111, 190);
 }
 
 .paragraph-text {
     font-size: 1.2rem;
-    font-family: 'Dosis', sans-serif; 
+    font-family: 'Dosis', sans-serif;
     line-height: normal;
 }
 
@@ -154,5 +166,14 @@ a {
 @media screen and (max-width:500px) {
     .footer {
         padding: 0.5rem 1rem;
+    }
+
+    .form-control {
+        width: 60%;
+    }
+
+    .logo-footer {
+        height: 60px;
+        width: 60px;
     }
 }

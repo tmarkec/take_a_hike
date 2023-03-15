@@ -17,7 +17,8 @@ class FormUser(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2')
+        fields = ('first_name', 'last_name', 'username', 'email',
+                  'password1', 'password2')
 
     def __init__(self, *args, **kwargs):
         super(FormUser, self).__init__(*args, **kwargs)
@@ -32,11 +33,11 @@ class ProfileForm(UserChangeForm):
 
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
-        for field in ['username', 'email',]:
+        for field in ['username', 'email', ]:
             self.fields[field].help_text = None
 
 
 class SubcribersForm(forms.ModelForm):
     class Meta:
         model = Subscription
-        fields = ['email',]
+        fields = ['email', ]

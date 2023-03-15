@@ -24,8 +24,8 @@
         <div class="logo-header">
           <a href="{% url 'index' %}">
             <img src="{% static '/images/logo-header.webp' %}" alt="Take a hike logo" class="img-fluid"></a>
-        </div>
-        <h6 class="ml-4"> Hi {{ user.username }}</h6>
+        </div>   
+        <h6 class="ml-4">{{ user.username }}</h6>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -60,21 +60,35 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+            {{ message | safe }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+            </button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </header>
   {% block content %}
   <!-- Content goes here -->
   {% endblock content %}
   <!-- Footer -->
-  <footer class="footer contain ">
-    <div class="row">
-      <div class="col">
+  <footer class="footer contain py-3">
+    <div class="row text-center">
+      <div class="col-md-4">
         <div class="logo-footer" onclick="window.location.href='index.html'" role="img" aria-label="Take a hike logo"
           title="Take a hike logo">
           <a href="{% url 'index' %}">
             <img src="{% static '/images/logo-footer.webp'%}" alt="Take a hike logo" class="img-fluid"></a>
         </div>
       </div>
-      <div class="col text-center">
+      <div class="col-md-4">
         <p class="m-0 text-center text-white fs-4 pb-2 fw-bold">Follow us: </p>
         <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="visit our Facebook page">
           <a href="https://twitter.com" target="_blank" rel="noopener">
@@ -86,11 +100,11 @@
           <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="visit our Youtube channel">
             <i class="fab fa-youtube-square ms-1 text-white fs-3"></i></a>
       </div>
-      <div class="col text-end ">
-        <form method="post" action="{% url 'subscribe' %}">
+      <div class="col-md-4">
+        <form method="post" action="{% url 'subscribe' %}" class="text-center">
           {% csrf_token %}
           <div class="col-auto">
-            <p class="pt-2">Subscribe for our newsletter</p>
+            <p class="pt-2"><strong>Subscribe</strong></p>
           </div>
           <div class="col-auto">
             <input id="email" name="email" type="email" class="form-control" placeholder="Email address" />
@@ -101,11 +115,6 @@
             </button>
           </div>
         </form>
-        {% if user.is_authenticated %}
-        <button class="btn btn-outline-success " type="submit">Logout</button>
-        {% else %}
-        <button class="btn btn-outline-success " type="submit">Login</button>
-        {% endif %}
       </div>
     </div>
   </footer>
