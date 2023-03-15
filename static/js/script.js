@@ -67,7 +67,7 @@ class TypeWriter {
   // dismiss messages accross the website
   setTimeout(function(){
     let messages = document.getElementById("msg")
-    let alert = new bootstrap.Aleret(messages)
+    let alert = new bootstrap.Alert(messages)
     alert.close();
 
   }, 2000);

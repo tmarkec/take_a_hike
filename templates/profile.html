@@ -17,6 +17,7 @@
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
+        <p class="py-4">If you wish to reset your password<a class="button secondaryAction" href="/accounts/password/reset/"> <strong> click here!</strong></a></p>
         <button type="submit" name="update" class="my-4 mx-3 btn btn-primary">Update</button>
         <button type="submit" name="delete" class="my-4 mx-3 btn btn-danger">Delete Account</button>
       </form>
