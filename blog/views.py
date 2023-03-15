@@ -92,23 +92,6 @@ def register(request):
     return render(request, 'account/signup-copy.html', {'form': form})
 
 
-# def profile(request, user_id):
-#     user = request.user
-#     context = {'user': user}
-#     return render(request, 'profile.html', context)
-
-# def profile(request):
-#     user = get_object_or_404(User, id=user_id)
-#     if request.method == 'POST':
-#         form = UserChangeForm(request.POST, instance=user)
-#         if form.is_valid():
-#             form.save()
-#     else:
-#         form = UserChangeForm(instance=user)
-#     context = {'form': form}
-#     return render(request, 'profile.html', context)
-
-
 @login_required
 def profile(request, user_id):
     user = request.user

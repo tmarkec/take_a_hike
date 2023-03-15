@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <section class="hero contain ">
   <div class="hero-img">
@@ -24,13 +24,14 @@
           rewarding adventure, I invite you to join me on a hike and experience the wonders of the great outdoors for
           yourself!</p>
       </div>
-      <div class="col-md-6">
-        <p>Image</p>
+      <div class="col-md-6 high">
+        <img src="{% static '/images/hiker.jpg' %}" alt="Happy face" class="img-fluid">
       </div>
     </div>
   </div>
 </article>
 <section class="my-5 contain text-center">
+  <hr>
   <h1 class="lead-text">Let numbers speak for themselves</h1>
   <div class="row mt-5">
     <div class="col">
