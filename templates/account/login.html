@@ -7,16 +7,16 @@
 
 {% block content %}
 
-<div class="contain form-view">
+<div class="contain forms-view">
   <div class="row">
     <div class="col-md-8 mt-5 offset-md-3">
 
 
-      <h2 class="form-text my-4">{% trans "Sign in" %}</h2>
+      <h2 class="form-text my-4">{% trans "Log in" %}</h2>
 
 
       <p>{% blocktrans %}If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+        <a href="{{ signup_url }}"><strong>sign up</strong></a> first.{% endblocktrans %}</p>
 
 
       <form class="login" method="POST" action="{% url 'account_login' %}">

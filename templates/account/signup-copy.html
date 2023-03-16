@@ -2,9 +2,10 @@
 
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="contain form-view">
-  <div class="row  m-5">
+<div class="contain">
+  <div class="row forms-view m-5">
     <div class="col-md-8 offset-md-3 mt5">
+      <h2 class="form-text my-4">Sign up</h2>
 
       <form class="signup" id="signup_form" method="POST" action="{% url 'account_register' %}">
         {% csrf_token %}

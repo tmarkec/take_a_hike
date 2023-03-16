@@ -143,11 +143,9 @@ a {
     font-size: 2rem;
     font-weight: 700;
 }
-
-.form-view {
-    height: 86vh;
+.forms-view {
+    height: 75vh;
 }
-
 #div_id_password {
     display: none;
 }

@@ -89,7 +89,7 @@ def register(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your profile has been created')
-            return redirect('post')
+            return redirect('index')
     else:
         form = FormUser()
 
@@ -127,6 +127,7 @@ def subscribe(request):
         form = SubcribersForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'ASdsadsd')
             return redirect('/')
     else:
         form = SubcribersForm()
