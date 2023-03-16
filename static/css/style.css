@@ -77,9 +77,14 @@ ul {
 
 .form-control {
     width: 90%;
-    margin: 0 auto;
+    margin: 8px 0px;
 }
-
+.scale {
+    transition: transform .5s;
+}
+.scale:hover {
+    transform: scale(1.2);
+}
 /* ------------------ index------------------- */
 
 .lead-text {
@@ -136,9 +141,8 @@ a {
     line-height: normal;
 }
 
-
-
 /* ------------------Login, logout, signup page--- */
+
 .form-text {
     font-size: 2rem;
     font-weight: 700;
@@ -149,7 +153,6 @@ a {
 #div_id_password {
     display: none;
 }
-
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {
     .navbar-expand-lg .navbar-collapse {
@@ -159,6 +162,10 @@ a {
     .justify-content-end {
         justify-content: flex-start !important;
     }
+    .logo-footer {
+        height: 60px;
+        width: 60px;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -167,11 +174,13 @@ a {
     }
 
     .form-control {
-        width: 60%;
+        width: 70%;
     }
-
+    .forms-view {
+        height: 85vh;
+    }
     .logo-footer {
-        height: 60px;
-        width: 60px;
+        height: 40px;
+        width: 40px;
     }
 }

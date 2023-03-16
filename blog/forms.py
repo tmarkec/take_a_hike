@@ -33,7 +33,7 @@ class ProfileForm(UserChangeForm):
 
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
-        for field in ['username', 'email', ]:
+        for field in ['username', 'email', 'password']:
             self.fields[field].help_text = None
 
 

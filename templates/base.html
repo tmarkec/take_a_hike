@@ -24,8 +24,8 @@
         <div class="logo-header">
           <a href="{% url 'index' %}">
             <img src="{% static 'images/logo-header.webp' %}" alt="Take a hike logo" class="img-fluid"></a>
-        </div>   
-        <h6 class="ml-4">{{ user.username }}</h6>
+        </div>
+        <!-- <h6 class="ml-4">{{ user.username }}</h6> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,19 +33,20 @@
         <div class="collapse navbar-collapse center" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ms-5">
-              <a class="nav-link " aria-current="page" href="{% url 'index' %}">Home</a>
+              <a class="nav-link scale aria-current="page" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item ms-5">
-              <a class="nav-link" href="{% url 'post' %}">Posts</a>
+              <a class="nav-link scale" href="{% url 'post' %}">Posts</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item ms-5">
-              <a class="nav-link" href="{% url 'profile' user_id=user.id %}">Profile</a>
+              <a class="nav-link scale" href="{% url 'profile' user_id=user.id %}">Profile</a>
             </li>
             {% endif %}
           </ul>
           <ul class="d-flex justify-content-end" role="search">
             {% if user.is_authenticated %}
+            <li class="m-2"> Hi {{ user.username }}<li>
             <li class="btn btn-outline-success">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
@@ -66,9 +67,7 @@
           {% for message in messages %}
           <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
             {{ message | safe }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-
-            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
           {% endfor %}
         </div>
@@ -91,14 +90,13 @@
       <div class="col-md-4">
         <p class="m-0 text-center text-white fs-4 pb-2 fw-bold">Follow us: </p>
         <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="visit our Facebook page">
-          <a href="https://twitter.com" target="_blank" rel="noopener">
-            <i class="fab fa-facebook-square ms-1 text-white fs-3"></i></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="visit our Twitter page">
-            <i class="fab fa-twitter-square ms-1 text-white fs-3"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="visit our Instagram page">
-            <i class="fab fa-instagram-square ms-1 text-white fs-3"></i></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="visit our Youtube channel">
-            <i class="fab fa-youtube-square ms-1 text-white fs-3"></i></a>
+          <i class="fab fa-facebook-square ms-1 text-white fs-3 scale"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="visit our Twitter page">
+          <i class="fab fa-twitter-square ms-1 text-white fs-3 scale"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="visit our Instagram page">
+          <i class="fab fa-instagram-square ms-1 text-white fs-3 scale"></i></a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="visit our Youtube channel">
+          <i class="fab fa-youtube-square ms-1 text-white fs-3 scale"></i></a>
       </div>
       <div class="col-md-4">
         <form method="post" action="{% url 'subscribe' %}" class="text-center">
@@ -118,6 +116,8 @@
       </div>
     </div>
   </footer>
+  <!-- javascript -->
+
   <script src="{% static 'js/script.js' %}"></script>
 </body>
 
