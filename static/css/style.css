@@ -2,6 +2,7 @@
 
 .red {
     color: red;
+    background-color: blue;
 }
 .contain {
     margin: auto;
