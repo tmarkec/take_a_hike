@@ -14,7 +14,9 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
   <title>Take a hike</title>
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
       <div class="container-fluid">
         <div class="logo-header">
           <a href="{% url 'index' %}">
-            <img src="{% static 'images/logo-header.webp' %}" alt="Take a hike logo" class="img-fluid"></a>
+            <img src="{% static 'images/logo_header.webp' %}" alt="Take a hike logo" class="img-fluid"></a>
         </div>
         <!-- <h6 class="ml-4">{{ user.username }}</h6> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -84,7 +86,7 @@
         <div class="logo-footer" onclick="window.location.href='index.html'" role="img" aria-label="Take a hike logo"
           title="Take a hike logo">
           <a href="{% url 'index' %}">
-            <img src="{% static 'images/logo-footer.webp'%}" alt="Take a hike logo" class="img-fluid"></a>
+            <img src="{% static 'images/logo_footer.webp'%}" alt="Take a hike logo" class="img-fluid"></a>
         </div>
       </div>
       <div class="col-md-4">
