@@ -131,23 +131,6 @@ def subscribe(request):
             return redirect('/')
     else:
         form = SubcribersForm()
-        # return redirect('/')
 
     context = {'form': form}
     return render(request, 'index.html', context)
-    # if request.method == 'POST':
-    #     email = request.POST.get('email', None)
-    #     if not email:
-    #         messages.error(request,
-    #  'You must type legit email address to subscribe')
-    #     try:
-    #         validate_email(email)
-    #     except ValidationError as e:
-    #         messages.error(request, e.messages[0])
-    #         return redirect("/")
-    #     subscribe_model_instance = Subscription()
-    #     subscribe_model_instance.save()
-    #     # messages.success(request,
-    #  f'{email} email was successfully subscribed to our newsletter!')
-    #     return redirect(request.META.get("HTTP_REFERER", "/"))
-    
