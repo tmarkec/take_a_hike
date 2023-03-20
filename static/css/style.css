@@ -53,7 +53,7 @@ ul {
     background-image: url('/static/images/hero_img.jpg');
     background-position: center center;
     background-size: cover;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
 }
 
@@ -179,7 +179,7 @@ a {
     }
 
     .form-control {
-        width: 70%;
+        width: 90%;
     }
     .forms-view {
         min-height: 85vh;
