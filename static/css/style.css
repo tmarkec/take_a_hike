@@ -145,7 +145,13 @@ a {
     font-family: 'Dosis', sans-serif;
     line-height: normal;
 }
-
+/* -------------profile-------------------- */
+.user-img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
 /* ------------------Login, logout, signup page--- */
 
 .form-text {

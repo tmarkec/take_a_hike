@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Subscription
+from .models import Post, Comment, Subscription, Profile
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -27,3 +27,6 @@ class CommentAdmin(admin.ModelAdmin):
 @admin.register(Subscription)
 class SubscribedUserAdmin(admin.ModelAdmin):
     list_display = ('email', 'created_on')
+
+
+admin.site.register(Profile)

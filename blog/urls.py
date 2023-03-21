@@ -3,6 +3,7 @@ from django.urls import path
 from django.contrib.auth.models import User
 from django.contrib.auth import views as auth_views
 
+
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('post/', views.PostList.as_view(), name='post'),

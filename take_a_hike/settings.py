@@ -32,7 +32,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["blog-hike.herokuapp.com", "localhost"]
 
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'take_a_hike.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# if DEBUG:
+# if 'DEVELOPMENT' in os.environ:
 #     DATABASES = {
 #         'default': {
 #             'ENGINE': 'django.db.backends.sqlite3',

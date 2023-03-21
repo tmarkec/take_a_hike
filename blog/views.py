@@ -12,6 +12,7 @@ from django.urls import reverse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from .models import Subscription
+from django.core.mail import send_mail
 
 # Create your views here.
 # def index(request):
@@ -100,14 +101,12 @@ def register(request):
 def profile(request, user_id):
     user = request.user
     if request.method == 'POST':
-        # If the user clicked on the "Update" button
         if 'update' in request.POST:
             form = ProfileForm(request.POST, instance=user)
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Profile updated successfully.')
                 return redirect('profile', user_id=user_id)
-        # If the user clicked on the "Delete" button
         elif 'delete' in request.POST:
             user.delete()
             logout(request)
@@ -127,7 +126,13 @@ def subscribe(request):
         form = SubcribersForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'ASdsadsd')
+            messages.success(request, 'You subscribed to our newsletter!')
+            email = request.POST.get('email')
+            subject = 'Confirm your subscription'
+            message = 'Thank you for subscribing to our newsletter, you will get updates on our future adventures!'
+            from_email = 'tmarkec@gmail.com'
+            recipient_list = [email]
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             return redirect('/')
     else:
         form = SubcribersForm()
