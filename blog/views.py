@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm, SubcribersForm
 from django.contrib import messages
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login, authenticate
 from django.urls import reverse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
@@ -88,7 +88,11 @@ def register(request):
     if request.method == 'POST':
         form = FormUser(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
             messages.success(request, 'Your profile has been created')
             return redirect('index')
     else:
@@ -128,8 +132,8 @@ def subscribe(request):
             form.save()
             messages.success(request, 'You subscribed to our newsletter!')
             email = request.POST.get('email')
-            subject = 'Confirm your subscription'
-            message = 'Thank you for subscribing to our newsletter, you will get updates on our future adventures!'
+            subject = 'Take a hike subscription'
+            message = 'Thank you for subscribing to our newsletter, you will get updates for our future adventures! Go back https://blog-hike.herokuapp.com/'
             from_email = 'tmarkec@gmail.com'
             recipient_list = [email]
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
