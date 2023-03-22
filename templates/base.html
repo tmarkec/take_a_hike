@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load active_link_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,19 +23,22 @@
   <header class="contain sticky-top">
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75">
       <div class="container-fluid">
-        <div class="logo-header">
-          <a href="{% url 'index' %}"></a>
+        <div class="left">
+        <div class="logo-header" onclick="window.location.href='index.html'" role="img" aria-label="Take a hike logo"
+        title="Take a hike logo">
+          <a href="{% url 'index' %}">
             <img src="{% static 'images/logo_header.webp' %}" alt="Take a hike logo" class="img-fluid"></a>
         </div>
-        <!-- <h6 class="ml-4">{{ user.username }}</h6> -->
+        <h5 class="username">{{ user.username|title }}</h5>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse center" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ms-5">
-              <a class="nav-link scale" aria-current="page" href="{% url 'index' %}">Home</a>
+            <li class="nav-item ms-5 {% active_link 'index' %}">
+              <a class="{% active_link 'index' %} nav-link scale" aria-current="page" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item ms-5">
               <a class="nav-link scale" href="{% url 'post' %}">Posts</a>
@@ -48,7 +51,7 @@
           </ul>
           <ul class="d-flex justify-content-end" role="search">
             {% if user.is_authenticated %}
-            <li class="m-2"> Hi {{ user.username }}<li>
+            
             <li class="btn btn-outline-success">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
