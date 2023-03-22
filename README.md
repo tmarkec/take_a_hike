@@ -22,10 +22,10 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 3. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
 5. [Testing](#testing)
-6. [Deployment](#deployment)
-7. [Credits](#credits)
-8. [Acknowledgements](#acknowledgements)
-
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 ## UX Design:
 
@@ -260,6 +260,18 @@ Below is the database diagram that I created using LucidCharts.
 
 ## Testing
 The testing section can be found [here](TESTING.md).
+
+## Bugs
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| On home page hero image was not loading| Created new file path directly to cloudinary |
+| Post page was not displaying| Change path in urls.py to post/ |
+| Admin page have no style | Set DEBUG to True|
+| Locally reset password email not working| Implemented if else statemant for DEVELOMPENT in settings.py for email part|
+| No css style on heroku | Before every deployment set debug to false and run "python3 manage.py collectstatic" |
+| Deployment issue on heroku multiple times error "etag" & error collectstatic | Deleted all cloudinary files and pushed code again |
+| Password reset & password confirm templates not rendering, displayed django templates | Renamed templates from django documentation |
+| After sign up user was not logged in automaticly | Changed registration function and added extra code to store data from user and use it to login automaticly |
 
 ## Deployment
 This website is deployed to Heroku from a github repository, the following steps were taken:
