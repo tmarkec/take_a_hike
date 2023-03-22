@@ -7,8 +7,8 @@
   <div class="row my-5 mx-5 justify-content-around">
     <div class="profile-info col-md-3 my-5">
       <div class="card m-1 p-1">
-      <p class="m-0"><strong>First name:</strong> {{ user.first_name}}</p>
-      <p class="m-0"><strong>Last name:</strong> {{ user.last_name}}</p>
+      <p class="m-0"><strong>First name:</strong> {{ user.first_name|title}}</p>
+      <p class="m-0"><strong>Last name:</strong> {{ user.last_name|title}}</p>
       <p class="m-0"><strong>Email:</strong> {{ user.email }}</p>
       <p class="m-0"><strong>Username:</strong> {{ user.username }}</p>
       </div>
