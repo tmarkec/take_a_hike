@@ -107,13 +107,13 @@
         <form method="post" action="{% url 'subscribe' %}" class="text-center">
           {% csrf_token %}
           <div class="col-auto">
-            <p class="pt-2"><strong>Subscribe</strong></p>
+            <p class="pt-2"><strong>Subscribe to our Newsletter</strong></p>
           </div>
           <div class="col-auto">
             <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required />
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btncolor">
+            <button type="submit" class="btn btn-outline-light">
               <i class="fa fa-arrow-circle-right fa-lg"></i>
             </button>
           </div>

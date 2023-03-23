@@ -60,6 +60,6 @@ class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     user_img = CloudinaryField('image', default='placeholder')
-    
+
     def __str__(self):
         return str(self.user)

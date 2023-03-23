@@ -7,17 +7,20 @@
   <div class="row my-5 mx-5 justify-content-around">
     <div class="profile-info col-md-3 my-5">
       <div class="card m-1 p-1">
-      <p class="m-0"><strong>First name:</strong> {{ user.first_name|title}}</p>
-      <p class="m-0"><strong>Last name:</strong> {{ user.last_name|title}}</p>
-      <p class="m-0"><strong>Email:</strong> {{ user.email }}</p>
-      <p class="m-0"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="m-0"><strong>First name:</strong> {{ user.first_name|title}}</p>
+        <p class="m-0"><strong>Last name:</strong> {{ user.last_name|title}}</p>
+        <p class="m-0"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="m-0"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="m-0"><strong>Bio:</strong> {{ user.profile.bio }}</p>
+        <p class="m-0"><strong>Username:</strong> {{ user.bio }}</p>
       </div>
     </div>
     <div class="profile-form col-md-5">
       <form method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <p class="py-4">If you wish to reset your password<a class="button secondaryAction" href="#"> <strong> click here!</strong></a></p>
+        <p class="py-4">If you wish to reset your password<a class="button secondaryAction" href="#"> <strong> click
+              here!</strong></a></p>
         <button type="submit" name="update" class="my-4 mx-3 btn btn-primary">Update</button>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Delete
@@ -42,5 +45,10 @@
     </div>
   </div>
 </div>
+</form>
+<form action="/updatebio/" method="post">
+  {% csrf_token %}
+  {{ bio_form|crispy }}
+  <button type="submit" name="update" class="my-4 mx-3 btn btn-primary">Update</button>
 </form>
 {% endblock %}

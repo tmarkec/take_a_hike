@@ -1,22 +1,17 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
-from .models import Post
-from .forms import CommentForm, FormUser
+from .models import Post, Subscription, Profile
+from .forms import CommentForm, FormUser, ProfileForm, SubcribersForm, BioForm
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from .forms import ProfileForm, SubcribersForm
 from django.contrib import messages
 from django.contrib.auth import logout, login, authenticate
 from django.urls import reverse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from .models import Subscription
 from django.core.mail import send_mail
-
-# Create your views here.
-# def index(request):
-#     return render(request, 'index.html')
+from django.http import HttpResponseRedirect
 
 
 class IndexView(View):
@@ -31,15 +26,26 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+# def post_list(request):
+#     post_list = Post.objects.filter(status=1).order_by('-created_on')
+#     paginator = Paginator(post_list, 6)
+#     page = request.GET.get('page')
+#     posts = paginator.get_page(page)
+#     context = {
+#         'posts': posts
+#     }
+#     return render(request, 'post.html', context)
+
+
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by('created_on')
-        liked = True
-        # if post.likes.filter(id=self.request.user.id).exist():
-        #     liked = True
+        comments = post.comments.filter(approved=True).order_by('-created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         return render(
             request,
@@ -55,10 +61,10 @@ class PostDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by('created_on')
-        liked = True
-        # if post.likes.filter(id=self.request.user.id).exist():
-        #     liked = True
+        comments = post.comments.filter(approved=True).order_by('-created_on')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         comment_form = CommentForm(data=request.POST)
 
@@ -81,6 +87,18 @@ class PostDetail(View):
                 "liked": liked,
                 "comment_form": CommentForm()
             })
+
+
+class PostLike(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        
+        return HttpResponseRedirect(reverse('single_post', args=[slug]))
 
 
 def register(request):
@@ -118,7 +136,24 @@ def profile(request, user_id):
             return redirect('index')
     else:
         form = ProfileForm(instance=user)
-    return render(request, 'profile.html', {'form': form})
+        bio_form = BioForm()
+    return render(request, 'profile.html', {'form': form, 'bio_form': bio_form, })
+
+
+def update_bio(request):
+    user = request.user
+    if request.method == 'POST':
+        if 'update' in request.POST:
+            bio_form = BioForm(request.POST, instance=user)
+            if bio_form.is_valid():
+                bio_form.save()
+                messages.success(request, 'Bio updated successfully.')
+                return redirect('profile', user_id=user.id)
+    else:
+        bio_form = BioForm()
+
+    context = {'bio_form': bio_form}
+    return render(request, 'profile.html', context)
 
 
 def logout_view(request):
