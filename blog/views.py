@@ -122,22 +122,33 @@ def register(request):
 @login_required
 def profile(request, user_id):
     user = request.user
+    try:
+        profile = user.profile
+    except Profile.DoesNotExist:
+        profile = Profile(user=user)
     if request.method == 'POST':
         if 'update' in request.POST:
-            p_form = ProfileForm(request.POST, instance=user)
-            b_form = BioForm(request.POST, instance=user.profile)
-            if p_form.is_valid() or p_form.is_valid():
-                p_form.save()
-                b_form.save()
+            profile_form = ProfileForm(request.POST, instance=user)
+            bio_form = BioForm(request.POST, request.FILES, instance=profile)
+            if profile_form.is_valid() and bio_form.is_valid():
+                profile_form.save()
+                profile = bio_form.save(commit=False)
+                profile.user = user
+                profile.save()
                 messages.success(request, 'Account updated successfully.')
                 return redirect('profile', user_id=user_id)
+        elif 'delete' in request.POST:
+            user.delete()
+            logout(request)
+            messages.success(request, 'Account deleted successfully.')
+            return redirect('index')
     else:
-        p_form = ProfileForm(instance=user)
-        b_form = BioForm(instance=user.profile)
+        profile_form = ProfileForm(instance=user)
+        bio_form = BioForm(instance=profile)
 
     context = {
-        'p_form': p_form,
-        'b_form': b_form
+        'profile_form': profile_form,
+        'bio_form': bio_form
     }
     return render(request, 'profile.html', context)
 
