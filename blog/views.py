@@ -124,36 +124,58 @@ def profile(request, user_id):
     user = request.user
     if request.method == 'POST':
         if 'update' in request.POST:
-            form = ProfileForm(request.POST, instance=user)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Profile updated successfully.')
+            p_form = ProfileForm(request.POST, instance=user)
+            b_form = BioForm(request.POST, instance=user.profile)
+            if p_form.is_valid() or p_form.is_valid():
+                p_form.save()
+                b_form.save()
+                messages.success(request, 'Account updated successfully.')
                 return redirect('profile', user_id=user_id)
-        elif 'delete' in request.POST:
-            user.delete()
-            logout(request)
-            messages.success(request, 'Account deleted successfully.')
-            return redirect('index')
     else:
-        form = ProfileForm(instance=user)
-        bio_form = BioForm()
-    return render(request, 'profile.html', {'form': form, 'bio_form': bio_form, })
+        p_form = ProfileForm(instance=user)
+        b_form = BioForm(instance=user.profile)
 
-
-def update_bio(request):
-    user = request.user
-    if request.method == 'POST':
-        if 'update' in request.POST:
-            bio_form = BioForm(request.POST, instance=user)
-            if bio_form.is_valid():
-                bio_form.save()
-                messages.success(request, 'Bio updated successfully.')
-                return redirect('profile', user_id=user.id)
-    else:
-        bio_form = BioForm()
-
-    context = {'bio_form': bio_form}
+    context = {
+        'p_form': p_form,
+        'b_form': b_form
+    }
     return render(request, 'profile.html', context)
+
+    # user = request.user
+    # if request.method == 'POST':
+    #     if 'update' in request.POST:
+    #         form = ProfileForm(request.POST, instance=user)
+    #         bio_form = BioForm(request.POST, instance=user)
+    #         if form.is_valid() or bio_form.is_valid():
+    #             form.save()
+    #             bio_form.save()
+    #             messages.success(request, 'Profile updated successfully.')
+    #             return redirect('profile', user_id=user_id)
+    #     elif 'delete' in request.POST:
+    #         user.delete()
+    #         logout(request)
+    #         messages.success(request, 'Account deleted successfully.')
+    #         return redirect('index')
+    # else:
+    #     form = ProfileForm(instance=user)
+    #     bio_form = BioForm()
+    # return render(request, 'profile.html', {'form': form, 'bio_form': bio_form, })
+
+
+# def update_bio(request):
+#     user = request.user
+#     if request.method == 'POST':
+#         if 'update' in request.POST:
+#             bio_form = BioForm(request.POST, instance=user)
+#             if bio_form.is_valid():
+#                 bio_form.save()
+#                 messages.success(request, 'Bio updated successfully.')
+#                 return redirect('profile', user_id=user.id)
+#     else:
+#         bio_form = BioForm()
+
+#     context = {'bio_form': bio_form}
+#     return render(request, 'profile.html', context)
 
 
 def logout_view(request):

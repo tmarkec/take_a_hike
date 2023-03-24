@@ -12,13 +12,14 @@
         <p class="m-0"><strong>Email:</strong> {{ user.email }}</p>
         <p class="m-0"><strong>Username:</strong> {{ user.username }}</p>
         <p class="m-0"><strong>Bio:</strong> {{ user.profile.bio }}</p>
-        <p class="m-0"><strong>Username:</strong> {{ user.bio }}</p>
       </div>
+      <p class="m-0"><strong>Image:</strong> {{ user.profile.user_img }}</p>
     </div>
     <div class="profile-form col-md-5">
       <form method="post">
         {% csrf_token %}
-        {{ form|crispy }}
+        {{ p_form|crispy }}
+        {{ b_form|crispy }}
         <p class="py-4">If you wish to reset your password<a class="button secondaryAction" href="#"> <strong> click
               here!</strong></a></p>
         <button type="submit" name="update" class="my-4 mx-3 btn btn-primary">Update</button>

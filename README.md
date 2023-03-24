@@ -7,7 +7,7 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 [Click Here To Visit Live Site](https://blog-hike.herokuapp.com/)  
 
 ## Table Of Contents:
-1. [UX Design](#ux-design)
+1. [Design & Planning](#design-&-planning)
     * [User Stories](#user-stories)
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
@@ -17,7 +17,13 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
     
 2. [Features](#features)
     * [Navigation](#Navigation-bar)
-    * [footer](#footer)
+    * [Footer](#footer)
+    * [Home page](#home-page)
+    * [Post page](#post-page)
+    * [Single post page](#single-post-page)
+    * [Profile page](#profile-page)
+    * [Login page](#profile-page)
+    * [Sign up page](#signup-page)
 
 3. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
@@ -27,7 +33,7 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 8. [Credits](#credits)
 9. [Acknowledgements](#acknowledgements)
 
-## UX Design:
+## Design & Planning:
 
 ### User Stories
 - As a first time user I want to understand the purpose of the website and easily navigate through
@@ -45,39 +51,47 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 
 ### Wireframes
 Below are the wireframes for the site that I created using balsamiq. 
-
+#### Desktop
 <details><summary>Home page</summary>
-<img src="readme_img/home page.png">
+<img src="readme_img/wireframes/bals_home.png">
 </details>
 
 <details><summary>Post page</summary>
-<img src="readme_img/post_page.png">
+<img src="readme_img/wireframes/bals_post.png">
 </details>
 
-<details><summary>Posts page</summary>
-<img src="readme_img/login_post.png">
+<details><summary>Single post page</summary>
+<img src="readme_img/wireframes/bals_single.png">
 </details>
 
-<details><summary>Contact & Edit profile page</summary>
-<img src="readme_img/contact_edit_profile.png">
+<details><summary>Profile page</summary>
+<img src="readme_img/wireframes/bals_profile.png">
 </details>
 
 <details><summary>Signup page</summary>
-<img src="readme_img/sign_up_page.png">
+<img src="readme_img/wireframes/bals_sign.png">
 </details>
 
-<details><summary>Mobile Home & Post page</summary>
-<img src="readme_img/mobile_home_posts.png">
+#### Mobile
+<details><summary>Home page</summary>
+<img src="readme_img/wireframes/bals_m_home.png">
 </details>
 
-<details><summary>Mobile Contact & Edit profile page</summary>
-<img src="readme_img/mobile_contact_edit_profile.png">
+<details><summary>Posts page</summary>
+<img src="readme_img/wireframes/bals_m_post.png">
 </details>
 
-<details><summary>Mobile Posts page and Navigation menu</summary>
-<img src="readme_img/mobile_posts_navbar.png">
+<details><summary>Single post page & navigation menu</summary>
+<img src="readme_img/wireframes/bals_m_single.png">
 </details>
 
+<details><summary>Profile</summary>
+<img src="readme_img/wireframes/bals_m_profile.png">
+</details>
+
+<details><summary>Sign up</summary>
+<img src="readme_img/wireframes/bals_m_signup.png">
+</details>
 
   
 ### Agile Methodology
@@ -108,9 +122,7 @@ The Agile Methodology was used to plan this project. This was implemented throug
 </details>
 
 ### Typography
-- The font that was used for the logo was **Allerta Stencil**.
-- The font that was used for the heading on the home page was **Satisfy**.
-- **Athiti** font was used for the body.
+
 
 
 ### Colour Scheme
@@ -123,8 +135,9 @@ I did also have some buttons like the login, signup, logout, delete, update butt
 ### DataBase Diagram
 Below is the database diagram that I created using LucidCharts.
 
-![Database Diagram](readme-docs/wireframes/database.jpg)  
-- - - 
+<details><summary>DataBase diagram</summary>
+<img src="readme_img/database.jpeg">
+</details>
 
 ## Features:
 
@@ -272,6 +285,7 @@ The testing section can be found [here](TESTING.md).
 | Deployment issue on heroku multiple times error "etag" & error collectstatic | Deleted all cloudinary files and pushed code again |
 | Password reset & password confirm templates not rendering, displayed django templates | Renamed templates from django documentation |
 | After sign up user was not logged in automaticly | Changed registration function and added extra code to store data from user and use it to login automaticly |
+| Profile model information was not updating with user model on profile page| Combined 2 forms into 1 function |
 
 ## Deployment
 This website is deployed to Heroku from a github repository, the following steps were taken:
@@ -306,13 +320,12 @@ This website is deployed to Heroku from a github repository, the following steps
 ## Credits
 - [Stack Overflow](https://stackoverflow.com/) is probably a developers best resource, this provided me with many answers to my questions.
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
-- [bbcgoodfood](https://www.bbcgoodfood.com/) as some of the recipes came from this site. This site is a great resource for anyone who likes cooking.
 - [Unsplash](https://unsplash.com/) all images were take from unsplash.
 
 
 ## Acknowledgements:
-- I would like to thank my mentor Adegbenga Adeye for all help throughout the project and for being really positive about the course.
-- I would like to thank Code Institutes Slack Communtiy as this helped me so much when I got stuck on part of my project and also with course challenges.
-- I would also like to thank our chort facilitators Kenan Wright and Kasia Bogucka, for answering any course related questions I asked and for porviding us with a weekly study schedule.
+- I would like to thank my mentor Narander Singh for all help throughout the project and guidance in general
+- I would like to thank Code Institutes Slack Communtiy, and tutor support as this helped me so much when I got stuck on part of my project
+- I would also like to thank our chort facilitators Irene Neville, for answering any course related questions I asked and for porviding us with a weekly guidance information about the project
 
 [Back to the top](#the-recipe-blog)
