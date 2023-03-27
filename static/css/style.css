@@ -51,7 +51,12 @@ ul {
 .hero {
     display: flex;
 }
-
+.active-class {
+    font-weight: bolder;
+    border-bottom: 2px solid rgb(210, 85, 8);
+    border-radius: 4px;
+    padding-bottom: 0;
+}
 /* hero image */
 .hero-img {
 
@@ -102,7 +107,9 @@ ul {
 .grf {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 10px;
+    border-radius: 50%;
+    background-color: rgb(236, 72, 7);
 }
 /* ------------------ index------------------- */
 
