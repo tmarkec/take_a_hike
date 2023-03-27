@@ -1,4 +1,4 @@
-# The Recipe Blog
+# Take a hike
 
 Take a hike is fully responsive full stack webiste that I built using the Dajngo Full Stack framework for my Portfolio Project 4. I created this website to promote adventure style of life and to give users opportunity to explore local area/ mountains with us.
   
