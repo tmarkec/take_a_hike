@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 
-.red {
-    color: red;
-    background-color: blue;
-}
 .contain {
     margin: auto;
     font-family: 'Dosis', sans-serif;
@@ -100,6 +96,14 @@ ul {
 .scale:hover {
     transform: scale(1.2);
 }
+.sub {
+    position: relative;
+}
+.grf {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 /* ------------------ index------------------- */
 
 .lead-text {
@@ -134,7 +138,9 @@ ul {
 /* ---------------posts page--------------- */
 
 .card {
-    background-color: rgb(231, 236, 238);
+    background-color: rgb(210, 85, 8);
+    background-image: radial-gradient(rgb(210, 85, 8), white);
+    border: none;
 }
 
 a {
@@ -147,7 +153,8 @@ a {
 }
 
 .post-link:hover {
-    color: rgb(15, 111, 190);
+    color: rgb(2, 39, 6);
+    font-weight: 800;
 }
 
 .paragraph-text {
@@ -155,11 +162,28 @@ a {
     font-family: 'Dosis', sans-serif;
     line-height: normal;
 }
+.post-date {
+    display: flex;
+    flex-direction: row;
+}
 /* --------------post page------------------ */
 textarea {
     width: 300px;
     height: 150px;
   }
+  .none {
+    border-radius: 50%;
+    border: none;
+  }
+  .none:hover {
+    background-color: rgb(240, 179, 141);
+  }
+  .border-div {
+    box-shadow: 6px 4px 8px;
+    border-radius: 10px;
+	
+}
+  
 /* -------------profile-------------------- */
 .user-img {
     width: 150px;
@@ -177,6 +201,12 @@ textarea {
 }
 #div_id_password {
     display: none;
+}
+.form-box {
+    border: 1px solid rgb(236, 72, 7);
+    border-radius: 10px;
+    box-shadow: 5px 5px 19px 5px rgb(236, 72, 7);
+
 }
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {

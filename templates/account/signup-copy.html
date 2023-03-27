@@ -3,8 +3,8 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="contain forms-view">
-  <div class="row m-4">
-    <div class="col-md-8 offset-md-3 mt5">
+  <div class="row m-4 justify-content-md-center">
+    <div class="col-md-6 mt5 text-center form-box">
       <h2 class="form-text my-4">Sign up</h2>
 
       <form class="signup" id="signup_form" method="POST" action="{% url 'account_register' %}">
@@ -13,7 +13,7 @@
 
         <!-- <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> -->
         <br>
-        <button type="submit" class="btn btn-outline-info">Sign up</button>
+        <button type="submit" class="btn btn-outline-info m-3">Sign up</button>
       </form>
     </div>
   </div>

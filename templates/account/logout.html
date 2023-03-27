@@ -6,9 +6,9 @@
 
 {% block content %}
 <div class="contain forms-view">
-  <div class="row my-4">
-    <div class="col-md-8 mt-5 offset-md-3">
-      <h1 class="form-text my-4 text-center">{% trans "Sign Out" %}</h1>
+  <div class="row my-4 justify-content-md-center">
+    <div class="col-md-6 mt-5 text-center form-box">
+      <h1 class="form-text my-4">{% trans "Sign Out" %}</h1>
       <div class="text-center">
         <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -17,7 +17,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button type="submit" class="btn btn-outline-info">{% trans 'Sign Out' %}</button>
+          <button type="submit" class="btn btn-outline-info m-3">{% trans 'Sign Out' %}</button>
         </form>
       </div>
     </div>
