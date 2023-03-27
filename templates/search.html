@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="contain forms-view">
+    <div class="row m-4 justify-content-md-center">
+        <div class="col-md-8 text-center form-box mt5">
+            <h2 class="form-text my-4">Search here</h2>
+            <p>Back to <a href="{% url 'post' %}"><strong> post page!</strong></a></p>
+            <form method="GET" action="{% url 'search_results' %}">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="row height m-2">
+            {% for post in post_list %}
+            <div class="col-md-4">
+                <div class="card mb-4 p-3 mb-5 rounded">
+                    <div class="card-body scale">
+                        <div class="image-container">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="../static/images/kerry.jpg">
+                            {% else %}
+                            <img class="card-img-top" src="{{ post.featured_image.url }}">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="author">Author: {{ post.author }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'single_post' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="card-text">{{ post.excerpt }}</p>
+                        </a>
+                        <hr />
+                        <div class="post-date">
+                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-thumbs-up"></i>
+                                {{ post.number_of_likes }}</p>
+                            <div class="px-3">
+                                {% with comments.count as total_comments %}
+                                <strong class="text-secondary"><i class="far fa-comments"></i>
+                                    {{ total_comments }}</strong>
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
