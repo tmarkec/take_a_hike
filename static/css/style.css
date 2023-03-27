@@ -111,6 +111,9 @@ ul {
     border-radius: 50%;
     background-color: rgb(236, 72, 7);
 }
+.btn-outline-light {
+--bs-btn-hover-color:rgb(236, 72, 7);
+}
 /* ------------------ index------------------- */
 
 .lead-text {
