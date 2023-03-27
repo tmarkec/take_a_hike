@@ -1,4 +1,5 @@
 {% load static %}
+{% load active_link_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,20 +38,14 @@
         <div class="collapse navbar-collapse center" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ms-5">
-              <a 
-              {% if request.path == '/' %}
-              class="nav-link scale active-class"
-              {% else %}
-              class="nav-link scale"
-              {% endif %}
-              aria-current="page" href="{% url 'index' %}">Home</a>
+              <a class=" {% active_link 'index' 'active-class' %} nav-link scale" aria-current="page" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item ms-5">
-              <a class=" nav-link scale" aria-current="page" href="{% url 'post' %}">Posts</a>
+              <a class="{% active_link 'post' 'active-class' %} nav-link scale" aria-current="page" href="{% url 'post' %}">Posts</a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item ms-5">
-              <a class=" nav-link scale" aria-current="page" href="{% url 'profile' user_id=user.id %}">Profile</a>
+              <a class=" {% active_link 'profile' 'active-class' %} nav-link scale" aria-current="page" href="{% url 'profile' user_id=user.id %}">Profile</a>
             </li>
             {% endif %}
           </ul>
