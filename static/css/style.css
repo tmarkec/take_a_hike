@@ -3,7 +3,7 @@
 .contain {
     margin: auto;
     font-family: 'Dosis', sans-serif;
-    max-width: 1200px;
+    max-width: 1400px;
 }
 
 ul {
@@ -103,10 +103,10 @@ ul {
 .scale:hover {
     transform: scale(1.2);
 }
-.sub {
+.form-parent {
     position: relative;
 }
-.grf {
+.form-child {
     position: absolute;
     bottom: 0;
     right: 10px;
@@ -223,8 +223,23 @@ textarea {
   
 /* -------------profile-------------------- */
 .user-img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+}
+/* .profile-fields {
+    width:70%;
+    border:1px solid rgb(236, 72, 7);
+    border-radius: 5px;
+} */
+#id_first_name,
+#id_last_name,
+#id_email,
+#id_bio,
+#id_login,
+#id_password {
+    width:90%;
+    border:1px solid rgb(236, 72, 7);
+    border-radius: 5px;
 }
 
 /* ------------------Login, logout, signup page--- */
@@ -236,14 +251,16 @@ textarea {
 .forms-view {
     min-height: 75vh;
 }
-/* #div_id_password {
+#div_id_password {
     display: none;
-} */
+}
 .form-box {
     border: 1px solid rgb(236, 72, 7);
     border-radius: 10px;
     box-shadow: 5px 5px 19px 5px rgb(236, 72, 7);
-
+}
+.hover-txt:hover {
+    color: rgb(236, 72, 7);
 }
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {

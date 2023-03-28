@@ -64,7 +64,7 @@
 //   };
   
 
-  dismiss messages accross the website
+  // dismiss messages accross the website
   setTimeout(function() {
     let messages = document.getElementById("msg");
     let alert = new bootstrap.Alert(messages);

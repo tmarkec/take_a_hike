@@ -22,11 +22,18 @@
       </div>
     </div>
     <div class="profile-form col-md-5">
-      <form method="post">
+      <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
-        {{ profile_form|crispy }}
+        <p> {{ profile_form.first_name.label_tag }} </p>
+        <p class="profile-fields"> {{ profile_form.first_name }}</p>
+        <p> {{ profile_form.last_name.label_tag }} </p>
+        <p class="profile-fields"> {{ profile_form.last_name }}</p>
+        <p> {{ profile_form.email.label_tag }} </p>
+        <p class="profile-fields"> {{ profile_form.email }}</p>
+        <!-- {{ profile_form|crispy }} -->
         {{ bio_form|crispy }}
-        <p class="py-4">If you wish to reset your password<a class="button secondaryAction" href="{% url 'account_reset_password' %}"> <strong> click
+        <p class="py-4">If you wish to reset your password<a class="button secondaryAction"
+            href="{% url 'account_reset_password' %}"> <strong class="hover-txt"> click
               here!</strong></a></p>
         <button type="submit" name="update" class="my-4 mx-3 btn btn-primary">Update</button>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
