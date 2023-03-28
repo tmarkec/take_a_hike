@@ -2,12 +2,14 @@ from . import views
 from django.urls import path
 from django.contrib.auth.models import User
 from django.contrib.auth import views as auth_views
+from .views import search_results
 
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('post/', views.PostList.as_view(), name='post'),
 #     path('updatebio/', views.update_bio, name='updatebio'),
+    path('search/', views.search_results, name='search_results'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='single_post'),
     path('like/<slug:slug>/', views.PostLike.as_view(), name='post_like'),
     path('account/signup/', views.register, name='account_register'),

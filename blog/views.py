@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.db.models import Q
 from django.views import generic, View
 from .models import Post, Subscription, Profile
 from .forms import CommentForm, FormUser, ProfileForm, SubcribersForm, BioForm
@@ -211,3 +212,16 @@ def subscribe(request):
 
     context = {'form': form}
     return render(request, 'index.html', context)
+
+
+def search_results(request):
+    query = request.GET.get('query')
+    if query is not None:
+        posts = Post.objects.filter(title__contains=query)
+        context = {
+            'query': query,
+            'posts': posts
+        }
+        return render(request, 'search.html', context)
+    else:
+        return render(request, 'search.html',)
