@@ -64,10 +64,10 @@
 //   };
   
 
-  // dismiss messages accross the website
-  // setTimeout(function() {
-  //   let messages = document.getElementById("msg");
-  //   let alert = new bootstrap.Alert(messages);
-  //   alert.close();
+  dismiss messages accross the website
+  setTimeout(function() {
+    let messages = document.getElementById("msg");
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
 
-  // }, 2500);
+  }, 2500);

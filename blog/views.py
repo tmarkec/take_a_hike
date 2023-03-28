@@ -27,17 +27,6 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-# def post_list(request):
-#     post_list = Post.objects.filter(status=1).order_by('-created_on')
-#     paginator = Paginator(post_list, 6)
-#     page = request.GET.get('page')
-#     posts = paginator.get_page(page)
-#     context = {
-#         'posts': posts
-#     }
-#     return render(request, 'post.html', context)
-
-
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -98,7 +87,7 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('single_post', args=[slug]))
 
 
@@ -153,42 +142,6 @@ def profile(request, user_id):
     }
     return render(request, 'profile.html', context)
 
-    # user = request.user
-    # if request.method == 'POST':
-    #     if 'update' in request.POST:
-    #         form = ProfileForm(request.POST, instance=user)
-    #         bio_form = BioForm(request.POST, instance=user)
-    #         if form.is_valid() or bio_form.is_valid():
-    #             form.save()
-    #             bio_form.save()
-    #             messages.success(request, 'Profile updated successfully.')
-    #             return redirect('profile', user_id=user_id)
-    #     elif 'delete' in request.POST:
-    #         user.delete()
-    #         logout(request)
-    #         messages.success(request, 'Account deleted successfully.')
-    #         return redirect('index')
-    # else:
-    #     form = ProfileForm(instance=user)
-    #     bio_form = BioForm()
-    # return render(request, 'profile.html', {'form': form, 'bio_form': bio_form, })
-
-
-# def update_bio(request):
-#     user = request.user
-#     if request.method == 'POST':
-#         if 'update' in request.POST:
-#             bio_form = BioForm(request.POST, instance=user)
-#             if bio_form.is_valid():
-#                 bio_form.save()
-#                 messages.success(request, 'Bio updated successfully.')
-#                 return redirect('profile', user_id=user.id)
-#     else:
-#         bio_form = BioForm()
-
-#     context = {'bio_form': bio_form}
-#     return render(request, 'profile.html', context)
-
 
 def logout_view(request):
     logout(request)
@@ -205,7 +158,8 @@ def subscribe(request):
             message = 'Thank you for subscribing to our newsletter, you will get updates for our future adventures! Go back https://blog-hike.herokuapp.com/'
             from_email = 'tmarkec@gmail.com'
             recipient_list = [email]
-            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            send_mail(subject, message, from_email,
+                      recipient_list, fail_silently=False)
             return redirect('/')
     else:
         form = SubcribersForm()

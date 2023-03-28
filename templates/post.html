@@ -6,10 +6,17 @@
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 contain">
-            <div>
+            <div class="post-title">
             <h1 class="lead-text my-5">My hikes</h1>
-            <a href="{% url 'search_results' %}">Search here</a>
+            <form method="GET" action="{% url 'search_results' %}">
+                {% csrf_token %}
+                <div class="sub mx-5 my-5">
+                <input type="text" name="query" placeholder="Search post..." class="form-box" required>
+                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
         </div>
+        
             <div class="row height m-2">
                 {% for post in post_list %}
                 <div class="col-md-4">

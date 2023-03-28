@@ -9,7 +9,9 @@
 ul {
     list-style: none;
 }
-
+.asteriskField {
+    display: none;
+}
 /* -----navigation menu ------*/
 .left {
     display: flex;
@@ -114,6 +116,7 @@ ul {
 .btn-outline-light {
 --bs-btn-hover-color:rgb(236, 72, 7);
 }
+
 /* ------------------ index------------------- */
 
 .lead-text {
@@ -176,6 +179,31 @@ a {
     display: flex;
     flex-direction: row;
 }
+.post-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.search-btn {
+    position: absolute;
+    right: -3px;
+    border-radius: 50%;
+    border-color: rgb(236, 72, 7);
+    background-color: rgb(236, 72, 7);
+    color: white;
+}
+.search-btn:hover {
+    background-color: white;
+    color: rgb(236, 72, 7);
+}
+.search-back {
+    color: rgb(236, 72, 7);
+    font-size: 1.7rem;
+}
+.search-back:hover {
+    color: rgb(188, 3, 3);
+}
 /* --------------post page------------------ */
 textarea {
     width: 300px;
@@ -190,8 +218,7 @@ textarea {
   }
   .border-div {
     box-shadow: 6px 4px 8px;
-    border-radius: 10px;
-	
+    border-radius: 10px;	
 }
   
 /* -------------profile-------------------- */
@@ -209,9 +236,9 @@ textarea {
 .forms-view {
     min-height: 75vh;
 }
-#div_id_password {
+/* #div_id_password {
     display: none;
-}
+} */
 .form-box {
     border: 1px solid rgb(236, 72, 7);
     border-radius: 10px;
