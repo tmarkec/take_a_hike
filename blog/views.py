@@ -173,7 +173,8 @@ def subscribe(request):
 def search_results(request):
     query = request.GET.get('query')
     if query is not None:
-        posts = Post.objects.filter(title__contains=query)
+        posts = Post.objects.filter(title__icontains=query)
+        print(posts)
         context = {
             'query': query,
             'posts': posts

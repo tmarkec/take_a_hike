@@ -50,7 +50,7 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 #### Site owner
 - As a site owner I want to be able to create, update and delete posts so that I can control my website content
 - As a site owner I want to be able to approve or delete comments so that I can filter out objectionable comments
--As a site owner I want to be able to access all subscribed email so that I could send new information related to my website
+-As a site owner I want to be able to access all subscribed emails so that I could send new information related to my website
 - As a site owner I want to be able to delete user so that I can receive several benefits such as: manage my data, reduce liability & resource optimization 
 
 
@@ -238,6 +238,11 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>Delete account</summary>
 <img src="readme_img/delete_account.png">
 </details>
+
+### Search page
+- This page will either display post that user has searched or it will provide user with message that there is no post under that search
+- Page behave just like post page where user can open up searched posts
+
 
 ### Login page
 - Login page is basic django allauth form thath has 2 input fields for username and password with sign in button bellow it

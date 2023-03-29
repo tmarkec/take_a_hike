@@ -6,7 +6,7 @@
         <h1 class="lead-text my-5">Searched posts</h1>
     </div>
     <a href="{% url 'post' %}" class="search-back mx-5"><i class="fas fa-arrow-left"></i>Back</a>
-    <!-- {% if post in posts %} -->
+    {% if posts %}
     <div class="row height m-2">
         {% for post in posts %}
         <div class="col-md-4">
@@ -42,9 +42,9 @@
         </div>
         {% endfor %}
     </div>
-    <!-- {% else %}
-    <h3 class="col-md-6 mx-4"> Sorry, no posts matches your search!</h3>
-    {% endif %} -->
+    {% else %}
+    <h3 class="col-md-6 mx-4"> Sorry, no posts match your search!</h3>
+    {% endif %}
 </div>
 
 {% endblock %}

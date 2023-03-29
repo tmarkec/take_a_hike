@@ -25,7 +25,6 @@
 
 #### Mobile Results:
 
-*Go back to the [top](#table-of-contents)*
 
 ## Code Validation
 
@@ -85,7 +84,7 @@ Only profile page, I had to copy and paste code as I couldn't test as url page. 
 
 
 ### PEP8 Python
-- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
+[PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
 
 <details><summary>Admin</summary>
 <img src="readme_img/validation/admin.pep.png">
@@ -146,7 +145,7 @@ In addition to the other tests, I have conducted a manual check list for differe
 | &check; | Clicking the navbar logo loads the home page
 | &check; | Navbar shows the nav links for Home, Post and buttons for Sign up and Sign In
 | &check; | Clicking the Home tab on the navbar loads the home page
-| &check; | Clicking the Post tab on the navbar loads the about page
+| &check; | Clicking the Post tab on the navbar loads the post page
 | &check; | Clicking the Sign in button on the navbar loads the Sign in page
 | &check; | Clicking the Sign up button on the navbar loads the Sign up page
 
@@ -171,13 +170,13 @@ In addition to the other tests, I have conducted a manual check list for differe
 
 | Status | **Home Page**
 |:-------:|:--------|
-| &check; | User can get more insight about the author/owner of the website and get better understanding of the website
+| &check; | User can get more insight about the author/owner through brief text, picture and 
 
 
 | Status | **Blog Page**
 |:-------:|:--------|
 | &check; | Shows the blog posts paginated by 6 posts and the prev/next button works as expected
-| &check; | Clicking on the post title loads the single post page.
+| &check; | Clicking on the post title user is redirected to single post page
 
 
 | Status | **Single post Page**
@@ -192,7 +191,9 @@ In addition to the other tests, I have conducted a manual check list for differe
 | Status | **Profile page**
 |:-------:|:--------|
 | &check; | User information is displayed to the user
-| &check; | Input fields are provided for user to implement CRUD
+| &check; | Input fields are provided for user to change his details
+| &check; | Extra field for Bio and Image are provided
+| &check; | Two buttons bellow the for work as expected
 
 
 | Status | **Profile page Update**
@@ -205,14 +206,14 @@ In addition to the other tests, I have conducted a manual check list for differe
 |:-------:|:--------|
 | &check; | Clicking 'Delete' button, modal is dispalyed to the user to confirm his actions
 | &check; | Clicking 'Cancel' in the modal user is redirected to the Profile page
-| &check; | Clickin 'Delete' in the modal us is redirected to the Home page, and confirmation message is displayed to the user
+| &check; | Clicking 'Delete' in the modal us is redirected to the Home page, and confirmation message is displayed to the user
 
 
 | Status | **Search field**
 |:-------:|:--------|
 | &check; | No input is not allowed
-| &check; | Search not matched to the post - user is prompt with the message to try again
-| &check; | Search matches the post - post is dislayed to the user
+| &check; | Search not matched to the post - user is prompt with the message to try again on the new page
+| &check; | Search matches the post - post is dislayed to the user on the new page
 
 | Status | **Login page**
 |:-------:|:--------|
@@ -244,3 +245,11 @@ In addition to the other tests, I have conducted a manual check list for differe
 | &check; | All input fields must be put in in order for user to sign in, standard criteria for email and passowrdfs are present
 | &check; | Relevant messages are displayed to the user if certain field doesn't match the criteria
 | &check; | Upon singing up, user is dirrectly logged into the website and prompt message is displayed to the user indicating that he has  succesfully signed up
+
+| Status | **Back link**
+|:-------:|:--------|
+| &check; | Link is displayed on 2 pages 'Search post' & 'Single post'
+| &check; | Clicking 'Back' link user is redirected to previous page
+
+
+*Go back to the [top](#table-of-contents)*
