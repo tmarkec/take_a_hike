@@ -14,9 +14,10 @@
                 </div>
                 <div class="d-md-block col-md-6 masthead-image">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%"
+                        alt="default-post-image">
                     {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%">
+                    <img src=" {{ post.featured_image.url }}" width="100%" alt="post-image">
                     {% endif %}
                 </div>
             </div>
@@ -90,30 +91,27 @@
             </div>
         </div>
         <div class="row mb-5 ">
-        <div class="col-md-8 mb-4 border-div">
-            <h3>Comments:</h3>
-            <div class="card-body"></div>
-            {% for comment in comments %}
-            <div class="comments" style="padding: 10px;">
-                <p><strong>
-                        {{ comment.name }},
-                    </strong>
-                    <span class=" text-muted font-weight-normal">
-                        {{ comment.created_on }}
-                    </span> wrote:
-                </p>
-                {{ comment.body | linebreaks }}
-                <hr>
+            <div class="col-md-8 mb-4 border-div">
+                <h3>Comments:</h3>
+                <div class="card-body"></div>
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p><strong>
+                            {{ comment.name }},
+                        </strong>
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                    <hr>
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
             </div>
-            <!-- Our for loop ends here -->
-            {% endfor %}
-        </div>
 
-        <a href="{% url 'post' %}" class="search-back mx-5"><i class="fas fa-arrow-left"></i>Back</a>
+            <a href="{% url 'post' %}" class="search-back mx-5"><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
     </div>
 </div>
-</div>
-</div>
-</div>
-
-{% endblock content %}
+    {% endblock content %}

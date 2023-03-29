@@ -155,7 +155,9 @@ def subscribe(request):
             messages.success(request, 'You subscribed to our newsletter!')
             email = request.POST.get('email')
             subject = 'Take a hike subscription'
-            message = 'Thank you for subscribing to our newsletter, you will get updates for our future adventures! Go back https://blog-hike.herokuapp.com/'
+            message = 'Thank you for subscribing to our newsletter,' + \
+                      'you will get updates for our future adventures!' +\
+                      'Go back https://blog-hike.herokuapp.com/'
             from_email = 'tmarkec@gmail.com'
             recipient_list = [email]
             send_mail(subject, message, from_email,

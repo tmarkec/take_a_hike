@@ -7,16 +7,16 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 contain">
             <div class="post-title">
-            <h1 class="lead-text my-5">My hikes</h1>
-            <form method="GET" action="{% url 'search_results' %}">
-                {% csrf_token %}
-                <div class="form-parent mx-5 my-5">
-                <input type="text" name="query" placeholder="Search post..." class="form-box" required>
-                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-        </div>
-        
+                <h1 class="lead-text my-5">My hikes</h1>
+                <form method="GET" action="{% url 'search_results' %}">
+                    {% csrf_token %}
+                    <div class="form-parent mx-5 my-5">
+                        <input type="text" name="query" placeholder="Search post..." class="form-box" required>
+                        <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
             <div class="row height m-2">
                 {% for post in post_list %}
                 <div class="col-md-4">
@@ -24,9 +24,9 @@
                         <div class="card-body scale">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="../static/images/kerry.jpg">
+                                <img class="card-img-top" src="../static/images/kerry.jpg" alt="post-image">
                                 {% else %}
-                                <img class="card-img-top" src="{{ post.featured_image.url }}">
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="post-image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
@@ -36,7 +36,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-                            <hr />
+                            <hr>
                             <div class="post-date">
                                 <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-thumbs-up"></i>
                                     {{ post.number_of_likes }}</p>
@@ -71,5 +71,6 @@
             </nav>
             {% endif %}
         </div>
-
-        {% endblock content %}
+    </div>
+</div>
+{% endblock content %}

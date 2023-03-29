@@ -7,12 +7,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hiking blog post website, based in Kerry Ireland">
+  <meta name="keywords" content="blog, journal, hiking, community, Ireland, Kerry, mouuntainering, nature">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-  </script>
+
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   
   <title>Take a hike</title>
@@ -55,7 +55,7 @@
             </li>
             {% endif %}
           </ul>
-          <ul class="d-flex justify-content-end" role="search">
+          <ul class="d-flex justify-content-end">
             {% if user.is_authenticated %}
             
             <li class="btn btn-outline-success">
@@ -63,10 +63,10 @@
             {% else %}
             <li class="btn btn-outline-success ">
               <a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
-            </li>
+            
             <li class="btn btn-outline-success ms-3">
               <a class="nav-link" href="{% url 'account_register' %}">Sign up</a></li>
-            </li>
+           
             {% endif %}
           </ul>
         </div>
@@ -117,7 +117,7 @@
           </div>
           <div class="col form-parent p-0 m-0">
             <div>
-            <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required />
+            <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required>
             </div>
             <div class="col-auto">
               <button type="submit" class="btn btn-outline-light form-child">
@@ -130,7 +130,9 @@
     </div>
   </footer>
   <!-- javascript -->
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
   <script src="{% static 'js/script.js' %}"></script>
 </body>
 
