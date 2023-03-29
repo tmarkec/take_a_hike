@@ -36,17 +36,22 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 ## Design & Planning:
 
 ### User Stories
-- As a first time user I want to understand the purpose of the website and easily navigate through
-- As a first time user I want to be able to view list of post so that I would get quick access to relevant information and get better understanding of content
-- As a first time user I want to be able to see likes and comments for each post in order to get some feedback from other users
-- As a first time user I want to be able to register account to have more acces to the website
-- As a registered user I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain topic
-- As a registered user I want to be able to like/unlike posts so that I can support certain posts without leaving a comment
-- As a registered user I want to be able to contact owner of the site so that I could get more information and be included in future events
-- As a registered user I want to be able to update my profile information so that I could make changes for new password, email etc
+#### First time visitor
+- As a first time visitor I want to understand the purpose of the website and easily navigate through
+- As a first time visitor I want to be able to view the posts so that I would get quick access to relevant information and get better understanding of the content
+- As a first time visitor I want to be able to see likes and comments for the posts in order to get some feedback from other users
+- As a first time visitor I want to be able to register account to have more acces to the website
+- As a first time visitor I want to be able to search posts by title name so I could get quicker access to the relevant one
+- As a first time visitor I want to be able to subscribe to the blog so I could get relevant information about future blog posts
+#### Registred user
+- As a registered user I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain post
+- As a registered user I want to be able to like/unlike posts so that I can support certain posts without without providing comment
+- As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and to add profile picture, bio
+#### Site owner
 - As a site owner I want to be able to create, update and delete posts so that I can control my website content
 - As a site owner I want to be able to approve or delete comments so that I can filter out objectionable comments
-- As a site owner I want to be able to delete user so that I can receive several benefits such as: manage my data, reduce liability , resource optimization etc...
+-As a site owner I want to be able to access all subscribed email so that I could send new information related to my website
+- As a site owner I want to be able to delete user so that I can receive several benefits such as: manage my data, reduce liability & resource optimization 
 
 
 ### Wireframes
