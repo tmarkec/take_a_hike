@@ -127,21 +127,15 @@ As a first time visitor I want to be able to search posts by title name so I cou
 As a first time visitor I want to be able to subscribe to the blog so I could get relevant information about future blog posts | On the bottom of the website in left corner in the footer there is input field with label that allows me to input my email address and subscribe to newsletter |:white_check_mark:
 As a registered user I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain post | I can click on any post I want to comment, and that post will be displayed on the separate page. I have to scrool down after posts description and there is a box in which I can write my comment and submit it |:white_check_mark:
 As a registered user I want to be able to like/unlike posts so that I can support certain posts without without providing comment | I can click on any post I want to like or unlike, and that post will be displayed on the separate page. I have to scrool down to the end of the description and like button will be displayed, if I already like the post that button will be coloured if not I can simply click on that button and like that post |:white_check_mark:
-
-As a site user<br>I want to be able to receive a feedback for my action<br> so that I know my inputs are working. | Given that I'm a site user<br>When I register,login/logout, access CURD functionality for a post<br>Then I should receive a confirmation message.| :white_check_mark:
-As an author <br>I can access all my posts easily in one place <br>so that I can easily track my activity on the site. |Given that I'm a author of post<br>When I am logged in and navigate to user-page<br>Then I can view all of mine posted blog post.| :white_check_mark:
-As an author/user<br>I can fully access the CURD functionality <br> so that I can manage my blog content. | Given that I'm an author/user<br>When I am logged in and navigate to user-page <br>Then I need to be able to CURD mine post content on the website.| :white_check_mark:
-As a site admin<br>I want to be able to review all posts, destinations, users, comments, etc <br>So that I can maintain the site and remove any offensive content. | Given that I'm a site admin<br>When I navigate to the admin panel<br>Then I should see all posts, destination, comments, likes, etc. | :white_check_mark:
-As a site admin <br>I can approve or disapprove comments<br>so that I can filter out objectionable comments.| Given that I'm a site admin<br>When I navigate to the comment model in admin panel<br>Then I need to be able to approve or disapprove any comments.| :white_check_mark:
-As a site admin<br>I want to be able to create/edit/update/delete a post <br>	so that I can maintain the site and remove any offensive content. | Given that I'm a site admin<br>When I navigate to the admin panel<br>Then I need to be able to control all the content on the website.| :white_check_mark:
-As a site admin<br>I want to be able to direct users to my social profiles<br> So that I can increase social interaction and attract new users. | Given that I'm a site admin<br>When I view/scroll down to the footer<br>Then I should see working links to my social media. | :white_check_mark:
-As a site admin<br>I want to be able to ensure that all areas of the site to function correctly and have no bugs<br> so that I can ensure an enjoyable browsing experience for all users. | Given that I'm a site admin<br>When I check all site functionality<br>Then I should see that everything works as expected, there are no bugs and all links and forms work as expected | :white_check_mark:
+As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and to add profile picture, bio | After logging in to the website I can click on the prfile page in the navbar which will lead me to profile page. Page is divided in two sectionss, one is displaying current information and other gives me option to implement CRUD functionality | :white_check_mark:
+As a site owner I want to be able to create, update and delete posts so that I can control my website content. |After logging in to the admin panel of the website I can navigate myselft to Post model and perform CRUD functionality for the posts| :white_check_mark:
+As a site owner I want to be able to approve or delete comments so that I can filter out objectionable comments | After logging in to the admin panel of the website I can navigate myselft to Comments model and from there I can pick comment which I want to approve or delete| :white_check_mark:
+As a site owner I want to be able to access all subscribed emails so that I could send new information related to my website | After logging in to the admin panel of the website I can navigate myselft to Subscribed model in which are displayed all subscribed emails | :white_check_mark:
+As a site owner I want to be able to delete user so that I can receive several benefits such as: manage my data, reduce liability & resource optimization| After logging in to the admin panel of the website I can navigate myselft to Users which is Django all auth model in which are displayed all registered users, from that model I can either update or delete specific users| :white_check_mark:
 
 ## Automated Testing
 
 I have performed some basic automated tests on the forms, urls and models. The tests passed as shown below.
-
-![Automated Tests Result](./assets/testing/automatic-test-result.jpg).
 
 ## Features Testing
 
@@ -150,101 +144,103 @@ In addition to the other tests, I have conducted a manual check list for differe
 | Status | **Navigation Bar - User Logged Out**
 |:-------:|:--------|
 | &check; | Clicking the navbar logo loads the home page
-| &check; | Navbar shows the nav links for Home, About, Blog, Register, Login, Destination and search field, search button if the user is logged out
+| &check; | Navbar shows the nav links for Home, Post and buttons for Sign up and Sign In
 | &check; | Clicking the Home tab on the navbar loads the home page
-| &check; | Clicking the About tab on the navbar loads the about page
-| &check; | Clicking the Blog tab on the navbar loads the blog page
-| &check; | Clicking the Login tab on the navbar loads the login Page
-| &check; | Clicking the Register tab on the navbar loads the register page
-| &check; | Clicking the Destination tab on the navbar loads the destination page
-| &check; | Clicking the Search button on the navbar loads the search page
+| &check; | Clicking the Post tab on the navbar loads the about page
+| &check; | Clicking the Sign in button on the navbar loads the Sign in page
+| &check; | Clicking the Sign up button on the navbar loads the Sign up page
 
 
 | Status | **Navigation Bar - User Logged In**
 |:-------:|:--------|
-| &check; | Clicking on navbar logo, Home, About, Blog, Destination, Search loads the relevant page as described above for user logged out
-| &check; | Navbar shows the tabs Home, About, Blog, Logout, UserName(for example: Mahi), Destination and search field, search button if the user is logged in
-| &check; | The navbar shows the username of the logged in user and clicking on that username tab loads the user page
-| &check; | Clicking the Logout tab on the navbar loads the logout page
+| &check; | User name is displayed next to the logo
+| &check; | Navbar shows additional link for Profile
 
 
 | Status | **Footer - User Logged Out/In**
 |:-------:|:--------|
-| &check; | Clicking the heading 'Incredible India' loads the home page
-| &check; | Clicking the LinkedIn/icon loads the my LinkedIn in a new tab
-| &check; | Clicking the Github/icon loads the my GitHub in a new tab
+| &check; | Clicking the footer logo loads the home page
+| &check; | Clicking the LinkedIn,Facebook,Youtube, Instagram/icons dirrect user to relevant pages
+| &check; | Subscribe input field is displayed
 
-
-| Status | **Destination Dropdown**
+| Status | **Subscribe field**
 |:-------:|:--------|
-| &check; | Clicking on the Destination tab shows a dropdown list which further shows the selected destination post
-
+| &check; | No input not allowed
+| &check; | Standard email characters allowed
+| &check; | After submitting confirmation message is displayed to the user
 
 | Status | **Home Page**
 |:-------:|:--------|
-| &check; | User can see the carousel images on first view
-| &check; | The Destination section navigates to the blog post of the selected destination type
+| &check; | User can get more insight about the author/owner of the website and get better understanding of the website
 
 
 | Status | **Blog Page**
 |:-------:|:--------|
-| &check; | Shows the blog posts paginated by 9 posts and the prev/next button works as expected
-| &check; | Clicking on the post image and title loads the post detail page.
+| &check; | Shows the blog posts paginated by 6 posts and the prev/next button works as expected
+| &check; | Clicking on the post title loads the single post page.
 
 
-| Status | **Post Detail Page**
+| Status | **Single post Page**
 |:-------:|:--------|
 | &check; | Shows the full content of the post
-| &check; | Shows a list of comments posted so far, if any
-| &check; | Comment box is visible with Sign Up and Sign In link 
+| &check; | Shows a list of comments posted so far with numbers of likes, if any
+| &check; | Comment box is only visible to registered users
+| &check; | Only register user can like post
 
 
-| Status | **Post Detail Page - User logged in**
+
+| Status | **Profile page**
 |:-------:|:--------|
-| &check; | Shows the full content of the post
-| &check; | Like icon works only when the user is logged in
-| &check; | Shows a list of comments posted so far, if any 
-| &check; | Comment box is visible with comment body input field and submit button 
-| &check; | Submitted comment displays in comment list
-| &check; | Edit/delete buttons are visible only for user's own comment
+| &check; | User information is displayed to the user
+| &check; | Input fields are provided for user to implement CRUD
 
 
-| Status | **Edit comment - User logged in**
+| Status | **Profile page Update**
 |:-------:|:--------|
-| &check; | That the user can see the comment body input field is already prepoulated with the content as it currently is
-| &check; | Clicking Update button, updates the comment content
-| &check; | That an alert message informs the user that their comment has been updated successfully
+| &check; | Changing any fields, or adding picture upon click on 'Update' button new information is displayed to the user
+| &check; | Confirmation message is shown to the user
 
 
-| Status | **Delete Comment - User Logged In**
+| Status | **Profile delete**
 |:-------:|:--------|
-| &check; | That the user can see a modal to make sure to delete the comment
-| &check; | Clicking the Close button fade the modal
-| &check; | Clicking the Delete button inform the user that the comment deleted successfully
+| &check; | Clicking 'Delete' button, modal is dispalyed to the user to confirm his actions
+| &check; | Clicking 'Cancel' in the modal user is redirected to the Profile page
+| &check; | Clickin 'Delete' in the modal us is redirected to the Home page, and confirmation message is displayed to the user
 
 
-| Status | **Add a Post - User Logged In**
+| Status | **Search field**
 |:-------:|:--------|
-| &check; | That the Title input field is required
-| &check; | That the Content field is required
-| &check; | That the Best Time field is required
-| &check; | That the Ideal Duration field is required
-| &check; | That the form cannot be submitted without all the required fields and user feedback is given if a user forgets a required field
-| &cross; | That when the form is submitted a post slug is automatically created from the title<br><details><summary>Empty slug screenshot</summary><img src="assets/empty-slug.jpg"></details> 
-| &check; | That when the form is submitted a post author field is automatically created
-| &check; | That when the post is added, the user is redirected back to the 'User page' and a message alert informs the user that the post added successfully
+| &check; | No input is not allowed
+| &check; | Search not matched to the post - user is prompt with the message to try again
+| &check; | Search matches the post - post is dislayed to the user
 
-
-| Status | **Edit Post - User Logged In**
+| Status | **Login page**
 |:-------:|:--------|
-| &check; | That the user can see the post input field is already prepoulated with the content as it currently is
-| &check; | Clicking Update button, updates the post content
-| &check; | That an alert message informs the user that their post has been updated successfully
+| &check; | No input not allowed
+| &check; | Messages displayed to the user in case of wrong input
 
-
-| Status | **Delete Post - User Logged In**
+| Status | **Forget password/reset password link**
 |:-------:|:--------|
-| &check; | That the user can see the user name and the message with post title that they would like to delete their post
-| &check; | Clicking the Delete button redirects back to the User post list page
-| &check; | That an alert message informs the user that they successfully deleted their post
-| &check; | That the post is completely deleted and doesnt show up in the database or subsequently any place on the website
+| &check; | Clicking on either links user is navigated to password change page
+
+| Status | **Password change route**
+|:-------:|:--------|
+| &check; | Input field is displayed on the password cahnge page for user to provide email in order to recover password
+| &check; | After submitting new page displayed with further instructions for user what to do next
+| &check; | If email matches registered username clickable link is provided in inbox
+| &check; | If email doesn't match registered username message is displayed to ignore that email, if not registered with Take a hike website
+| &check; | Link redirects to input new password page
+| &check; | Password must pass all standard criteria
+| &check; | After submitting new password user new page with conformation is displayed to the user with link to sign in to the website
+
+| Status | **Logout**
+|:-------:|:--------|
+| &check; | Clicking on logout user is redirected to new page, asking user to confirm his choice
+| &check; | Clicking 'Sign out' user is redirected to the home page with confirmation message displayed to the user
+
+| Status | **Sign up**
+|:-------:|:--------|
+| &check; | Clicking on Sign up in the navigation bar new page is displayed to user with input fields
+| &check; | All input fields must be put in in order for user to sign in, standard criteria for email and passowrdfs are present
+| &check; | Relevant messages are displayed to the user if certain field doesn't match the criteria
+| &check; | Upon singing up, user is dirrectly logged into the website and prompt message is displayed to the user indicating that he has  succesfully signed up
