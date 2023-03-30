@@ -1,6 +1,6 @@
 # Take a hike
 
-Take a hike is fully responsive full stack webiste that I built using the Dajngo Full Stack framework for my Portfolio Project 4. I created this website to promote adventure style of life and to give users opportunity to explore local area/ mountains with us.
+Take a hike is a fully responsive full-stack website that I have built using the Django Full Stack framework for my Portfolio Project 4. I created this website to promote an adventure style of life and to give users the opportunity to explore local areas and mountains with us.
   
 ![Am i responsive image](readme-docs/images/amiresponsive.jpg)  
 
@@ -37,21 +37,21 @@ Take a hike is fully responsive full stack webiste that I built using the Dajngo
 
 ### User Stories
 #### First time visitor
-- As a first time visitor I want to understand the purpose of the website and easily navigate through
-- As a first time visitor I want to be able to view the posts so that I would get quick access to relevant information and get better understanding of the content
-- As a first time visitor I want to be able to see likes and comments for the posts in order to get some feedback from other users
-- As a first time visitor I want to be able to register account to have more acces to the website
-- As a first time visitor I want to be able to search posts by title name so I could get quicker access to the relevant one
-- As a first time visitor I want to be able to subscribe to the blog so I could get relevant information about future blog posts
+- As a first-time visitor, I want to understand the purpose of the website and easily navigate through
+- As a first-time visitor, I want to be able to view the posts so that I would get quick access to relevant information and get a better understanding of the content
+- As a first-time visitor, I want to be able to see likes and comments for the posts to get some feedback from other users
+- As a first-time visitor, I want to be able to register an account to have more access to the website
+- As a first-time visitor, I want to be able to search posts by title name so I could get quick access to the relevant one
+- As a first-time visitor, I want to be able to subscribe to the blog so I could get relevant information about future blog posts
 #### Registred user
-- As a registered user I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain post
-- As a registered user I want to be able to like/unlike posts so that I can support certain posts without without providing comment
-- As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and to add profile picture, bio
+- As a registered user I want to be able to leave comments for posts so that I can engage with other users and, leave feedback about certain posts
+- As a registered user I want to be able to like/unlike posts so that I can support certain posts without providing comment
+- As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and add a profile picture, bio
 #### Site owner
-- As a site owner I want to be able to create, update and delete posts so that I can control my website content
-- As a site owner I want to be able to approve or delete comments so that I can filter out objectionable comments
--As a site owner I want to be able to access all subscribed emails so that I could send new information related to my website
-- As a site owner I want to be able to delete user so that I can receive several benefits such as: manage my data, reduce liability & resource optimization 
+- As a site owner, I want to be able to create, update and delete posts so that I can control my website content
+- As a site owner, I want to be able to approve or delete comments so that I can filter out objectionable comments
+-As a site owner, I want to be able to access all subscribed emails so that I could send new information related to my website
+- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization 
 
 
 ### Wireframes
@@ -100,9 +100,9 @@ Below are the wireframes for the site that I created using balsamiq.
 
   
 ### Agile Methodology
-The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections: 
+The Agile Methodology was used to plan this project. I found it hard for me to work parallel on agile and on my coding as I was team of 1 and was aware of the changes and progress I made, so I had to add a few things at the end of my project. I did learn more towards the end of the project about the use of the agile develepment. I implemented it through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections: 
 
-* To Do- (All the User stories were initially entered in the 'To Do' column)
+* To-Do- (All the User stories were initially entered in the 'To Do' column)
 * In Progress- (then during development story they were moved into the 'In Progress' column)
 * Done- (and then finally they get moved into 'Done' once the development completes)
 
@@ -131,8 +131,8 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 
 ### Colour Scheme
-For this site I decide to keep the main color scheme very simple, with the text either being white or black while some background colours varies (orange for footer, grey for post cards, white as background accross the pages).
-I did also have some buttons like the login, signup, logout, delete, update buttons which were coloured according to the standards(delete = red colour etc...).
+For this site, I decide to keep the main color scheme very simple, with the text either being white or black with background of certain cards and the footer beeing orange while the rest of the background is white.
+I did also have some buttons like the login, signup, logout, delete and update  which were colored according to the standards
   
 <!-- ![colour scheme](readme-docs/images/color-scheme.jpg)  
 - - -  -->
@@ -168,17 +168,17 @@ Below is the database diagram that I created using LucidCharts.
 
 
 ### Footer
-- The footer is found at the bottom of every page and responsive for tablet and mobile too.
-- It displays logo in the left corner, social links (Youtube, Facebook, Twitter & Youtube) are in the middle of the footer and Subscription field is on the right side of the footer.
-- When any of the icons are clicked the social media site opens on a seperate tab, this way the user still has the main website open, also by clicking on logo the user is redirected to the home page.
+- The footer is found at the bottom of every page and is responsive for tablet and mobile too.
+- It displays the logo in the left corner, social links (Youtube, Facebook, Twitter & Youtube) are in the middle of the footer and, the Subscription field is on the right side of the footer.
+- When any of the icons are clicked the social media site opens on a separate tab, this way the user still has the main website open, also by clicking on thelogo the user is redirected to the home page.
   
 <details><summary>Footer</summary>
 <img src="readme_img/footer.png">
 </details>
 
 ### Home Page
-- The home page has a dark hero image with text gradually displaying and deleting indicating site purpouse
-- Bellow hero image there are two sections which describes the owner of the page and his reach to the community with icons and numbers
+- The home page has a dark hero image with text gradually displaying and deleting indicating site purpose
+- Bellow hero image there are two sections which describe the owner of the page and his reach to the community with icons and numbers
 
 <details><summary>Home page</summary>
 <img src="readme_img/home_page.png">
@@ -186,7 +186,7 @@ Below is the database diagram that I created using LucidCharts.
 
 
 ### Posts page
--  Posts are displayed in 2 columns with 5 posts per row, each post card has image, author, date, indicator of likes and comments and title/brief description which are clickable and will direct user to another page about that post
+-  Posts are displayed in 2 columns with 3 posts per row, each post contains of: image, author, date, indicator of likes and comments and title and brief description which are clickable and will direct the user to another page about that post
 - All posts are scaling up as the user hovers over them which makes it more attractive for the user
 
 <details><summary>Posts page</summary>
@@ -195,9 +195,9 @@ Below is the database diagram that I created using LucidCharts.
 
   
 ### Single post page
-- On this page the user can have brief description about the certain post that he clicked on and get all relevant information about it
+- On this page, the user can have a brief description of the certain post that he clicked on and get all relevant information about it
 - Bellow post section user can either like that post or read/leave comments
-- After user post his comment he will be prompt with the message that "comment is waiting for approval"
+- After the user posts his comment he will be prompted with the message that "comment is waiting for approval"
  
 <details><summary>Single post page</summary>
 <img src="readme_img/single_post.png">
@@ -213,9 +213,10 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme_img/profile.png">
 </details>
 
-- First section displays current information about the user.
-- Second section is standard django form which allows user to change information about him
-  - Bellow the form there is a link to reset/change his password. When user clicks on it he will be directed to page with further instructions.
+- The first section displays current information about the user.
+- The second section is a standard django form which allows the user to change information about him
+- Bellow the form there is a link to reset/change his password. When a user clicks on it he will be directed to the page with further instructions.
+
 <details><summary>Password change email input page</summary>
 <img src="readme_img/password1.png">
 </details>
@@ -231,37 +232,39 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>Password change confirmation page</summary>
 <img src="readme_img/password4.png">
 </details>
-
-
-  - Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" user account, if user clicks on delete button separate model will pop out for user to confirm deleting his account. 
+  - Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" the user account, if a user clicks on the delete button separate model will pop out for the user to confirm deleting his account. 
 
 <details><summary>Delete account</summary>
 <img src="readme_img/delete_account.png">
 </details>
 
 ### Search page
-- This page will either display post that user has searched or it will provide user with message that there is no post under that search
-- Page behave just like post page where user can open up searched posts
+- This page will either display a post that user has searched or it will provide a user with message that there is no post under that search
+- Page behaves just like post page where user can open searched posts with click on the title of the post
 
 
 ### Login page
-- Login page is basic django allauth form thath has 2 input fields for username and password with sign in button bellow it
-- User also have description links to either signup for the website or to reset his password which will redirect user to "Password change page"
+- Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
+- A User also have description links to either signup for the website or to reset his password which will redirect a user to the "Password change page"
 <details><summary>Login page</summary>
 <img src="readme_img/login.png">
 </details>
 
 ### Signup page
-- Signup page is also standard form with all required fields for user to input. After inputing all the fields and pressing sign up button user will be automatically logged in and redirected to the home page.
+- The signup page is also a standard django form with all required fields for a user to input. After inputting all the fields and pressing sign-up button user will be automatically logged in and redirected to the home page.
 <details><summary>Sign up page</summary>
 <img src="readme_img/signup.png">
 </details>
 
 
 ## Future Features
-- In the future I would like for user to receive email after signing up so they need to verify their account before they could register.
-- I would like to create another Photo gallery page in which user would be able to post their pictures from specific hike with brief description
-- Also I would like to create contact page as well
+<details><summary>Future features</summary>
+<img src="readme_img/page_screen/future.png">
+</details>
+- There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
+- Create a gallery page
+- Allow users to create their posts (CRUD)
+- Create a booking system for adventures
 
 
 ## Technologies Used
@@ -287,58 +290,58 @@ The testing section can be found [here](TESTING.md).
 ## Bugs
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| On home page hero image was not loading| Created new file path directly to cloudinary |
+| On home page hero image was not loading| Created new file path directly to Cloudinary |
 | Post page was not displaying| Change path in urls.py to post/ |
 | Admin page have no style | Set DEBUG to True|
-| Locally reset password email not working| Implemented if else statemant for DEVELOMPENT in settings.py for email part|
-| No css style on heroku | Before every deployment set debug to false and run "python3 manage.py collectstatic" |
-| Deployment issue on heroku multiple times error "etag" & error collectstatic | Deleted all cloudinary files and pushed code again |
+| Locally reset password email not working| Implemented if else statemEnt for DEVELOPMENT in settings.py for email part|
+| No css style on Heroku | Before every deployment set debug to false and run "python3 manage.py collectstatic" |
+| Deployment issue on Heroku multiple times error "etag" & error collectstatic | Deleted all Cloudinary files and pushed code again |
 | Password reset & password confirm templates not rendering, displayed django templates | Renamed templates from django documentation |
-| After sign up user was not logged in automaticly | Changed registration function and added extra code to store data from user and use it to login automaticly |
-| Profile model information was not updating with user model on profile page| Combined 2 forms into 1 function |
-| User image was not uploading| Added code in the form = 'enctype="multipart/form-data"'|
+| After signing up user was not logged in automatically | Changed registration function and added extra code to store data from user and use it to login automatically |
+| Profile model information was not updating with the user model on the profile page| Combined 2 forms into 1 function |
+| The user image was not uploading| Added code in the form = 'enctype="multipart/form-data"'|
 | No css styles on heroku| Add ',' in settings.py 'STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]'|
 
 
 ## Deployment
-This website is deployed to Heroku from a github repository, the following steps were taken:
+This website is deployed to Heroku from a GitHub repository, the following steps were taken:
 
-#### Creating Respository on Github
-- First make sure you are signed into [Github](https://github.com/) and go to code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
-- Then click on **use this template** and select **Create a new repository** from the drop down. Enter the name for the repository and click **Create repository from template**.
+#### Creating Repository on GitHub
+- First make sure you are signed into [Github](https://github.com/) and go to the code institutes template, which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
+- Then click on **use this template** and select **Create a new repository** from the drop-down. Enter the name for the repository and click **Create repository from template**.
 - Once the repository was created, I clicked the green **gitpod** button to create a workspace in gitpod so that I could write the code for the site.
 
-#### Creating app on Heroku
-- After creating the repository on github, head over to [heroku](https://www.heroku.com/) and sign in.
+#### Creating an app on Heroku
+- After creating the repository on GitHub, head over to [heroku](https://www.heroku.com/) and sign in.
 - On the home page, click **New** and **Create new app** from the drop down.
 - Give the app a name(this must be unique) and select a **region** I chose **Europe** as I am in Europe, Then click **Create app**.
 
 #### Create a database On ElephantSQL
 - Log into the [ElephantSQL](https://www.elephantsql.com/) website and click **Create new Instance**
-- Enter a **Name** and keep the plan as **Tiny Turtle Free**, then **tags** field can be left blank, Select a region closest to you, I selected **EU-West-1(Ireland)** as I'm in Ireland. Then click **Review** and afterwards click **create instance**.
+- Enter a **Name** and keep the plan as **Tiny Turtle Free**, then **tags** field can be left blank, Select a region closest to you, I selected **EU-West-1(Ireland)** as I'm in Ireland. Then click **Review** and afterward click **create an instance**.
 - On The Dashboard click on your database instance name.
-- You will see the details for your database instance, in the url section click on the copy icon to copy the database url.
-- Head over to gitpod and create a **Database URL** enviroment variable in your env.py file and set it equal to the copied url.
+- You will see the details for your database instance, in the URL section click on the copy icon to copy the database URL.
+- Head over to gitpod and create a **Database URL** environment variable in your env.py file and set it equal to the copied URL.
 
 #### Deploying to Heroku.
 - Head back over to [heroku](https://www.heroku.com/) and click on your **app** and then go to the **Settings tab**
-- On the **settings page** scroll down to the **config vars** section and enter the **DATABASE_URL** which you will set equal to the elephantSQL url, create **Secret key** this can be anything,
+- On the **settings page** scroll down to the **config vars** section and enter the **DATABASE_URL** which you will set equal to the elephantSQL URL, create **Secret key** this can be anything,
 **CLOUDINARY_URL** this will be set to your cloudinary url and finally **Port** which will be set to 8000.
 - Then scroll to the top and go to the **deploy tab** and go down to the **Deployment method** section and select **Github** and then sign into your account.
-- Below that in the **search for a repository to connect to** search box enter the name of your repository that you created on **github** and click **connect**
-- Once it has connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
+- Below that in the **search for a repository to connect to** search box enter the name of your repository that you created on **GitHub** and click **connect**
+- Once it has been connected scroll down to the **Manual Deploy** and click **Deploy branch** when it has deployed you will see a **view app** button below and this will bring you to your newly deployed app.
 - Please note that when deploying manually you will have to deploy after each change you make to your repository.
 - - -
 
 ## Credits
-- [Stack Overflow](https://stackoverflow.com/) is probably a developers best resource, this provided me with many answers to my questions.
+- [Stack Overflow](https://stackoverflow.com/) is probably a developer's best resource, this provided me with many answers to my questions.
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
-- [Unsplash](https://unsplash.com/) all images were take from unsplash.
+- [Unsplash](https://unsplash.com/) all images were taken from Unsplash.
 
 
 ## Acknowledgements:
-- I would like to thank my mentor Narander Singh for all help throughout the project and guidance in general
-- I would like to thank Code Institutes Slack Communtiy, and tutor support as this helped me so much when I got stuck on part of my project
-- I would also like to thank our chort facilitators Irene Neville, for answering any course related questions I asked and for porviding us with a weekly guidance information about the project
+- I would like to thank my mentor Narander Singh for all his help throughout the project and guidance in general
+- I would like to thank Code Institutes Slack Community, and tutor support as this helped me so much when I got stuck on part of my project
+- I would also like to thank our cohort facilitator Irene Neville, for answering any course-related questions I asked and for providing us with weekly guidance information about the project
 
-[Back to the top](#the-recipe-blog)
+[Back to the top](#take-a-hike)

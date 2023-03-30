@@ -28,7 +28,7 @@ ul {
     font-weight: bold;
 }
 
-.logo_header {
+.logo-header {
     width: 50px;
     height: 50px;
 }
@@ -90,7 +90,7 @@ ul {
     border-radius: 4px;
 }
 
-.logo_footer {
+.logo-footer {
     max-height: 90px;
     max-width: 90px;
 }
@@ -281,7 +281,14 @@ textarea {
         font-size: 3rem;
     }
 }
-
+@media screen and (max-width:750px) {
+    .profile-info {
+        padding: 3rem;
+    }
+    .profile-form {
+        padding: 3rem;
+    }
+}
 @media screen and (max-width:500px) {
     .footer {
         padding: 0.5rem 1rem;
