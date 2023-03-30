@@ -28,7 +28,7 @@ ul {
     font-weight: bold;
 }
 
-.logo-header {
+.logo_header {
     width: 50px;
     height: 50px;
 }
@@ -90,7 +90,7 @@ ul {
     border-radius: 4px;
 }
 
-.logo-footer {
+.logo_footer {
     max-height: 90px;
     max-width: 90px;
 }

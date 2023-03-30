@@ -5,6 +5,8 @@
 ## Table of Contents
 - [Performance](#performance)
   - [Google's Lighthouse Performance](#googles-lighthouse-performance)
+- [Browser Compatibility](#browser-compatibility)
+  - [Google's Lighthouse Performance](#googles-lighthouse-performance)
 - [Code Validation](#code-validation)
   - [HTML Validation](#html-validation)
   - [CSS Validation](#css-validation)
@@ -19,12 +21,20 @@
 
 ### Google's Lighthouse Performance
 
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website. 
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test the performance of the website.
+
 #### Desktop Results:
+<details><summary>Desktop</summary>
+<img src="readme_img/validation/mobile_performance.png">
+</details>
 
 
 #### Mobile Results:
+<details><summary>Mobile</summary>
+<img src="readme_img/validation/mobile_performance.png">
+</details>
 
+## Browser Compatibility
 
 ## Code Validation
 

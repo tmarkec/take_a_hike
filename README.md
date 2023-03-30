@@ -296,6 +296,9 @@ The testing section can be found [here](TESTING.md).
 | Password reset & password confirm templates not rendering, displayed django templates | Renamed templates from django documentation |
 | After sign up user was not logged in automaticly | Changed registration function and added extra code to store data from user and use it to login automaticly |
 | Profile model information was not updating with user model on profile page| Combined 2 forms into 1 function |
+| User image was not uploading| Added code in the form = 'enctype="multipart/form-data"'|
+| No css styles on heroku| Add ',' in settings.py 'STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]'|
+
 
 ## Deployment
 This website is deployed to Heroku from a github repository, the following steps were taken:
