@@ -2,7 +2,7 @@
 
 Take a hike is a fully responsive full-stack website that I have built using the Django Full Stack framework for my Portfolio Project 4. I created this website to promote an adventure style of life and to give users the opportunity to explore local areas and mountains with us.
   
-![Am i responsive image](readme-docs/images/amiresponsive.jpg)  
+![Am i responsive image](readme_img/responsive/responsive.png)  
 
 [Click Here To Visit Live Site](https://blog-hike.herokuapp.com/)  
 
@@ -27,11 +27,12 @@ Take a hike is a fully responsive full-stack website that I have built using the
 
 3. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
-5. [Testing](#testing)
-6. [Bugs](#bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
-9. [Acknowledgements](#acknowledgements)
+5. [Libraries](#libraries-used)
+6. [Testing](#testing)
+7. [Bugs](#bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
 
 ## Design & Planning:
 
@@ -127,7 +128,6 @@ The Agile Methodology was used to plan this project. I found it hard for me to w
 </details>
 
 ### Typography
-
 
 
 ### Colour Scheme
@@ -282,8 +282,29 @@ Below is the database diagram that I created using LucidCharts.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
 - [Cloudinary](https://cloudinary.com/) was used to store the images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
+- [Grammarly](https://app.grammarly.com/) was used to check typography.
 - - -
 
+## Libraries
+- asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
+- cloudinary - A Python package allowing integration between the application and Cloudinary.
+- coverage - is a third-party package that helps developers measure code coverage in their Python codebase.
+- dj-database-url - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
+- dj3-cloudinary-storage - A Django package that facilitates integration with Cloudinary storage.
+- Django - A python package for the Django framework.
+- django-active-link - A Django package used to highlight an active link in the site navigation bars.
+- django-allauth - An integrated set of Django applications addressing user authentication, registration and account management.
+- django-summernote - is a third-party package that provides a rich text editor widget for Django web applications.
+- django-crispy-forms - A Django package that provides tags and filters to control the rendering behaviour of Django forms. 
+- gunicorn - A Python WSGI HTTP Server for UNIX.
+- oauthlib - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+- psycopg2 - A PostgreSQL database adapter for Python.
+- PyJWT - A Python library that allows for encoding and decoding of JSON Web Tokens (JWT).
+- python3-openid - A set of Python packages to support use of the OpenID decentralized identity system.
+- pytz - A Python package for world timezone definitions, modern and historical.
+- Pillow - A Python Imaging Library adds image processing capabilities
+- requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
+- sqlparse - A non-validating SQL parser for Python.
 ## Testing
 The testing section can be found [here](TESTING.md).
 
@@ -301,6 +322,8 @@ The testing section can be found [here](TESTING.md).
 | Profile model information was not updating with the user model on the profile page| Combined 2 forms into 1 function |
 | The user image was not uploading| Added code in the form = 'enctype="multipart/form-data"'|
 | No css styles on heroku| Add ',' in settings.py 'STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]'|
+| No css styles on heroku| Deleted all static files in Cloduinary|
+| No searched posts displayed on search page | replaced {% if post in posts %} with {% if posts %} statemant and placed it outside div |
 
 
 ## Deployment
@@ -335,8 +358,19 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 
 ## Credits
 - [Stack Overflow](https://stackoverflow.com/) is probably a developer's best resource, this provided me with many answers to my questions.
+  Examples of code I found on slack that helped me with coding:
+    'def __init__(self, *args, **kwargs):
+        super(FormUser, self).__init__(*args, **kwargs)
+        for field in ["username", "email", "password1", "password2"]:
+            self.fields[field].help_text = None'
+  Also found similar solution on how to combine 2 forms into 1 (in my case User & Profile form)
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
 - [Unsplash](https://unsplash.com/) all images were taken from Unsplash.
+- [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project 'I think I can blog', which guided me with website build especially for publishing posts and comments section which I code along with the video with few adjustments
+- [AllTrails](https://www.alltrails.com/) for providing me some text and useful information for my posts
+- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja** and **veryacademy** for guidance and examples on how to create blog and improve of the website
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication
+- [Logoapp](https://logo.com/) for providing me with tools to easier generate my idea and create logo
 
 
 ## Acknowledgements:

@@ -14,9 +14,9 @@ class PostAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ("name", "body", "post", "created_on", "approved")
+    list_display = ("username", "body", "post", "created_on", "approved")
     list_filter = ("created_on", "approved")
-    search_fields = ["name", "email_address", "body"]
+    search_fields = ["username", "email_address", "body"]
     actions = ["approved"]
 
     def approved(self, request, queryset):

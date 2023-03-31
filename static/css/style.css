@@ -36,7 +36,9 @@ ul {
 .navbar-expand-lg .navbar-collapse {
     margin-left: 20rem;
 }
-
+.image {
+    width: 100%;
+}
 .navbar {
     border-bottom: 1px solid rgb(236, 72, 7);
     border-radius: 2px;
@@ -64,7 +66,7 @@ ul {
 /* hero image */
 .hero-img {
 
-    background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1679045749/static/images/hero_img.2bddab35b721.jpg');
+    background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1680188340/static/images/hero_img.b8a4c209f3ba.webp');
     /* background-image: url("/static/images/hero_img.jpg"); */
     background-position: center center;
     background-size: cover;

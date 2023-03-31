@@ -215,37 +215,50 @@ In addition to the other tests, I have conducted a manual checklist for differen
 |:-------:|:--------|
 | &check; | User name is displayed next to the logo
 | &check; | Navbar shows additional link for Profile
+| &check; | Clicking the Profile tab on the navbar loads the Profile page
 
 
 | Status | **Footer - User Logged Out/In**
 |:-------:|:--------|
 | &check; | Clicking the footer logo loads the home page
-| &check; | Clicking the LinkedIn, Facebook, Youtube, and Instagram/icons directs the user to relevant pages
+| &check; | Clicking the LinkedIn, Facebook, Youtube, and Instagram icons directs the user to relevant pages
 | &check; | Subscribe input field is displayed
 
 | Status | **Subscribe field**
 |:-------:|:--------|
 | &check; | No input not allowed
-| &check; | Standard email characters allowed
+| &check; | Only tandard email characters allowed
 | &check; | After submitting confirmation message is displayed to the user
+| &check; | User received subscription email
 
 | Status | **Home Page**
 |:-------:|:--------|
-| &check; | Users can get more insight about the author/owner through brief text, pictures and 
+| &check; | Users receive basic knowledge about the website
 
 
 | Status | **Blog Page**
 |:-------:|:--------|
-| &check; | Shows the blog posts paginated by 6 posts and the prev/next button works as expected
-| &check; | Clicking on the post title user is redirected to a single post page
+| &check; | Shows the blog posts paginated by 6 posts
+| &check; | Next and previous page buttons works as expected and leads user to next or prevoius page 
+| &check; | Hovering on the title colour change indicating user that is clickable
+| &check; | Clicking on the title user gets redirected to the single post page
 
 
 | Status | **Single post Page**
 |:-------:|:--------|
 | &check; | Shows the full content of the post
-| &check; | Shows a list of comments posted so far with numbers of likes, if any
+| &check; | Shows a list of comments posted so far
+| &check; | Shows a numbers of likes
+| &check; | If post not liked by user like button is not colored
+| &check; | When clicked like button on the post that user hasn't liked yet button will change color
+| &check; | If post was liked by the user like button is colored
+| &check; | When clicked like button on the post that user has liked already like button will go back to previous state/not colored
+| &check; | If post not liked by user like button is not coloured
+| &check; | Shows a numbers of likes
 | &check; | Comment box is only visible to registered users
 | &check; | Only register user can like post
+| &check; | Only register user can comment post
+| &check; | When post is commented, confirmation message is displayed to the user
 
 
 
@@ -254,7 +267,7 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | User information is displayed to the user
 | &check; | Input fields are provided for the user to change his details
 | &check; | Extra fields for Bio and Image are provided
-| &check; | Two buttons bellow the for work as expected
+| &check; | Two buttons for update and delete profile are displayed 
 
 
 | Status | **Profile page Update**
@@ -266,38 +279,40 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | Status | **Profile delete**
 |:-------:|:--------|
 | &check; | Clicking the 'Delete' button, the modal is displayed to the user to confirm his actions
-| &check; | Clicking 'Cancel' in the modal user is redirected to the Profile page
-| &check; | Clicking 'Delete' in the modal us is redirected to the Home page, and a confirmation message is displayed to the user
+| &check; | Clicking 'Cancel' in the modal the user is redirected to the Profile page
+| &check; | Clicking 'Delete' in the modal the user is redirected to the Home page
+| &check; | Confirmation message is shown to the user
 
 
 | Status | **Search field**
 |:-------:|:--------|
 | &check; | No input is not allowed
-| &check; | Search not matched to the post - user is prompted with the message to try again on the new page
-| &check; | Search matches the post - post is displayed to the user on the new page
+| &check; | Search not matched to the post - user is redirected to the search page with message indicating that there is no match to searched words
+| &check; | Search matches the post - user is redirected to the search page with match post displayed to the user
 
 | Status | **Login page**
 |:-------:|:--------|
 | &check; | No input not allowed
-| &check; | Messages displayed to the user in case of wrong input
+| &check; | Messages displayed to the user in case of the username or password is not matching the information in databese
+| &check; | Clickin on 'Forgot password' link redirects user to password reset page
 
-| Status | **Forget the password/reset password link**
-|:-------:|:--------|
-| &check; | Clicking on either link user is navigated to the password change page
 
 | Status | **Password change route**
 |:-------:|:--------|
 | &check; | Input field is displayed on the password change page for the user to provide an email to recover the password
-| &check; | After submitting new page is displayed with further instructions for the user on what to do next
-| &check; | If the email matches the registered username clickable link is provided in the inbox
+| &check; | No input is not allowed
+| &check; | Allowed only standard email input 
+| &check; | 'Send me instructions' button work as expected
+| &check; | After submitting user is redirected to new conformation page
+| &check; | If the email matches the registered username clickable link is provided in the inbox for the user
 | &check; | If the email doesn't match the registered username message is displayed to ignore that email, if not registered with the Take a hike website
 | &check; | Link redirects to input new password page
-| &check; | Password must pass all standard criteria
-| &check; | After submitting a new password user new page with conformation is displayed to the user with a link to sign in to the website
+| &check; | New password must pass all standard criteria
+| &check; | After submitting a new password new page with conformation is displayed to the user with a link to sign in to the website
 
 | Status | **Logout**
 |:-------:|:--------|
-| &check; | Clicking on logout user is redirected to a new page, asking the user to confirm his choice
+| &check; | Clicking on logout user is redirected to a new page asking the user to confirm his choice
 | &check; | Clicking 'Sign out' user is redirected to the home page with a confirmation message displayed to the user
 
 | Status | **Sign up**
@@ -305,7 +320,8 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking on Sign up in the navigation bar new page is displayed to the user with input fields
 | &check; | All input fields must be put in for the user to sign in, standard criteria for email and passwords are present
 | &check; | Relevant messages are displayed to the user if a certain field doesn't match the criteria
-| &check; | Upon signing up, the user is directly logged into the website and the prompt message is displayed to the user indicating that he has successfully signed up
+| &check; | Upon signing up, the user is directly logged into the website 
+| &check; | Prompt message is displayed to the user indicating that he has successfully signed up
 
 | Status | **Back link**
 |:-------:|:--------|

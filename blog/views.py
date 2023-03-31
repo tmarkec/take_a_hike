@@ -187,7 +187,8 @@ def subscribe(request):
             )
             from_email = "tmarkec@gmail.com"
             recipient_list = [email]
-            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            send_mail(subject, message, from_email,
+                      recipient_list, fail_silently=False)
             return redirect("/")
     else:
         form = SubcribersForm()
