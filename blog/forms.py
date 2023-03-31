@@ -2,6 +2,7 @@ from .models import Comment, Subscription, Profile
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.forms import ModelForm
 
 
 class CommentForm(forms.ModelForm):
@@ -55,11 +56,12 @@ class ProfileForm(UserChangeForm):
             self.fields[field].help_text = None
 
 
-class BioForm(UserChangeForm):
+class BioForm(forms.ModelForm):
     """
     Form for updating user bio and profile image
     """
-
+    user_img = forms.ImageField(required=False)
+    
     class Meta:
         model = Profile
         fields = ["bio", "user_img"]

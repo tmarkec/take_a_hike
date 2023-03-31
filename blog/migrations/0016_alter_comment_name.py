@@ -16,6 +16,11 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='comment',
             name='name',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to=settings.AUTH_USER_MODEL),
+            field=models.TextField(blank=True, default=''),
+            # field=models.ForeignKey(
+            #     on_delete=django.db.models.deletion.CASCADE, 
+            #     related_name='comments', 
+            #     to=settings.AUTH_USER_MODEL
+            # ),
         ),
     ]

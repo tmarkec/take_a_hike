@@ -8,8 +8,8 @@
     <div class="profile-info col-md-4 my-5">
       <div class="card m-1 p-3">
         <div class="media mx-auto my-3">
-          {% if user.profile.user_img %}
-          <img src="{{ user.profile.user_img.url }}" alt="user-image" class="rounded-circle user-img">
+          {% if user.profile.image %}
+          <img src="{{ user.profile.image.url }}" alt="user-image" class="rounded-circle user-img">
           {% else %}
           <img src="{% static 'images/usr_img.png' %}" alt="user-image" class="rounded-circle user-img">
           {% endif %}
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="profile-form col-md-5">
-      <form enctype="multipart/form-data" method="post">
+      <form enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         <p> {{ profile_form.first_name.label_tag }} </p>
         <p class="profile-fields"> {{ profile_form.first_name }}</p>

@@ -44,7 +44,7 @@ class Comment(models.Model):
 
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
-    username = models.CharField(max_length=80)
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateField(auto_now_add=True)
@@ -54,7 +54,7 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.username}"
+        return f"Comment {self.body} by {self.name}"
 
 
 class Subscription(models.Model):
@@ -76,8 +76,8 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
-    user_img = models.ImageField(
-        "image", null=True, blank=True, upload_to="profile_pics"
+    image = models.ImageField(
+         null=True, blank=True, upload_to="profile_pics"
     )
 
     def __str__(self):

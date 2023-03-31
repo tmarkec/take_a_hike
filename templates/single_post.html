@@ -104,6 +104,12 @@
                         </span> wrote:
                     </p>
                     {{ comment.body | linebreaks }}
+                    {% if comment.name == request.user %}
+                    <form method="post" action="{% url 'delete_comment' comment.id %}">
+                        {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                    {% endif %}
                     <hr>
                 </div>
                 <!-- Our for loop ends here -->

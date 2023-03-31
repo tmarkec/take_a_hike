@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.db.models import Q
 from django.views import generic, View
-from .models import Post, Subscription, Profile
+from .models import Post, Subscription, Profile, Comment
 from .forms import CommentForm, FormUser, ProfileForm, SubcribersForm, BioForm
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
@@ -71,9 +71,11 @@ class PostDetail(View):
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
+            # comment_form.instance.email = request.user.email
+            # comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
+            comment.email = request.user.email
+            comment.name = request.user if isinstance(request.user, User) else None
             comment.post = post
             comment.save()
         else:
@@ -149,6 +151,8 @@ def profile(request, user_id):
                 profile.save()
                 messages.success(request, "Account updated successfully.")
                 return redirect("profile", user_id=user_id)
+            messages.success(request, "Account updated successfully.")
+            
         elif "delete" in request.POST:
             user.delete()
             logout(request)
@@ -160,6 +164,14 @@ def profile(request, user_id):
 
     context = {"profile_form": profile_form, "bio_form": bio_form}
     return render(request, "profile.html", context)
+
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if comment.name == request.user:
+        comment.delete()
+    return redirect('single_post', slug=comment.post.slug)
 
 
 def logout_view(request):
