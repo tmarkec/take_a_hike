@@ -59,9 +59,9 @@ ul {
 }
 .active-class {
     font-weight: bolder;
-    border-bottom: 2px solid rgb(210, 85, 8);
-    border-radius: 4px;
+    color: rgb(236, 72, 7);
     padding-bottom: 0;
+    
 }
 /* hero image */
 .hero-img {
@@ -105,7 +105,7 @@ ul {
     transition: transform .5s;
 }
 .scale:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .form-parent {
     position: relative;
@@ -160,8 +160,8 @@ ul {
 /* ---------------posts page--------------- */
 
 .card {
-    background-color: rgb(210, 85, 8);
-    background-image: radial-gradient(rgb(210, 85, 8), white);
+    background: rgb(210, 85, 8);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(210, 85, 8) 100%);
     border: none;
 }
 
@@ -175,8 +175,9 @@ a {
 }
 
 .post-link:hover {
-    color: rgb(2, 39, 6);
+    color: rgb(72, 77, 109);
     font-weight: 800;
+    text-transform: capitalize;
 }
 
 .paragraph-text {

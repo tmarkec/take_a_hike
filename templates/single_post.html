@@ -10,7 +10,7 @@
                     <h1 class="post-title">{{ post.title }}</h1>
                     <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
                     <br>
-                    <P class="paragraph-text"> {{ post.content_header | safe }}</P>
+                    <p class="paragraph-text"> {{ post.content_header | safe }}</p>
                 </div>
                 <div class="d-md-block col-md-6 masthead-image">
                     {% if "placeholder" in post.featured_image.url %}
@@ -26,8 +26,8 @@
 
     <div class="container contain">
         <div class="row">
-            <div class="col card mb-4  mt-3 left  top">
-                <div class="card-body">
+            <div class="col card my-4 mx-2 left">
+                <div class="card-body mx-2">
                     <p class="card-text ">
                         {{ post.content_footer | safe }}
                     </p>
