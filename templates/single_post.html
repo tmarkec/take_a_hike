@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="row m-3 ">
-            <div class="col-md-7 mb-4 border-div">
+            <div class="col-md-6 mb-4 border-div">
                 <div>
                     {% if commented %}
                     <div class="alert alert-success" role="alert">
@@ -91,11 +91,11 @@
             </div>
         </div>
         <div class="row m-3">
-            <div class="col-md-10 mb-4 border-div">
+            <div class="col-md-7 mb-4 border-div">
                 <h3>Comments:</h3>
                 <div class="card-body"></div>
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
+                <div class="comments">
                     <p><strong>
                             {{ comment.name }},
                         </strong>
@@ -105,10 +105,37 @@
                     </p>
                     {{ comment.body | linebreaks }}
                     {% if comment.name == request.user %}
-                    <form method="post" action="{% url 'delete_comment' comment.id %}">
-                        {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </form>
+                    <div class="left">
+                        <form method="post" action="{% url 'delete_comment' comment.id %}">
+                            {% csrf_token %}
+                            <button type="button" class="btn btn--outline-danger btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Delete</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Delete your account</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to delete your comment?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" name="delete"
+                                                class="my-4 mx-3 btn btn-danger">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <form method="get" action="{% url 'update_comment' comment.id %}">
+                            <button type="submit" class="btn btn-outline-info ms-3 btn-sm">Update</button>
+                        </form>
+                    </div>
                     {% endif %}
                     <hr>
                 </div>
@@ -120,4 +147,4 @@
         </div>
     </div>
 </div>
-    {% endblock content %}
+{% endblock content %}

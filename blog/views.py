@@ -171,7 +171,24 @@ def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
     if comment.name == request.user:
         comment.delete()
+        messages.success(request, "Comment deleted successfully.")
     return redirect('single_post', slug=comment.post.slug)
+
+
+@login_required
+def update_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if comment.name != request.user:
+        return HttpResponse("You are not authorized to edit this comment.")
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Comment updated successfully.")
+            return redirect('single_post', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'update_comment.html', {'form': form, 'comment': comment})
 
 
 def logout_view(request):

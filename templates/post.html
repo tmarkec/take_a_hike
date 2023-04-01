@@ -10,8 +10,8 @@
                 <h1 class="lead-text my-5">My hikes</h1>
                 <form method="GET" action="{% url 'search_results' %}">
                     {% csrf_token %}
-                    <div class="form-parent mx-5 my-5">
-                        <input type="search" name="query" placeholder="Search post..." class="form-box" required>
+                    <div class="form-parent my-4 mx-5">
+                        <input type="search" name="query" placeholder="Search post..." class="form-box ws" required>
                         <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
