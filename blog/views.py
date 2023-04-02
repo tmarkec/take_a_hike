@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.db.models import Q
 from django.views import generic, View
 from .models import Post, Subscription, Profile, Comment
-from .forms import CommentForm, FormUser, ProfileForm, SubcribersForm, BioForm
+from .forms import CommentForm, FormUser, UserForm, SubcribersForm, BioForm
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
@@ -142,13 +142,13 @@ def profile(request, user_id):
         profile = Profile(user=user)
     if request.method == "POST":
         if "update" in request.POST:
-            profile_form = ProfileForm(request.POST, instance=user)
+            profile_form = UserForm(request.POST, instance=user)
             bio_form = BioForm(request.POST, request.FILES, instance=profile)
-            if profile_form.is_valid() and bio_form.is_valid():
-                profile_form.save()
+            if bio_form.is_valid() and profile_form.is_valid():
                 profile = bio_form.save(commit=False)
                 profile.user = user
                 profile.save()
+                profile_form.save()
                 messages.success(request, "Account updated successfully.")
                 return redirect("profile", user_id=user_id)
             messages.success(request, "Account updated successfully.")
@@ -159,7 +159,7 @@ def profile(request, user_id):
             messages.success(request, "Account deleted successfully.")
             return redirect("index")
     else:
-        profile_form = ProfileForm(instance=user)
+        profile_form = UserForm(instance=user)
         bio_form = BioForm(instance=profile)
 
     context = {"profile_form": profile_form, "bio_form": bio_form}
@@ -168,6 +168,9 @@ def profile(request, user_id):
 
 @login_required
 def delete_comment(request, comment_id):
+    """
+    Function that handles deleting registered user comment.
+    """
     comment = get_object_or_404(Comment, id=comment_id)
     if comment.name == request.user:
         comment.delete()
@@ -177,6 +180,9 @@ def delete_comment(request, comment_id):
 
 @login_required
 def update_comment(request, comment_id):
+    """
+    Function that handles updating registered user comment.
+    """
     comment = get_object_or_404(Comment, id=comment_id)
     if comment.name != request.user:
         return HttpResponse("You are not authorized to edit this comment.")

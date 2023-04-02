@@ -108,7 +108,7 @@
                     <div class="left">
                         <form method="post" action="{% url 'delete_comment' comment.id %}">
                             {% csrf_token %}
-                            <button type="button" class="btn btn--outline-danger btn-sm" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Delete</button>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                                 aria-hidden="true">

@@ -41,7 +41,7 @@ class FormUser(UserCreationForm):
             self.fields[field].help_text = None
 
 
-class ProfileForm(UserChangeForm):
+class UserForm(UserChangeForm):
     """
     Form for updating user profile
     """
@@ -51,7 +51,7 @@ class ProfileForm(UserChangeForm):
         fields = ["username", "first_name", "last_name", "email"]
 
     def __init__(self, *args, **kwargs):
-        super(ProfileForm, self).__init__(*args, **kwargs)
+        super(UserForm, self).__init__(*args, **kwargs)
         for field in ["username", "email", "password"]:
             self.fields[field].help_text = None
 

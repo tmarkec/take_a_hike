@@ -46,6 +46,7 @@ Take a hike is a fully responsive full-stack website that I have built using the
 - As a first-time visitor, I want to be able to subscribe to the blog so I could get relevant information about future blog posts
 #### Registred user
 - As a registered user I want to be able to leave comments for posts so that I can engage with other users and, leave feedback about certain posts
+- As a registered user I can update or delete my comments so that have more control over my content in case of errors, and to have better engagemant with other users
 - As a registered user I want to be able to like/unlike posts so that I can support certain posts without providing comment
 - As a registered user I want to be able to update my profile information so that I could change my first name, last name, email and password and add a profile picture, bio
 #### Site owner
@@ -56,7 +57,7 @@ Take a hike is a fully responsive full-stack website that I have built using the
 
 
 ### Wireframes
-Below are the wireframes for the site that I created using balsamiq. 
+Below are the wireframes for the site that I created using balsamiq. As I was developing my website I was using agile approach and adding/updating my website/elements so for that reason some wireframes are not matching my final product.
 #### Desktop
 <details><summary>Home page</summary>
 <img src="readme_img/wireframes/bals_home.png">
@@ -132,7 +133,7 @@ The Agile Methodology was used to plan this project. I found it hard for me to w
 
 ### Colour Scheme
 For this site, I decide to keep the main color scheme very simple, with the text either being white or black with background of certain cards and the footer beeing orange while the rest of the background is white.
-I did also have some buttons like the login, signup, logout, delete and update  which were colored according to the standards
+I kept consistant colours for buttons and links on the website: login, logout, sign up buttons - green colour, all delete buttons are in red color while update buttons are in primary blue color. 
   
 <!-- ![colour scheme](readme-docs/images/color-scheme.jpg)  
 - - -  -->
@@ -148,10 +149,11 @@ Below is the database diagram that I created using LucidCharts.
 
 ### Navigation Bar
 - The Navigation bar sits at the very top of each page, and it's sticky navbar which means when page is longer and user has to scroll down the navbar will stay on top of the page all the time! The logo is at the left side and the navigation links are in the middle with login/signup buttons on the right.
-- When logged in new link is displayed to the user "Profile" and login/signup button is replaced with Logout button. Also user name is displayed next to the logo.
-- The Navbar background is black with opacity set to 75%.
+- Logo is clickable and redirects user back to the home page
+- When logged in new link is displayed to the user: "Profile" ,and login/signup button is replaced with Logout button. Also user name is displayed next to the logo.
+- The Navbar background is white with opacity set to 75%.
 - On large to xx-large screens the navigation bar is in the center of the page and is sized by the bootstrap class.
-- The active page (page that the user is currently on) is displayed in bold text, this makes it stand out much more and is clear to the user which page they are on.
+- The active page (page that the user is currently on) is displayed in coloured text, this makes it stand out much more and is clear to the user which page they are on.
 - When on medium to small screens the navigation menu changes to burger menu which shows all the nav links when clicked on.
   
 <details><summary>Navbar</summary>
@@ -168,9 +170,10 @@ Below is the database diagram that I created using LucidCharts.
 
 
 ### Footer
-- The footer is found at the bottom of every page and is responsive for tablet and mobile too.
+- The footer is found at the bottom of every page and is responsive for tablet and mobile too in its orange color.
 - It displays the logo in the left corner, social links (Youtube, Facebook, Twitter & Youtube) are in the middle of the footer and, the Subscription field is on the right side of the footer.
 - When any of the icons are clicked the social media site opens on a separate tab, this way the user still has the main website open, also by clicking on thelogo the user is redirected to the home page.
+- Copyright text sits at the bottom of the footer
   
 <details><summary>Footer</summary>
 <img src="readme_img/footer.png">
@@ -179,15 +182,18 @@ Below is the database diagram that I created using LucidCharts.
 ### Home Page
 - The home page has a dark hero image with text gradually displaying and deleting indicating site purpose
 - Bellow hero image there are two sections which describe the owner of the page and his reach to the community with icons and numbers
-
+- map?
 <details><summary>Home page</summary>
 <img src="readme_img/home_page.png">
 </details>
 
 
 ### Posts page
--  Posts are displayed in 2 columns with 3 posts per row, each post contains of: image, author, date, indicator of likes and comments and title and brief description which are clickable and will direct the user to another page about that post
-- All posts are scaling up as the user hovers over them which makes it more attractive for the user
+- On this page the user have option to use "search bar" to find specific posts or he can scroll down to search for post that he would like to get more information about it
+- If input on search box is not empty the user will be redirected to the new page which will eaither displayed match post or display message to the user 
+- Posts are displayed in 2 columns with 3 posts per row, each post contains of: image, author, date, indicator of likes and comments and title and brief description 
+- Posts card are scaling up as the user hovers over them and clickable title and ecerpt are transforming to capitalize letter
+- When clicked on title/excerpt user is redirected to another page which will give a user more information about the post
 
 <details><summary>Posts page</summary>
 <img src="readme_img/posts.png">
@@ -196,8 +202,12 @@ Below is the database diagram that I created using LucidCharts.
   
 ### Single post page
 - On this page, the user can have a brief description of the certain post that he clicked on and get all relevant information about it
-- Bellow post section user can either like that post or read/leave comments
-- After the user posts his comment he will be prompted with the message that "comment is waiting for approval"
+- Bellow post section register user can like/unlike post
+- User can leave comment
+- After the user posts his comment he will be prompted with the message that says "comment is waiting for approval"
+- If user has already left comment he has option to either update his comment or delete it by simply clicking either of displayed buttons
+- By clickin "Delete" button user will be asked to confirm his choice, if he do so success message will be displayed to the user and comment would be deleted
+- By clicking "Update" the user will be redirected to the new page which will allow him to update his comment
  
 <details><summary>Single post page</summary>
 <img src="readme_img/single_post.png">
@@ -207,14 +217,18 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme_img/comments.png">
 </details>
 
+### Update comment page
+- On this page one form field is displayed to the user with current comment that he wish to update
+- Bellow the form there is submit button, which will confirm user new comment by providing success message to the user and redirecting to the previous page
+
 ### Profile page
 - Profile page has 2 sections
 <details><summary>Profile page</summary>
 <img src="readme_img/profile.png">
 </details>
 
-- The first section displays current information about the user.
-- The second section is a standard django form which allows the user to change information about him
+- The first section on the left of the screen displays current information about the user which he provided upon registration
+- The second section is a standard django form which allows the user to change information about him and to add "bio" and profile image if he wants to
 - Bellow the form there is a link to reset/change his password. When a user clicks on it he will be directed to the page with further instructions.
 
 <details><summary>Password change email input page</summary>
@@ -232,26 +246,33 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>Password change confirmation page</summary>
 <img src="readme_img/password4.png">
 </details>
-  - Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" the user account, if a user clicks on the delete button separate model will pop out for the user to confirm deleting his account. 
+
+- Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" the user account, if a user clicks on the delete button separate model will pop out for the user to confirm deleting his account. 
 
 <details><summary>Delete account</summary>
 <img src="readme_img/delete_account.png">
 </details>
 
+- If user click on update button, updated information would be shown on his profile card with success message
+
 ### Search page
+- Use can only get to this page by inputing something on the search bar in the post page
 - This page will either display a post that user has searched or it will provide a user with message that there is no post under that search
 - Page behaves just like post page where user can open searched posts with click on the title of the post
+- There is back link that will redirect user to the previous page
 
 
 ### Login page
 - Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
-- A User also have description links to either signup for the website or to reset his password which will redirect a user to the "Password change page"
+- A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
 <details><summary>Login page</summary>
 <img src="readme_img/login.png">
 </details>
 
 ### Signup page
-- The signup page is also a standard django form with all required fields for a user to input. After inputting all the fields and pressing sign-up button user will be automatically logged in and redirected to the home page.
+- The signup page is also a standard django form with all required fields for a user to input
+- User must input all information (username, first name, last name, email and password) 
+- After inputting all the fields and clicking sign-up button user will be automatically logged in and redirected to the home page.
 <details><summary>Sign up page</summary>
 <img src="readme_img/signup.png">
 </details>
@@ -261,6 +282,7 @@ Below is the database diagram that I created using LucidCharts.
 <details><summary>Future features</summary>
 <img src="readme_img/page_screen/future.png">
 </details>
+
 - There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
 - Create a gallery page
 - Allow users to create their posts (CRUD)
@@ -305,6 +327,7 @@ Below is the database diagram that I created using LucidCharts.
 - Pillow - A Python Imaging Library adds image processing capabilities
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
 - sqlparse - A non-validating SQL parser for Python.
+
 ## Testing
 The testing section can be found [here](TESTING.md).
 

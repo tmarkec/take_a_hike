@@ -205,11 +205,11 @@ In addition to the other tests, I have conducted a manual checklist for differen
 |:-------:|:--------|
 | &check; | Clicking the navbar logo loads the home page
 | &check; | Navbar shows the nav links for Home, Post, and buttons for Sign up and Sign In
+| &check; | Current page is highlighted for the user
 | &check; | Clicking the Home tab on the navbar loads the home page
 | &check; | Clicking the Post tab on the navbar loads the post page
 | &check; | Clicking the Sign in button on the navbar loads the Sign in page
 | &check; | Clicking the Signup button on the navbar loads the Signup page
-
 
 | Status | **Navigation Bar - User Logged In**
 |:-------:|:--------|
@@ -227,9 +227,9 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | Status | **Subscribe field**
 |:-------:|:--------|
 | &check; | No input not allowed
-| &check; | Only tandard email characters allowed
+| &check; | Only standard email characters allowed
 | &check; | After submitting confirmation message is displayed to the user
-| &check; | User received subscription email
+| &check; | User received subscription email to the email address he provided
 
 | Status | **Home Page**
 |:-------:|:--------|
@@ -259,6 +259,12 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Only register user can like post
 | &check; | Only register user can comment post
 | &check; | When post is commented, confirmation message is displayed to the user
+| &check; | Under current user comment two buttons are displayed "Update" &  "Delete"
+| &check; | Clickin on "Delete" button modal is shown to the user to confirm his choice
+| &check; | Confirming and deleting his comment message is displayed to the user and comment has been deleted
+| &check; | Clicking on "Update" button new template is beeing shown to the user with box to update his comment
+| &check; | Confirming his updated comment message is displayed to the user and his updated comment
+
 
 
 

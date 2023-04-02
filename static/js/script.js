@@ -56,11 +56,12 @@ class TypeWriter {
   
   // Init App
   function init() {
-    const txtElement = document.querySelector('.move-txt');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
+    const h1Element = document.querySelector('.moving.text');
+    const spanElement = h1Element.querySelector('.move-txt');
+    const words = JSON.parse(spanElement.getAttribute('data-words'));
+    const wait = spanElement.getAttribute('data-wait');
     // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
+    new TypeWriter(spanElement, words, wait);
   }
   
 
