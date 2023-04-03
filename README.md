@@ -102,7 +102,7 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 
   
 ### Agile Methodology
-The Agile Methodology was used to plan this project. I found it hard for me to work parallel on agile and on my coding as I was team of 1 and was aware of the changes and progress I made, so I had to add a few things at the end of my project. I did learn more towards the end of the project about the use of the agile develepment. I implemented it through Github and the Project Board. Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections: 
+The Agile Methodology was used to plan this project. I found it hard for me to work parallel on agile and on my coding as I was team of 1 and was aware of the changes and progress I made, so I had to add a few things at the end of my project. I did learn more towards the end of the project about the use of the agile develepment. I implemented it through Github and the Project Board. Through the use of the Kanban board in the projects view in Github. 
 
 * To-Do- (All the User stories were initially entered in the 'To Do' column)
 * In Progress- (then during development story they were moved into the 'In Progress' column)
@@ -112,24 +112,35 @@ The Agile Methodology was used to plan this project. I found it hard for me to w
 <img src="readme_img/user_stories.png">
 </details>
 
+- Project board was devided into 3 sections:
+* To-Do- (All the User stories were initially entered in the 'To Do' column)
+* In Progress- (then during development story they were moved into the 'In Progress' column)
+* Done- (and then finally they get moved into 'Done' once the development completes)
+
 <details><summary>Milestones</summary>
 <img src="readme_img/milestones.png">
 </details>
+
+- I've planned 5 itterations for this project, 4 I've managed to complete and fifth one is for future development of the webiste, which is described more in feature features in this document
 
 <details><summary>Milestone detail</summary>
 <img src="readme_img/milestone.png">
 </details>
 
+- Each milestone consist of user stories, which are labeld either as 'must-have', 'should-have' or 'could-have' based on their labels and priority I was coding and developing features, I also added estimated story points for how much time would it take me to develop certain feature
+
 <details><summary>Issues board</summary>
 <img src="readme_img/issues.png">
 </details>
+
+- I've created all my user stories into issues board first 
 
 <details><summary>User story detail</summary>
 <img src="readme_img/user_story.png">
 </details>
 
 ### Typography
-
+I chose to use "Dosis" font family beacuse it's easily readable on both small and large screens, making it a great option for websites and digital interfaces. It's clean with moder apperance. As a backdrop font I've used 'Sans-serif'.
 
 ### Colour Scheme
 For this site, I decide to keep the main color scheme very simple, with the text either being white or black with background of certain cards and the footer beeing orange while the rest of the background is white.
@@ -157,16 +168,9 @@ Below is the database diagram that I created using LucidCharts.
 - When on medium to small screens the navigation menu changes to burger menu which shows all the nav links when clicked on.
   
 <details><summary>Navbar</summary>
-<img src="readme_img/navbar.png">
+<img src="readme_img/test/navbar_login.png">
 </details>
 
-<details><summary>Navbar Logged in</summary>
-<img src="readme_img/navbar_login.png">
-</details>
-
-<details><summary>Navbar mobile</summary>
-<img src="readme_img/navbar_mobile.png">
-</details>
 
 
 ### Footer
@@ -176,7 +180,7 @@ Below is the database diagram that I created using LucidCharts.
 - Copyright text sits at the bottom of the footer
   
 <details><summary>Footer</summary>
-<img src="readme_img/footer.png">
+<img src="readme_img/test/footer.png">
 </details>
 
 ### Home Page
@@ -196,7 +200,7 @@ Below is the database diagram that I created using LucidCharts.
 - When clicked on title/excerpt user is redirected to another page which will give a user more information about the post
 
 <details><summary>Posts page</summary>
-<img src="readme_img/posts.png">
+<img src="readme_img/test/post_page.png">
 </details>
 
   
@@ -209,51 +213,26 @@ Below is the database diagram that I created using LucidCharts.
 - By clickin "Delete" button user will be asked to confirm his choice, if he do so success message will be displayed to the user and comment would be deleted
 - By clicking "Update" the user will be redirected to the new page which will allow him to update his comment
  
-<details><summary>Single post page</summary>
-<img src="readme_img/single_post.png">
-</details>
-
-<details><summary>Comments section</summary>
-<img src="readme_img/comments.png">
-</details>
 
 ### Update comment page
 - On this page one form field is displayed to the user with current comment that he wish to update
 - Bellow the form there is submit button, which will confirm user new comment by providing success message to the user and redirecting to the previous page
 
-### Profile page
-- Profile page has 2 sections
-<details><summary>Profile page</summary>
-<img src="readme_img/profile.png">
+<details><summary>Update comment</summary>
+<img src="readme_img/test/update_cmnt.png">
 </details>
 
+### Profile page
+- Profile page has 2 sections
 - The first section on the left of the screen displays current information about the user which he provided upon registration
 - The second section is a standard django form which allows the user to change information about him and to add "bio" and profile image if he wants to
 - Bellow the form there is a link to reset/change his password. When a user clicks on it he will be directed to the page with further instructions.
-
-<details><summary>Password change email input page</summary>
-<img src="readme_img/password1.png">
-</details>
-
-<details><summary>Check email page</summary>
-<img src="readme_img/password2.png">
-</details>
-
-<details><summary>Input new password page</summary>
-<img src="readme_img/password3.png">
-</details>
-
-<details><summary>Password change confirmation page</summary>
-<img src="readme_img/password4.png">
-</details>
-
 - Bellow reset/change passwords there are 2 buttons to either "Update" or " Delete" the user account, if a user clicks on the delete button separate model will pop out for the user to confirm deleting his account. 
-
-<details><summary>Delete account</summary>
-<img src="readme_img/delete_account.png">
-</details>
-
 - If user click on update button, updated information would be shown on his profile card with success message
+
+<details><summary>Profile page</summary>
+<img src="readme_img/test/profile.png">
+</details>
 
 ### Search page
 - Use can only get to this page by inputing something on the search bar in the post page
@@ -261,22 +240,26 @@ Below is the database diagram that I created using LucidCharts.
 - Page behaves just like post page where user can open searched posts with click on the title of the post
 - There is back link that will redirect user to the previous page
 
+<details><summary>Search page</summary>
+<img src="readme_img/test/searched_post.png">
+</details>
 
 ### Login page
 - Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
 - A User also have description links to either signup for the website if he doesnt have an account or to reset his password which will redirect a user either to the "Password change page" or "Sign up" page
+
 <details><summary>Login page</summary>
-<img src="readme_img/login.png">
+<img src="readme_img/test/login.png">
 </details>
 
 ### Signup page
 - The signup page is also a standard django form with all required fields for a user to input
 - User must input all information (username, first name, last name, email and password) 
 - After inputting all the fields and clicking sign-up button user will be automatically logged in and redirected to the home page.
-<details><summary>Sign up page</summary>
-<img src="readme_img/signup.png">
-</details>
 
+<details><summary>Sign up page</summary>
+<img src="readme_img/test/signup.png">
+</details>
 
 ## Future Features
 <details><summary>Future features</summary>
@@ -347,6 +330,7 @@ The testing section can be found [here](TESTING.md).
 | No css styles on heroku| Add ',' in settings.py 'STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]'|
 | No css styles on heroku| Deleted all static files in Cloduinary|
 | No searched posts displayed on search page | replaced {% if post in posts %} with {% if posts %} statemant and placed it outside div |
+| Profile picture/ form was not saving properly | Deleted 'username' from form fields in forms.py as I took it out from the template earlier so my form was not validating properly as it was searhing for that username |
 
 
 ## Deployment

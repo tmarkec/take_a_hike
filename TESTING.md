@@ -211,11 +211,20 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking the Sign in button on the navbar loads the Sign in page
 | &check; | Clicking the Signup button on the navbar loads the Signup page
 
+<details><summary>Logout navbar</summary>
+<img src="readme_img/test/navbar_logged_out.png">
+</details>
+
+
 | Status | **Navigation Bar - User Logged In**
 |:-------:|:--------|
 | &check; | User name is displayed next to the logo
 | &check; | Navbar shows additional link for Profile
 | &check; | Clicking the Profile tab on the navbar loads the Profile page
+
+<details><summary>Login navbar</summary>
+<img src="readme_img/test/navbar_login.png">
+</details>
 
 
 | Status | **Footer - User Logged Out/In**
@@ -224,6 +233,10 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking the LinkedIn, Facebook, Youtube, and Instagram icons directs the user to relevant pages
 | &check; | Subscribe input field is displayed
 
+<details><summary>Footer</summary>
+<img src="readme_img/test/footer.png">
+</details>
+
 | Status | **Subscribe field**
 |:-------:|:--------|
 | &check; | No input not allowed
@@ -231,18 +244,52 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | After submitting confirmation message is displayed to the user
 | &check; | User received subscription email to the email address he provided
 
+<details><summary>Subscribe empty</summary>
+<img src="readme_img/test/subscribe.png">
+</details>
+
+<details><summary>Subscribe wrong</summary>
+<img src="readme_img/test/correct_subs.png">
+</details>
+
+<details><summary>Subscribe message</summary>
+<img src="readme_img/test/subscr.png">
+</details>
+
 | Status | **Home Page**
 |:-------:|:--------|
 | &check; | Users receive basic knowledge about the website
 
 
-| Status | **Blog Page**
+| Status | **Post Page**
 |:-------:|:--------|
 | &check; | Shows the blog posts paginated by 6 posts
-| &check; | Next and previous page buttons works as expected and leads user to next or prevoius page 
+| &check; | Next and previous buttons at the bottom of the page works as expected and leads user to next or prevoius page 
 | &check; | Hovering on the title colour change indicating user that is clickable
 | &check; | Clicking on the title user gets redirected to the single post page
+| &check; | Search input field is displayed to user
 
+<details><summary>Post page</summary>
+<img src="readme_img/test/post_pagination.png">
+</details>
+
+| Status | **Search field & page**
+|:-------:|:--------|
+| &check; | No input is not allowed
+| &check; | Search not matched to the post - user is redirected to the search page with message indicating that there is no match to searched words
+| &check; | Search matches the post - user is redirected to the search page with match post displayed to the user
+
+<details><summary>Search - no input</summary>
+<img src="readme_img/test/search_wrong.png">
+</details>
+
+<details><summary>Search page no match results</summary>
+<img src="readme_img/test/no_match_posts.png">
+</details>
+
+<details><summary>Search page match result</summary>
+<img src="readme_img/test/searched_post.png">
+</details>
 
 | Status | **Single post Page**
 |:-------:|:--------|
@@ -265,7 +312,25 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking on "Update" button new template is beeing shown to the user with box to update his comment
 | &check; | Confirming his updated comment message is displayed to the user and his updated comment
 
+<details><summary>Comments</summary>
+<img src="readme_img/test/whole_cmnt.png">
+</details>
 
+<details><summary>Approve comments</summary>
+<img src="readme_img/test/approval.png">
+</details>
+
+<details><summary>CRUD Comments</summary>
+<img src="readme_img/test/comments_crud.png">
+</details>
+
+<details><summary>Update comments</summary>
+<img src="readme_img/test/edit_comment.png">
+</details>
+
+<details><summary>Delete comments</summary>
+<img src="readme_img/test/delete_comment.png">
+</details>
 
 
 | Status | **Profile page**
@@ -275,12 +340,18 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Extra fields for Bio and Image are provided
 | &check; | Two buttons for update and delete profile are displayed 
 
+<details><summary>Profile page</summary>
+<img src="readme_img/test/profile.png">
+</details>
 
 | Status | **Profile page Update**
 |:-------:|:--------|
 | &check; | Changing any fields, or adding a picture upon clicking on the 'Update' button new information is displayed to the user
 | &check; | Confirmation message is shown to the user
 
+<details><summary>Profile page update</summary>
+<img src="readme_img/test/update_profile.png">
+</details>
 
 | Status | **Profile delete**
 |:-------:|:--------|
@@ -289,18 +360,23 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Clicking 'Delete' in the modal the user is redirected to the Home page
 | &check; | Confirmation message is shown to the user
 
+<details><summary>Profile page delete</summary>
+<img src="readme_img/test/modal_account.png">
+</details>
 
-| Status | **Search field**
-|:-------:|:--------|
-| &check; | No input is not allowed
-| &check; | Search not matched to the post - user is redirected to the search page with message indicating that there is no match to searched words
-| &check; | Search matches the post - user is redirected to the search page with match post displayed to the user
+<details><summary>Profile page delete</summary>
+<img src="readme_img/test/deleted_acc.png">
+</details>
 
 | Status | **Login page**
 |:-------:|:--------|
 | &check; | No input not allowed
 | &check; | Messages displayed to the user in case of the username or password is not matching the information in databese
 | &check; | Clickin on 'Forgot password' link redirects user to password reset page
+
+<details><summary>Incorrect password/username</summary>
+<img src="readme_img/test/incorrect password.png">
+</details>
 
 
 | Status | **Password change route**
@@ -316,10 +392,47 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | New password must pass all standard criteria
 | &check; | After submitting a new password new page with conformation is displayed to the user with a link to sign in to the website
 
+<details><summary>Forgot password link</summary>
+<img src="readme_img/test/forgot_password.png">
+</details>
+
+<details><summary>Forgot password</summary>
+<img src="readme_img/test/highlight.png">
+</details>
+
+<details><summary>Check email</summary>
+<img src="readme_img/test/check_email.png">
+</details>
+
+<details><summary>New password</summary>
+<img src="readme_img/test/new_password.png">
+</details>
+
+<details><summary>Too short password</summary>
+<img src="readme_img/test/too_short_pass.png">
+</details>
+
+<details><summary>Not matching password</summary>
+<img src="readme_img/test/no_match_pass.png">
+</details>
+
+<details><summary>Confirmation news password</summary>
+<img src="readme_img/test/reset_complete.png">
+</details>
+
 | Status | **Logout**
 |:-------:|:--------|
 | &check; | Clicking on logout user is redirected to a new page asking the user to confirm his choice
 | &check; | Clicking 'Sign out' user is redirected to the home page with a confirmation message displayed to the user
+
+<details><summary>Logout</summary>
+<img src="readme_img/test/logout.png">
+</details>
+
+<details><summary>Logout message</summary>
+<img src="readme_img/test/message-lgo.png">
+</details>
+
 
 | Status | **Sign up**
 |:-------:|:--------|
@@ -328,6 +441,18 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Relevant messages are displayed to the user if a certain field doesn't match the criteria
 | &check; | Upon signing up, the user is directly logged into the website 
 | &check; | Prompt message is displayed to the user indicating that he has successfully signed up
+
+<details><summary>Signup</summary>
+<img src="readme_img/test/signup.png">
+</details>
+
+<details><summary>Signup form validation</summary>
+<img src="readme_img/test/signup_form_v.png">
+</details>
+
+<details><summary>Login message</summary>
+<img src="readme_img/test/login_msg.png">
+</details>
 
 | Status | **Back link**
 |:-------:|:--------|
