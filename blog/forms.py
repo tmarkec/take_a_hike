@@ -27,6 +27,7 @@ class FormUser(UserCreationForm):
     class Meta:
         model = User
         fields = (
+            "username",
             "first_name",
             "last_name",
             "username",
@@ -48,11 +49,11 @@ class UserForm(UserChangeForm):
 
     class Meta:
         model = User
-        fields = ["username", "first_name", "last_name", "email"]
+        fields = ["first_name", "last_name", "email"]
 
     def __init__(self, *args, **kwargs):
         super(UserForm, self).__init__(*args, **kwargs)
-        for field in ["username", "email", "password"]:
+        for field in ["email", "password"]:
             self.fields[field].help_text = None
 
 
@@ -60,11 +61,11 @@ class BioForm(forms.ModelForm):
     """
     Form for updating user bio and profile image
     """
-    user_img = forms.ImageField(required=False)
-    
+    image = forms.ImageField(required=False)
+
     class Meta:
         model = Profile
-        fields = ["bio", "user_img"]
+        fields = ["bio", "image"]
 
 
 class SubcribersForm(forms.ModelForm):

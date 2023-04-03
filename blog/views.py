@@ -142,27 +142,29 @@ def profile(request, user_id):
         profile = Profile(user=user)
     if request.method == "POST":
         if "update" in request.POST:
-            profile_form = UserForm(request.POST, instance=user)
+            user_form = UserForm(request.POST, instance=user)
             bio_form = BioForm(request.POST, request.FILES, instance=profile)
-            if bio_form.is_valid() and profile_form.is_valid():
+            if bio_form.is_valid() and user_form.is_valid():
+                user_form.save()
                 profile = bio_form.save(commit=False)
                 profile.user = user
                 profile.save()
-                profile_form.save()
                 messages.success(request, "Account updated successfully.")
                 return redirect("profile", user_id=user_id)
-            messages.success(request, "Account updated successfully.")
-            
+            else:
+                print(bio_form.errors)
+                print(user_form.errors)
+
         elif "delete" in request.POST:
             user.delete()
             logout(request)
             messages.success(request, "Account deleted successfully.")
             return redirect("index")
     else:
-        profile_form = UserForm(instance=user)
+        user_form = UserForm(instance=user)
         bio_form = BioForm(instance=profile)
 
-    context = {"profile_form": profile_form, "bio_form": bio_form}
+    context = {"user_form": user_form, "bio_form": bio_form}
     return render(request, "profile.html", context)
 
 
@@ -175,7 +177,7 @@ def delete_comment(request, comment_id):
     if comment.name == request.user:
         comment.delete()
         messages.success(request, "Comment deleted successfully.")
-    return redirect('single_post', slug=comment.post.slug)
+    return redirect("single_post", slug=comment.post.slug)
 
 
 @login_required
@@ -186,15 +188,15 @@ def update_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
     if comment.name != request.user:
         return HttpResponse("You are not authorized to edit this comment.")
-    if request.method == 'POST':
+    if request.method == "POST":
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
             messages.success(request, "Comment updated successfully.")
-            return redirect('single_post', slug=comment.post.slug)
+            return redirect("single_post", slug=comment.post.slug)
     else:
         form = CommentForm(instance=comment)
-    return render(request, 'update_comment.html', {'form': form, 'comment': comment})
+    return render(request, "update_comment.html", {"form": form, "comment": comment})
 
 
 def logout_view(request):
@@ -222,8 +224,7 @@ def subscribe(request):
             )
             from_email = "tmarkec@gmail.com"
             recipient_list = [email]
-            send_mail(subject, message, from_email,
-                      recipient_list, fail_silently=False)
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             return redirect("/")
     else:
         form = SubcribersForm()

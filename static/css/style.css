@@ -226,7 +226,15 @@ textarea {
     box-shadow: 6px 4px 8px;
     border-radius: 10px;	
 }
-  
+  .next {
+    border: 1px solid rgb(240, 179, 141);
+    border-radius: 10px;
+    margin: 0;
+    color: black;
+  }
+  .next:hover {
+    background-color: rgb(240, 179, 141);
+  }
 /* -------------profile-------------------- */
 .user-img {
     width: 100px;
@@ -242,8 +250,11 @@ textarea {
 #id_email,
 #id_bio,
 #id_login,
-#id_password {
-    width:90%;
+#id_password, 
+#id_password1, 
+#id_password2, 
+#id_username {
+    width:100%;
     border:1px solid rgb(236, 72, 7);
     border-radius: 5px;
 }
@@ -267,6 +278,9 @@ textarea {
 }
 .hover-txt:hover {
     color: rgb(236, 72, 7);
+}
+.signup {
+    margin: 0 auto;
 }
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {
@@ -320,5 +334,9 @@ textarea {
     .ws {
         width: 100%;
     }
-   
+    .row>* {
+        padding-right: 0;
+        padding-left: 0;
+        
+    }
 }

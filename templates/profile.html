@@ -22,15 +22,14 @@
       </div>
     </div>
     <div class="profile-form col-md-5">
-      <form enctype="multipart/form-data" method="POST">
+      <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <p> {{ profile_form.first_name.label_tag }} </p>
-        <p class="profile-fields"> {{ profile_form.first_name }}</p>
-        <p> {{ profile_form.last_name.label_tag }} </p>
-        <p class="profile-fields"> {{ profile_form.last_name }}</p>
-        <p> {{ profile_form.email.label_tag }} </p>
-        <p class="profile-fields"> {{ profile_form.email }}</p>
-        <!-- {{ profile_form|crispy }} -->
+        <p> {{ user_form.first_name.label_tag }} </p>
+        <p class="profile-fields"> {{ user_form.first_name }}</p>
+        <p> {{ user_form.last_name.label_tag }} </p>
+        <p class="profile-fields"> {{ user_form.last_name }}</p>
+        <p> {{ user_form.email.label_tag }} </p>
+        <p class="profile-fields"> {{ user_form.email }}</p>
         {{ bio_form|crispy }}
         <p class="py-4">If you wish to reset your password<a class="button secondaryAction"
             href="{% url 'account_reset_password' %}"> <strong class="hover-txt"> click
