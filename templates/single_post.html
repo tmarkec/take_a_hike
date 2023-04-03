@@ -25,10 +25,10 @@
     </div>
 
     <div class="container contain">
-        <div class="row">
-            <div class="col card my-4 mx-2 left">
-                <div class="card-body mx-2">
-                    <p class="card-text ">
+        <div class="row bg-post rounded">
+            <div class="col-md-10 my-4 left">
+                <div class=" mx-2">
+                    <p class=" mx-2">
                         {{ post.content_footer | safe }}
                     </p>
                     <div class="row">
@@ -82,7 +82,7 @@
                         {{ comment_form|crispy }}
                         {% csrf_token %}
                         <div class="d-grid gap-2 col-6 mx-auto py-3">
-                            <button type="submit" class="btn btn-primary mx-1">Comment</button>
+                            <button type="submit" class="btn .btn-header mx-1">Comment</button>
                         </div>
                     </form>
                     {% endif %}
@@ -108,7 +108,7 @@
                     <div class="left">
                         <form method="post" action="{% url 'delete_comment' comment.id %}">
                             {% csrf_token %}
-                            <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Delete</button>
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                                 aria-hidden="true">
@@ -133,7 +133,7 @@
                             </div>
                         </form>
                         <form method="get" action="{% url 'update_comment' comment.id %}">
-                            <button type="submit" class="btn btn-outline-info ms-3 btn-sm">Update</button>
+                            <button type="submit" class="btn btn-primary ms-3 btn-sm">Update</button>
                         </form>
                     </div>
                     {% endif %}

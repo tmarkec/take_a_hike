@@ -1,6 +1,6 @@
 # Take a hike - Testing
 
-:arrow_left: [Return to the README](README.md)
+[Return to the README](README.md)
 
 ## Table of Contents
 - [Performance](#performance)
@@ -15,7 +15,7 @@
   - [PEP8 Validation](#pep8-python)
   - [Javascript Validation](#javascript-validation)
 - [Testing](#testing)
-  - [Manual Testing (BDD)](#manual-testing-bdd)
+  - [Manual Testing](#manual-testing-bdd)
   - [Automated Testing](#automated-testing)
   - [Features Testing](#features-testing)
 
@@ -134,6 +134,10 @@ Only profile page, I had to copy and paste code as I couldn't test as url page. 
 
 <details><summary>Password reset complete</summary>
 <img src="readme_img/validation/password_reset_complete.validator.png">
+</details>
+
+<details><summary>Update comment</summary>
+<img src="readme_img/validation/update_validation.png">
 </details>
 
 ### CSS Validation 
@@ -260,6 +264,13 @@ In addition to the other tests, I have conducted a manual checklist for differen
 |:-------:|:--------|
 | &check; | Users receive basic knowledge about the website
 
+<details><summary>Home page</summary>
+<img src="readme_img/page_screen/home1.png">
+</details>
+
+<details><summary>Home page</summary>
+<img src="readme_img/page_screen/home2.png">
+</details>
 
 | Status | **Post Page**
 |:-------:|:--------|
@@ -311,6 +322,10 @@ In addition to the other tests, I have conducted a manual checklist for differen
 | &check; | Confirming and deleting his comment message is displayed to the user and comment has been deleted
 | &check; | Clicking on "Update" button new template is beeing shown to the user with box to update his comment
 | &check; | Confirming his updated comment message is displayed to the user and his updated comment
+
+<details><summary>Post page</summary>
+<img src="readme_img/page_screen/post_pg.png">
+</details>
 
 <details><summary>Comments</summary>
 <img src="readme_img/test/whole_cmnt.png">

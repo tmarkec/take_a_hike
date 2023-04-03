@@ -100,43 +100,52 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 <img src="readme_img/wireframes/bals_m_signup.png">
 </details>
 
+<details><summary>Login</summary>
+<img src="readme_img/wireframes/login_b.png">
+</details>
+
+<details><summary>Edit comment</summary>
+<img src="readme_img/wireframes/edit_comm_b.png">
+</details>
+<details><summary>Reset password</summary>
+<img src="readme_img/wireframes/reset_passw_b.png">
+</details>
+<details><summary>New password</summary>
+<img src="readme_img/wireframes/update_pass_b.png">
+</details>
   
 ### Agile Methodology
-The Agile Methodology was used to plan this project. I found it hard for me to work parallel on agile and on my coding as I was team of 1 and was aware of the changes and progress I made, so I had to add a few things at the end of my project. I did learn more towards the end of the project about the use of the agile develepment. I implemented it through Github and the Project Board. Through the use of the Kanban board in the projects view in Github. 
+The Agile Methodology was used to plan this project. I found it hard to work parallel on agile and on my coding as I was team of 1 and was aware of the changes so I found that to be confusing. I had to add a few things at the end of my project in github repository. I did learn more towards the end of the project about the use of the agile develepment, and why it's important and usefull to keep track of the whole process and to implement as much as you can. 
+I've used Github and the Project Board with use of the Kanban board.
 
-* To-Do- (All the User stories were initially entered in the 'To Do' column)
-* In Progress- (then during development story they were moved into the 'In Progress' column)
-* Done- (and then finally they get moved into 'Done' once the development completes)
+I devided project board into 3 sections:
+
+  -  To-Do- (All the User stories were initially entered in the 'To Do' column)
+  -  In Progress- (then during development story they were moved into the 'In Progress' column)
+  -  Done- (and then finally they get moved into 'Done' once the development completes)
 
 <details><summary>Project board</summary>
-<img src="readme_img/user_stories.png">
+<img src="readme_img/test/project_board.png">
 </details>
 
-- Project board was devided into 3 sections:
-* To-Do- (All the User stories were initially entered in the 'To Do' column)
-* In Progress- (then during development story they were moved into the 'In Progress' column)
-* Done- (and then finally they get moved into 'Done' once the development completes)
+- I've planned 5 itterations for this project. Four were completed as planned and fifth one is for future development of the webiste, which is described more in feature features in this document
 
 <details><summary>Milestones</summary>
-<img src="readme_img/milestones.png">
+<img src="readme_img/test/milestone.png">
 </details>
 
-- I've planned 5 itterations for this project, 4 I've managed to complete and fifth one is for future development of the webiste, which is described more in feature features in this document
+- Each milestone consist of user stories, which are displayed either open or closed depends on the progress.
+Each user story is labeled either as 'must-have', 'should-have' or 'could-have'depending of the needs of the project with estimated story points attached.
 
 <details><summary>Milestone detail</summary>
-<img src="readme_img/milestone.png">
+<img src="readme_img/test/mls_det.png">
 </details>
 
-- Each milestone consist of user stories, which are labeld either as 'must-have', 'should-have' or 'could-have' based on their labels and priority I was coding and developing features, I also added estimated story points for how much time would it take me to develop certain feature
-
-<details><summary>Issues board</summary>
-<img src="readme_img/issues.png">
-</details>
-
-- I've created all my user stories into issues board first 
+- Each user story have acceptance criteria and tasks that needed to be done to accomplish  that criteria
+ 
 
 <details><summary>User story detail</summary>
-<img src="readme_img/user_story.png">
+<img src="readme_img/test/user_story_detail.png">
 </details>
 
 ### Typography
@@ -153,7 +162,7 @@ I kept consistant colours for buttons and links on the website: login, logout, s
 Below is the database diagram that I created using LucidCharts.
 
 <details><summary>DataBase diagram</summary>
-<img src="readme_img/database.jpeg">
+<img src="readme_img/wireframes/dtb.jpeg">
 </details>
 
 ## Features:
@@ -171,7 +180,9 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme_img/test/navbar_login.png">
 </details>
 
-
+<details><summary>Navbar medium screens</summary>
+<img src="readme_img/test/navbar_mob.png">
+</details>
 
 ### Footer
 - The footer is found at the bottom of every page and is responsive for tablet and mobile too in its orange color.
