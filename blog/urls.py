@@ -46,3 +46,5 @@ urlpatterns = [
     ),
     path("subscribe", views.subscribe, name="subscribe"),
 ]
+
+handler404 = "take_a_hike.views.page_not_found_view"

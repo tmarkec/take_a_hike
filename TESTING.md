@@ -173,11 +173,10 @@ Only profile page, I had to copy and paste code as I couldn't test as url page. 
 <img src="readme_img/validation/jshint.png"></details>
 JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file. There was 1 warning for a variable named 'new' and 1 undefined variable. As that code was copied from other websites, I didn't change it as it would affect the code itself. No other errors or warnings are shown.
 
-## Manual Testing (BDD)
+## Manual Testing
 
-BDD, or Behaviour Driven Development, is the process used to test user stories in a non-technical way, allowing anyone to test the features of an app.
 
-User Story | BDD Test | Pass
+User Story |  Test | Pass
 --- | --- | :---:
 As a first-time visitor, I want to understand the purpose of the website and easily navigate through | Upon landing on the index page, I can see a big hero navigation bar with 'home' and 'post' links, and below the navigation, there is big hero image displayed with hero text. Without scrolling further I can understand the purpose of this website | &check;
 As a first-time visitor I want to be able to view the posts so that I would get quick access to relevant information and get a better understanding of the content|I can easily navigate to the post page which is shown different posts about different topics/hikes. If I wish to get more information about a certain post I just have to click on the title which will redirect me to the single_post page|&check;
