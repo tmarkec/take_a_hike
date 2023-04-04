@@ -61,27 +61,6 @@ class RegisterViewTestCase(TestCase):
         self.assertTrue(user.is_authenticated)
 
 
-# class PostDetailTestCase(TestCase):
-#     def setUp(self):
-#         self.client = Client()
-#         self.user = User.objects.create_user(
-#             username='testuser', email='testuser@example.com',
-#             password='testpassword')
-#         self.post = Post.objects.create(
-#             title='Test Post', slug='test-post', author=self.user,
-#             content_header='Test content')
-#         self.comment = Comment.objects.create(
-#             post=self.post, name='Test User', email='testuser@example.com',
-#             body='Test comment', approved=True)
-
-#     def test_get_post_detail_page(self):
-#         response = self.client.get(
-#                    reverse('post_detail', kwargs={'slug': self.post.slug}))
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'single_post.html')
-#         self.assertContains(response, self.post.title)
-#         self.assertContains(response, self.post.content_header)
-
 class ProfileTestCase(TestCase):
     def setUp(self):
         self.client = Client()
@@ -89,7 +68,7 @@ class ProfileTestCase(TestCase):
                     username='testuser', email='testuser@example.com',
                     password='testpassword')
         self.profile = Profile.objects.create(user=self.user, bio='Test bio')
-    
+
     def test_profile_page(self):
         self.client.login(username='testuser', password='testpassword')
         response = self.client.get(reverse('profile',
@@ -100,7 +79,9 @@ class ProfileTestCase(TestCase):
 
     def test_delete_profile(self):
         self.client.login(username='testuser', password='testpassword')
-        response = self.client.post(reverse('profile', kwargs={'user_id': self.user.id}), {'delete': 'delete'})
+        response = self.client.post(
+                    reverse('profile', kwargs={'user_id': self.user.id}),
+                    {'delete': 'delete'})
         self.assertEqual(response.status_code, 302)
         self.assertFalse(User.objects.filter(username='testuser').exists())
         self.assertFalse(Profile.objects.filter(user=self.user).exists())

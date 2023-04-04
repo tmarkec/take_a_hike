@@ -199,7 +199,15 @@ As a site owner, I want to be able to delete users so that I can receive several
 
 ## Automated Testing
 
-I have performed some basic automated tests on the forms, URLs, and models. The tests passed as shown below.
+I have performed some automated tests for views, models and forms. I found it challenging and time consuming to complete all tests although I do understand now concept of testing and why it is important to create test cases for code. Deadline of the project cought up to me to finish this section completly.
+
+<details><summary>Number of tests</summary>s
+<img src="readme_img/test/test.png">
+</details>
+
+<details><summary>Report</summary>
+<img src="readme_img/test/report.png">
+</details>
 
 ## Features Testing
 

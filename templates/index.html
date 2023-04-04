@@ -13,19 +13,28 @@
     <h1 class="lead-text mt-5">Who am I</h1>
     <div class="row mt-5 justify-content-center mx-3">
       <div class="col-md-6">
-        <p> I'm a lover of nature and adventure, and one of my favorite pastimes is hiking. There's something about being surrounded 
-          by stunning landscapes and breathing in fresh air that I find incredibly calming and grounding. When I'm out on the trail,
+        <p> I'm a lover of nature and adventure, and one of my favorite pastimes is hiking. There's something about
+          being surrounded
+          by stunning landscapes and breathing in fresh air that I find incredibly calming and grounding. When I'm out
+          on the trail,
           I feel like I can just immerse myself in the beauty of the natural world.<br>
-          I think that everyone should experience the joys of hiking at least once in their lifetime. It's a great way to step 
-          outside of your comfort zone, challenge yourself, and connect with nature. Hiking is not only a source of relaxation, 
-          but it's also a great way to stay active and fit.The feeling of accomplishment that comes with reaching the summit of a peak
+          I think that everyone should experience the joys of hiking at least once in their lifetime. It's a great way
+          to step
+          outside of your comfort zone, challenge yourself, and connect with nature. Hiking is not only a source of
+          relaxation,
+          but it's also a great way to stay active and fit.The feeling of accomplishment that comes with reaching the
+          summit of a peak
           it's undescribable<br>
-          I've had so many incredible experiences while hiking, from trekking through lush forests to scaling rocky mountainsides.
-          Each hike is a unique adventure, and I love discovering new trails and exploring new areas. I've also met some amazing people 
-          on my hikes and formed lasting connections with fellow nature enthusiasts. If you're looking for a fun and rewarding adventure, 
-          I invite you to join me on a hike and experience the wonders of the great outdoors for yourself! You can read more about my adventures 
+          I've had so many incredible experiences while hiking, from trekking through lush forests to scaling rocky
+          mountainsides.
+          Each hike is a unique adventure, and I love discovering new trails and exploring new areas. I've also met some
+          amazing people
+          on my hikes and formed lasting connections with fellow nature enthusiasts. If you're looking for a fun and
+          rewarding adventure,
+          I invite you to join me on a hike and experience the wonders of the great outdoors for yourself! You can read
+          more about my adventures
           in my blog posts
-         </p>
+        </p>
       </div>
       <div class="col-md-6 high rounded">
         <img src="{% static 'images/hiker.webp' %}" alt="Happy-face" class="img-fluid rounded">
@@ -61,15 +70,16 @@
   </div>
 </section>
 <section class="my-5 contain text-center">
-  <div id="map" class="maps">
+  <div class="row justify-content-md-center">
+    <h1 class="lead-text">Hiking map</h1>
+    <div id="map" class=" col-md-6  maps">
 
+    </div>
   </div>
-</section> 
+</section>
 
-<script
-      src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap&v=weekly"
-      defer
-    ></script>
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&callback=initMap&v=weekly" defer></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+</script>
 
 {% endblock content %}

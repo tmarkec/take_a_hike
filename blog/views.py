@@ -79,7 +79,6 @@ class PostDetail(View):
             comment.email = request.user.email
             comment.name = request.user if isinstance(
                             request.user, User) else None
-            # comment.name = request.user
             comment.post = post
             comment.save()
         else:
@@ -137,7 +136,7 @@ def register(request):
 @login_required
 def profile(request, user_id):
     """
-    Function that handles user profile page.
+    Function that handles user profile page
     """
     user = request.user
     try:

@@ -348,9 +348,18 @@ The testing section can be found [here](TESTING.md).
 | No css styles on heroku| Deleted all static files in Cloduinary|
 | No searched posts displayed on search page | replaced {% if post in posts %} with {% if posts %} statemant and placed it outside div |
 | Profile picture/ form was not saving properly | Deleted 'username' from form fields in forms.py as I took it out from the template earlier so my form was not validating properly as it was searhing for that username |
+
+### Unresolved bugs and issues
+| **Bug** | **Fix** |
+| ----------- | ----------- |
 | Post image must be certain size in order to match other posts box sizes |  |
 | Uploaded user picture can looked stretch depends on the upload height and width |  |
+| Google map with hiking locations shows error message that "Page can't load Google maps correctly", the map and cluster locations are working though |  |
+| In dev tools in console I'm getting 2 errors. First is for self clossing messages accross webstie, and second one is for dissapering text on the index page, both are workin as expected |  |
 
+<details><summary>Console issues</summary>
+<img src="readme_img/test/issues.png">
+</details>
 
 ## Deployment
 This website is deployed to Heroku from a GitHub repository, the following steps were taken:
@@ -399,6 +408,7 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - [Logoapp](https://logo.com/) for providing me with tools to easier generate my idea and create logo
 - [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
 - [DEV community](https://dev.to/) for helping me to setup email with django
+- [Traversy media](https://www.traversymedia.com/) for providing me with the code for dissapering hero text
 
 
 ## Acknowledgements:
