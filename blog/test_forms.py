@@ -1,35 +1,51 @@
 from django.test import TestCase
-from .forms import ProfileForm, FormUser
+from .forms import UserForm, FormUser
 from django.contrib.auth.models import User
 
 
-class UserForm(TestCase):
-
-    def test_fields_are_explicit_in_form_metaclass(self):
-        form = FormUser()
-        self.assertEqual(
-            form.Meta.fields,
-            ('first_name', 'last_name', 'username', 'email', 'password1', 'password2'))
-
-
-class ProfileFormTestCase(TestCase):
-    def setUp(self):
-        self.user = User.objects.create_user(
-            username='testuser', email='test@example.com', password='password'
+class FormUserTestCase(TestCase):
+    def test_form_user_missing_data(self):
+        form = FormUser(
+            {
+                "username": "",
+                "first_name": "",
+                "last_name": "",
+                "email": "",
+                "password1": "",
+                "password2": "",
+            }
         )
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors["username"], ["This field is required."])
+        self.assertEqual(form.errors["first_name"],
+                         ["This field is required."])
+        self.assertEqual(form.errors["last_name"], ["This field is required."])
+        self.assertEqual(form.errors["email"], ["This field is required."])
+        self.assertEqual(form.errors["password1"], ["This field is required."])
+        self.assertEqual(form.errors["password2"], ["This field is required."])
 
-    def test_profile_form(self):
-        data = {
-            'username': 'newusername',
-            'first_name': 'John',
-            'last_name': 'Doe',
-            'email': 'newemail@example.com',
-        }
-        form = ProfileForm(data=data, instance=self.user)
-        self.assertTrue(form.is_valid())
-        form.save()
-        self.user.refresh_from_db()
-        self.assertEqual(self.user.username, 'newusername')
-        self.assertEqual(self.user.first_name, 'John')
-        self.assertEqual(self.user.last_name, 'Doe')
-        self.assertEqual(self.user.email, 'newemail@example.com')
+    def test_form_user_help_text(self):
+        form = FormUser()
+        self.assertEqual(form.fields["username"].help_text, None)
+        self.assertEqual(form.fields["email"].help_text, None)
+        self.assertEqual(form.fields["password1"].help_text, None)
+        self.assertEqual(form.fields["password2"].help_text, None)
+
+
+class UserFormTestCase(TestCase):
+    def test_user_form_valid(self):
+        form_data = {'first_name': 'John',
+                     'last_name': 'Doe', 'email': 'johndoe@example.com'}
+        form = UserForm(data=form_data)
+        assert form.is_valid() == True
+
+    def test_user_form_invalid_email(self):
+        form_data = {'first_name': 'John',
+                     'last_name': 'Doe', 'email': 'johndoexample.com'}
+        form = UserForm(data=form_data)
+        assert form.is_valid() == False
+
+    def test_form_user_help_text(self):
+        form = UserForm()
+        self.assertEqual(form.fields["email"].help_text, None)
+        self.assertEqual(form.fields["password"].help_text, None)

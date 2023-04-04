@@ -5,37 +5,43 @@
     font-family: 'Dosis', sans-serif;
     max-width: 1300px;
 }
+
 .maps {
     min-height: 300px;
     min-width: 300px;
-    border-radius: ;
 }
+
 ul {
     list-style: none;
 }
+
 .asteriskField {
     display: none;
 }
+
 /* -----navigation menu ------*/
 .left {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: baseline;
 }
+
 .username {
     margin-left: 1rem;
     color: rgb(241, 78, 2);
 }
+
 .nav-link {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
 .btn-header {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(64, 184, 176);
     color: rgb(64, 184, 176);
 }
+
 .btn-header:hover {
     background-color: rgb(64, 184, 176);
     color: rgb(255, 255, 255);
@@ -49,9 +55,11 @@ ul {
 .navbar-expand-lg .navbar-collapse {
     margin-left: 20rem;
 }
+
 .image {
     width: 100%;
 }
+
 .navbar {
     border-bottom: 1px solid rgb(236, 72, 7);
     border-radius: 2px;
@@ -70,17 +78,17 @@ ul {
 .hero {
     display: flex;
 }
+
 .active-class {
     font-weight: bolder;
     color: rgb(236, 72, 7);
     padding-bottom: 0;
-    
+
 }
+
 /* hero image */
 .hero-img {
-
-    background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1680188340/static/images/hero_img.b8a4c209f3ba.webp');
-    /* background-image: url("/static/images/hero_img.jpg"); */
+    background-image: url('https://res.cloudinary.com/dpeqgxtle/image/upload/v1680566587/static/images/hero_img.b8a4c209f3ba.webp');
     background-position: center center;
     background-size: cover;
     height: 87vh;
@@ -114,24 +122,30 @@ ul {
     width: 90%;
     margin: 8px 0px;
 }
+
 .scale {
     transition: transform .5s;
 }
+
 .scale:hover {
     transform: scale(1.1);
 }
+
 .form-parent {
     position: relative;
 }
+
 .form-child {
     position: absolute;
     bottom: 0;
     right: 10px;
     background-color: rgb(236, 72, 7);
 }
+
 .btn-outline-light {
---bs-btn-hover-color:rgb(236, 72, 7);
+    --bs-btn-hover-color: rgb(236, 72, 7);
 }
+
 .copy {
     margin-bottom: -8px;
     font-size: 0.9rem;
@@ -139,6 +153,7 @@ ul {
     letter-spacing: 1px;
     word-spacing: 4px;
 }
+
 /* ------------------ index------------------- */
 
 .lead-text {
@@ -169,7 +184,7 @@ ul {
 
 .card {
     background: rgb(210, 85, 8);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(210, 85, 8) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(210, 85, 8) 100%);
     border: none;
 }
 
@@ -193,16 +208,19 @@ a {
     font-family: 'Dosis', sans-serif;
     line-height: normal;
 }
+
 .post-date {
     display: flex;
     flex-direction: row;
 }
+
 .post-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .search-btn {
     position: absolute;
     right: -1px;
@@ -211,14 +229,17 @@ a {
     background-color: rgb(236, 72, 7);
     color: white;
 }
+
 .search-btn:hover {
     background-color: white;
     color: rgb(236, 72, 7);
 }
+
 .search-back {
     color: rgb(236, 72, 7);
     font-size: 1.7rem;
 }
+
 .search-back:hover {
     color: rgb(188, 3, 3);
 }
@@ -227,52 +248,55 @@ a {
 textarea {
     width: 300px;
     height: 150px;
-  }
-  .none {
+}
+
+.none {
+    color: rgb(64, 184, 176);
     border-radius: 50%;
     border: none;
-  }
-  .none:hover {
-    background-color: rgb(240, 179, 141);
-  }
-  .border-div {
-    box-shadow: 6px 4px 8px;
-    border-radius: 10px;	
 }
-  .next {
+
+.none:hover {
+    background-color: rgb(240, 179, 141);
+}
+
+.border-div {
+    box-shadow: 6px 4px 8px;
+    border-radius: 10px;
+}
+
+.next {
     border: 1px solid rgb(240, 179, 141);
     border-radius: 10px;
     margin: 0;
     color: black;
-  }
-  .next:hover {
+}
+
+.next:hover {
     background-color: rgb(240, 179, 141);
-  }
-  .bg-post {
-    background: rgb(252,248,248);
-    background: linear-gradient(180deg, rgba(252,248,248,1) 0%, rgba(250,155,123,1) 50%, rgba(247,248,249,1) 100%);
-  }
+}
+
+.bg-post {
+    background: rgb(252, 248, 248);
+    background: linear-gradient(180deg, rgba(252, 248, 248, 1) 0%, rgba(250, 155, 123, 1) 50%, rgba(247, 248, 249, 1) 100%);
+}
+
 /* -------------profile-------------------- */
 .user-img {
     width: 100px;
     height: 100px;
 }
-/* .profile-fields {
-    width:70%;
-    border:1px solid rgb(236, 72, 7);
-    border-radius: 5px;
-} */
 #id_first_name,
 #id_last_name,
 #id_email,
 #id_bio,
 #id_login,
-#id_password, 
-#id_password1, 
-#id_password2, 
+#id_password,
+#id_password1,
+#id_password2,
 #id_username {
-    width:100%;
-    border:1px solid rgb(236, 72, 7);
+    width: 100%;
+    border: 1px solid rgb(236, 72, 7);
     border-radius: 5px;
 }
 
@@ -282,23 +306,29 @@ textarea {
     font-size: 2rem;
     font-weight: 700;
 }
+
 .forms-view {
     min-height: 75vh;
 }
+
 #div_id_password {
     display: none;
 }
+
 .form-box {
     border: 1px solid rgb(236, 72, 7);
     border-radius: 10px;
     box-shadow: 5px 5px 19px 5px rgb(236, 72, 7);
 }
+
 .hover-txt:hover {
     color: rgb(236, 72, 7);
 }
+
 .signup {
     margin: 0 auto;
 }
+
 /* -----------------smaller screens------------ */
 @media screen and (max-width:950px) {
     .navbar-expand-lg .navbar-collapse {
@@ -308,22 +338,27 @@ textarea {
     .justify-content-end {
         justify-content: flex-start !important;
     }
+
     .logo-footer {
         height: 60px;
         width: 60px;
     }
+
     .lead-text {
         font-size: 3rem;
     }
 }
+
 @media screen and (max-width:750px) {
     .profile-info {
         padding: 3rem;
     }
+
     .profile-form {
         padding: 3rem;
     }
 }
+
 @media screen and (max-width:500px) {
     .footer {
         padding: 0.5rem 1rem;
@@ -332,28 +367,35 @@ textarea {
     .form-control {
         width: 97%;
     }
+
     .forms-view {
         min-height: 85vh;
     }
+
     .logo-footer {
         height: 40px;
         width: 40px;
     }
+
     .li-txt {
         font-size: 1rem;
     }
+
     .lead-text {
         font-size: 2.6rem;
     }
+
     .post-title {
         display: block;
     }
+
     .ws {
         width: 100%;
     }
+
     .row>* {
         padding-right: 0;
         padding-left: 0;
-        
+
     }
 }

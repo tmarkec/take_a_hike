@@ -74,63 +74,54 @@ setTimeout(function () {
 }, 2500);
 
 
-// function initMap() {
-//   var map = new google.maps.Map(document.getElementById("map"), {
-//     zoom: 8,
-//     center: {
-//       lat: 51.98945,
-//       lng: -9.497680
-//     }
-//   });
+function initMap() {
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 8,
+    center: {
+      lat: 51.98945,
+      lng: -9.497680
+    }
+  });
 
-//   var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-//   var locations = [{
-//       lat: 51.975419966873176,
-//       lng: -9.480041904900212
+  var locations = [{
+      lat: 51.975419966873176,
+      lng: -9.480041904900212
       
-//     },
-//     {
-//       lat: 51.85419966873176,
-//       lng: -9.180041904900212
-//     },
-//     {
-//       lat: 52.009966873176,
-//       lng: -9.6841904900212
-//     },
-//     {
-//       lat: 51.95419966873176,
-//       lng: -9.6041904900212
-//     },
-//     {
-//       lat: 51.975419966873176,
-//       lng: -9.77041904900212
-//     },
-//     {
-//       lat: 52.01757,
-//       lng: -9.59041904900212
-//     },
+    },
+    {
+      lat: 51.85419966873176,
+      lng: -9.180041904900212
+    },
+    {
+      lat: 52.009966873176,
+      lng: -9.6841904900212
+    },
+    {
+      lat: 51.95419966873176,
+      lng: -9.6041904900212
+    },
+    {
+      lat: 51.975419966873176,
+      lng: -9.77041904900212
+    },
+    {
+      lat: 52.01757,
+      lng: -9.59041904900212
+    },
    
    
 
-//   ];
-//   var markers = locations.map(function (location, i) {
-//     return new google.maps.Marker({
-//       position: location,
-//       label: labels[i % labels.length]
-//     });
-//   });
+  ];
+  var markers = locations.map(function (location, i) {
+    return new google.maps.Marker({
+      position: location,
+      label: labels[i % labels.length]
+    });
+  });
 
-//   const markerCluster = new MarkerClusterer(map, markers, {
-//     imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-//   });
-// };
-
-// var script = document.createElement('script');
-// script.src = 'https://maps.googleapis.com/maps/api/js?key=' + '{{ os.environ["GOOGLE_MAPS_API_KEY"] }}' + '&callback=initMap&v=weekly';
-// script.defer = true;
-// document.getElementsByTagName('head')[0].appendChild(script);
-
-// var markerCluster = new MarkerClusterer(map, markers, {
-//   imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-// });
+  const markerCluster = new MarkerClusterer(map, markers, {
+    imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+  });
+};

@@ -13,6 +13,7 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+from django.conf import settings
 
 
 class IndexView(View):
@@ -21,6 +22,9 @@ class IndexView(View):
     """
 
     def get(self, request, *args, **kwargs):
+        context = {
+            'api_key': settings.GOOGLE_MAPS_API_KEY
+        }
         return render(request, "index.html")
 
 
@@ -71,11 +75,11 @@ class PostDetail(View):
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            # comment_form.instance.email = request.user.email
-            # comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.email = request.user.email
-            comment.name = request.user if isinstance(request.user, User) else None
+            comment.name = request.user if isinstance(
+                            request.user, User) else None
+            # comment.name = request.user
             comment.post = post
             comment.save()
         else:
@@ -151,9 +155,6 @@ def profile(request, user_id):
                 profile.save()
                 messages.success(request, "Account updated successfully.")
                 return redirect("profile", user_id=user_id)
-            else:
-                print(bio_form.errors)
-                print(user_form.errors)
 
         elif "delete" in request.POST:
             user.delete()
@@ -196,7 +197,8 @@ def update_comment(request, comment_id):
             return redirect("single_post", slug=comment.post.slug)
     else:
         form = CommentForm(instance=comment)
-    return render(request, "update_comment.html", {"form": form, "comment": comment})
+    return render(request,
+                  "update_comment.html", {"form": form, "comment": comment})
 
 
 def logout_view(request):
@@ -204,6 +206,7 @@ def logout_view(request):
     Function that handles loggin out for the user
     """
     logout(request)
+    return redirect('index')
 
 
 def subscribe(request):
@@ -224,7 +227,8 @@ def subscribe(request):
             )
             from_email = "tmarkec@gmail.com"
             recipient_list = [email]
-            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+            send_mail(subject,
+                      message, from_email, recipient_list, fail_silently=False)
             return redirect("/")
     else:
         form = SubcribersForm()

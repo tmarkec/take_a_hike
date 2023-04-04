@@ -14,11 +14,11 @@
           <img src="{% static 'images/usr_img.png' %}" alt="user-image" class="rounded-circle user-img">
           {% endif %}
         </div>
-        <p class="m-0"><strong>First name:</strong> {{ user.first_name|title}}</p>
-        <p class="m-0"><strong>Last name:</strong> {{ user.last_name|title}}</p>
-        <p class="m-0"><strong>Email:</strong> {{ user.email }}</p>
-        <p class="m-0"><strong>Username:</strong> {{ user.username }}</p>
-        <p class="m-0"><strong>Bio:</strong> {{ user.profile.bio }}</p>
+        <p class="m-0 profile-txt"><strong>First name:</strong> {{ user.first_name|title}}</p>
+        <p class="m-0 profile-txt"><strong>Last name:</strong> {{ user.last_name|title}}</p>
+        <p class="m-0 profile-txt"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="m-0 profile-txt"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="m-0 profile-txt"><strong>Bio:</strong> {{ user.profile.bio }}</p>
       </div>
     </div>
     <div class="profile-form col-md-5">

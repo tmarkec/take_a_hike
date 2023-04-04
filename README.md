@@ -272,6 +272,12 @@ Below is the database diagram that I created using LucidCharts.
 <img src="readme_img/test/signup.png">
 </details>
 
+### 404 page
+- I've created custom 404 page
+<details><summary>404 page</summary>
+<img src="readme_img/test/404.png">
+</details>
+
 ## Future Features
 <details><summary>Future features</summary>
 <img src="readme_img/page_screen/future.png">
@@ -342,6 +348,8 @@ The testing section can be found [here](TESTING.md).
 | No css styles on heroku| Deleted all static files in Cloduinary|
 | No searched posts displayed on search page | replaced {% if post in posts %} with {% if posts %} statemant and placed it outside div |
 | Profile picture/ form was not saving properly | Deleted 'username' from form fields in forms.py as I took it out from the template earlier so my form was not validating properly as it was searhing for that username |
+| Post image must be certain size in order to match other posts box sizes |  |
+| Uploaded user picture can looked stretch depends on the upload height and width |  |
 
 
 ## Deployment
@@ -384,16 +392,19 @@ This website is deployed to Heroku from a GitHub repository, the following steps
   Also found similar solution on how to combine 2 forms into 1 (in my case User & Profile form)
 - [W3schools](https://www.w3schools.com/) this was great for looking up forgotten **CSS** syntax and how to use it.
 - [Unsplash](https://unsplash.com/) all images were taken from Unsplash.
-- [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project 'I think I can blog', which guided me with website build especially for publishing posts and comments section which I code along with the video with few adjustments
+- [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
 - [AllTrails](https://www.alltrails.com/) for providing me some text and useful information for my posts
-- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja** and **veryacademy** for guidance and examples on how to create blog and improve of the website
+- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja**, **veryacademy**, **djangolessons** and **ProgrammingWithJosh**youtube channels for guidance and examples on how to create blog and improve website with features such as 'search-box' & 'subscription'
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication
 - [Logoapp](https://logo.com/) for providing me with tools to easier generate my idea and create logo
+- [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
+- [DEV community](https://dev.to/) for helping me to setup email with django
 
 
 ## Acknowledgements:
 - I would like to thank my mentor Narander Singh for all his help throughout the project and guidance in general
 - I would like to thank Code Institutes Slack Community, and tutor support as this helped me so much when I got stuck on part of my project
 - I would also like to thank our cohort facilitator Irene Neville, for answering any course-related questions I asked and for providing us with weekly guidance information about the project
+- Last but not least I would like to thank fellow colleague Mark Fenton for helping me with debugging my code and general advices
 
 [Back to the top](#take-a-hike)

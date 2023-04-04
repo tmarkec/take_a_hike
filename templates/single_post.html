@@ -40,7 +40,7 @@
                                 {% csrf_token %}
                                 {% if liked %}
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like none"><i
-                                        class="fas fa-thumbs-up" style="color: #060ddb;"></i></button>
+                                        class="fas fa-thumbs-up"></i></button>
                                 {% else %}
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like none"><i
                                         class="far fa-thumbs-up"></i></button>
