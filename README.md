@@ -152,11 +152,13 @@ Each user story is labeled either as 'must-have', 'should-have' or 'could-have'd
 I chose to use "Dosis" font family beacuse it's easily readable on both small and large screens, making it a great option for websites and digital interfaces. It's clean with moder apperance. As a backdrop font I've used 'Sans-serif'.
 
 ### Colour Scheme
-For this site, I decide to keep the main color scheme very simple, with the text either being white or black with background of certain cards and the footer beeing orange while the rest of the background is white.
-I kept consistant colours for buttons and links on the website: login, logout, sign up buttons - green colour, all delete buttons are in red color while update buttons are in primary blue color. 
+For this website, I decide to keep the main color scheme very simple.Text was either  white or black with background of certain cards and the footer beeing light red/orange color while the rest of the background is white.
+I kept consistant colours for buttons and links on the website. All buttons have hover effect of "Robin egg blue" except 'Delete & Update' button which are standard red and blue colored.
   
-<!-- ![colour scheme](readme-docs/images/color-scheme.jpg)  
-- - -  -->
+<details><summary>Color palette</summary>
+<img src="readme_img/page_screen/palete.png">
+</details>
+
 
 ### DataBase Diagram
 Below is the database diagram that I created using LucidCharts.
@@ -352,10 +354,10 @@ The testing section can be found [here](TESTING.md).
 ### Unresolved bugs and issues
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| Post image must be certain size in order to match other posts box sizes |  |
-| Uploaded user picture can looked stretch depends on the upload height and width |  |
-| Google map with hiking locations shows error message that "Page can't load Google maps correctly", the map and cluster locations are working though |  |
-| In dev tools in console I'm getting 2 errors. First is for self clossing messages accross webstie, and second one is for dissapering text on the index page, both are workin as expected |  |
+| Post image must be certain size in order to match other posts box sizes | X |
+| Uploaded user picture can looked stretch depends on the upload height and width | X |
+| Google map with hiking locations shows error message that "Page can't load Google maps correctly", the map and cluster locations are working though | X |
+| In dev tools in console I'm getting 2 errors. First is for self clossing messages accross webstie, and second one is for dissapering text on the index page, both are workin as expected | X |
 
 <details><summary>Console issues</summary>
 <img src="readme_img/test/issues.png">
@@ -403,13 +405,19 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - [Unsplash](https://unsplash.com/) all images were taken from Unsplash.
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
 - [AllTrails](https://www.alltrails.com/) for providing me some text and useful information for my posts
-- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja**, **veryacademy**, **djangolessons** and **ProgrammingWithJosh**youtube channels for guidance and examples on how to create blog and improve website with features such as 'search-box' & 'subscription'
+- [youtube](https://www.youtube.com/) videos from **codemy**, **netninja**, **veryacademy**, **djangolessons** and **ProgrammingWithJosh** channels for guidance and examples on how to create blog and improve website. I watch videos and tried to recreate some features accross my website such as 'search-box' & 'subscription', specific links could be found here
+[codemy](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com)
+[netninja](https://www.youtube.com/watch?v=n-FTlQ7Djqc&list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc&ab_channel=TheNetNinja)
+[veryacademy](https://www.youtube.com/watch?v=k_RY1og4Zj0&list=PLOLrQ9Pn6cawWd-5UZM6CIm0uqFXeBcTd&ab_channel=VeryAcademy)
+[techwithtime](https://www.youtube.com/watch?v=Z4D3M-NSN58&list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9&ab_channel=TechWithTim)
+[ProgrammingWithJosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg&ab_channel=ProgrammingwithMosh)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication
 - [Logoapp](https://logo.com/) for providing me with tools to easier generate my idea and create logo
 - [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
 - [DEV community](https://dev.to/) for helping me to setup email with django
 - [Traversy media](https://www.traversymedia.com/) for providing me with the code for dissapering hero text
-
+- [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
+- [Balsamic](https://balsamiq.com/wireframes/) was used to create wireframes
 
 ## Acknowledgements:
 - I would like to thank my mentor Narander Singh for all his help throughout the project and guidance in general
